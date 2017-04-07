@@ -1,0 +1,11 @@
+.content {
+  background: #121212;
+  padding-left:1.3vw;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 3vh;
+}

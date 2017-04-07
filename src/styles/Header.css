@@ -1,0 +1,20 @@
+.header {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 6vh;
+  font-weight: 200;
+  letter-spacing: .2vh;
+  color: #DFE0E6;
+}
+
+@media only screen and (min-width: 900px) {
+  .header {
+    justify-content: flex-start;
+    padding-left: 3vh;
+  }
+}

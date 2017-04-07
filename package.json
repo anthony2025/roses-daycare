@@ -1,7 +1,7 @@
 {
   "name": "roses-daycare",
   "version": "1.0.0",
-  "description": "Describe roses-daycare here",
+  "description": "static responsive webpage made for Rose's Daycare LLC",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "nwb": "0.15.x"
   },
-  "author": "",
-  "license": "MIT",
-  "repository": ""
+  "author": "Anthony Ascencio",
+  "license": "CC0",
+  "repository": "https://github.com/anthony2025/roses-daycare"
 }

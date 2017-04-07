@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #272727;
+  height: 24vw;
+  width: 14vw;
+  margin: .7vw;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+.label {
+  color: white;
+}
