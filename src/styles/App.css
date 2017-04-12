@@ -1,25 +1,22 @@
-.wrapper {
+@font-face {
+  font-family: signika;
+  src: url(/font/signika-regular.otf);
+}
+
+@font-face {
+  font-family: signika;
+  font-weight: bold;
+  src: url(/font/signika-bold.otf);
+}
+
+body {
+  background: url(/img/background.png) no-repeat center/cover fixed;
+  font: 16px/1 signika, 'Helvetica Neue', Helvetica;
+  color: white;
+}
+
+.app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  grid-gap: 0;
-}
-
-.content {
-  flex-grow: 1; /* allows the sidebar to stick to the bottom */
-}
-
-.header  {grid-area: header}
-.sidebar {grid-area: sidebar}
-.content {grid-area: content}
-
-@media only screen and (min-width: 900px) {
-  .wrapper {
-    display: grid;
-    grid-gap: 0;
-    grid-template-columns: 6.25vw auto; /* sidebar width */
-    grid-template-rows: 12vh 88vh; /* TODO: fix these proportions */
-    grid-template-areas: "sidebar header"
-                            "sidebar content";
-  }
+  margin: 4% 7% 1% 7%;
 }

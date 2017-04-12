@@ -1,11 +1,69 @@
-.content {
-  background: #121212;
-  padding-left:1.3vw;
+:root {
+  --blueAccent: #79B9D9;
+  --pinkAccent: #FEBCBD;
+  --redAccent: #FD8384;
+  --greenAccent: #9ED2A6;
+  --boxMargin: 1%;
 }
 
-.section {
+.content {
+  background-color: white;
+  padding: 2%;
+}
+
+.boxes {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-bottom: 3vh;
+}
+
+.box {
+  padding: 16px;
+  border-style: solid;
+  border-width: 12px 0 0 0;
+}
+
+.firstBox {
+  composes: box;
+  background-color: var(--blueAccent);
+  border-color: var(--greenAccent);
+  margin: var(--boxMargin) 0;
+}
+
+.secondBox {
+  composes: box;
+  background-color: var(--pinkAccent);
+  border-color: var(--blueAccent);
+  margin: var(--boxMargin);
+}
+
+.thirdBox {
+  composes: box;
+  background-color: var(--greenAccent);
+  border-color: var(--redAccent);
+  margin: var(--boxMargin) var(--boxMargin) var(--boxMargin) 0;
+}
+
+.fourthBox {
+  composes: box;
+  background-color: var(--redAccent);
+  border-color: var(--pinkAccent);
+  margin: var(--boxMargin) 0;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.readMore {
+  background-color: white;
+  color: var(--redAccent);
+  margin-top: 8px;
+  padding: 3px;
+  font-size: 13px;
+  text-align: right;
 }

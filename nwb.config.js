@@ -1,3 +1,6 @@
+// $ npm install --dev postcss-cssnext
+// babel-plugin-react-html-attrs
+
 const path = require('path')
 
 module.exports = {

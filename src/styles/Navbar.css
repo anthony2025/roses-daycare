@@ -1,0 +1,38 @@
+@custom-media --forDesktop (width >= 800px);
+@custom-media --forMobile (width <= 800px);
+
+:root {
+  --primaryColor: #FF8282;
+  --secondaryColor: #9CD3A5;
+}
+
+.navbar {
+  margin-top: auto;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.item {
+  color: var(--primaryColor);
+}
+
+.activeItem {
+  composes: item;
+  color: var(--secondaryColor);
+}
+
+@media (--forMobile) {
+  .item {
+    font-size: 16px;
+  }
+}
+
+@media (--forDesktop) {
+  .item {
+    font-size: 18px;
+  }
+}
