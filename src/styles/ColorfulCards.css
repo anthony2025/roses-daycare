@@ -1,0 +1,83 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+:root {
+  --blueAccent: #79B9D9;
+  --pinkAccent: #FEBCBD;
+  --redAccent: #FD8384;
+  --greenAccent: #9ED2A6;
+  --boxSpacing: 2%;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  padding: 16px;
+  border-style: solid;
+  border-width: 12px 0 0 0;
+}
+
+.card:nth-child(4n) {
+  background-color: var(--blueAccent);
+  border-color: var(--greenAccent);
+  }
+
+.card:nth-child(4n+1) {
+  background-color: var(--pinkAccent);
+  border-color: var(--blueAccent);
+  }
+
+.card:nth-child(4n+2) {
+  background-color: var(--greenAccent);
+  border-color: var(--redAccent);
+  }
+
+.card:nth-child(4n+3) {
+  background-color: var(--redAccent);
+  border-color: var(--pinkAccent);
+  }
+
+.subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.readMore {
+  background-color: white;
+  color: var(--redAccent);
+  margin-top: 8px;
+  padding: 3px;
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (--forMobile) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    margin: var(--boxSpacing) 0;
+  }
+}
+
+@media (--forDesktop) {
+  .cards {
+    flex-direction: row;
+  }
+  .card {
+    margin: 0 calc(var(--boxSpacing)/3);
+  }
+  .card:first-of-type {
+    margin-left: 0;
+  }
+  .card:last-of-type {
+    margin-right: 0;
+  }
+}

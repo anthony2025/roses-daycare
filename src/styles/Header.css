@@ -1,9 +1,8 @@
-@custom-media --forDesktop (width >= 800px);
-@custom-media --forMobile (width <= 800px);
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
 
 .header {
   display: flex;
-  margin: 50px 0 20px 0;
 }
 
 .title {
@@ -17,6 +16,12 @@
 
 .largeTitle {
   font-size: 80px;
+}
+
+.navbar {
+  margin-top: auto;
+  height: 30px;
+  width: 100%;
 }
 
 @media (--forMobile) {

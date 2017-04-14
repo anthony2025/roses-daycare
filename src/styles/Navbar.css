@@ -1,5 +1,5 @@
-@custom-media --forDesktop (width >= 800px);
-@custom-media --forMobile (width <= 800px);
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
 
 :root {
   --primaryColor: #FF8282;
@@ -7,9 +7,6 @@
 }
 
 .navbar {
-  margin-top: auto;
-  height: 30px;
-  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-around;

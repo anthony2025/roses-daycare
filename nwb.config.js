@@ -12,6 +12,7 @@ module.exports = {
   webpack: {
     aliases: {
       components: path.resolve('src/components'),
+      containers: path.resolve('src/containers'),
       styles: path.resolve('src/styles')
     },
     html: {
