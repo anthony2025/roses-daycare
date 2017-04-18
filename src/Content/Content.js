@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import styles from 'styles/Content.css'
 import {Route} from 'react-router-dom'
+import styles from './Content.css'
 
-import Home from 'views/Home.js'
-import Contact from 'views/Contact.js'
+import Home from 'src/Home'
+import Contact from 'src/Contact'
 
 export default class Content extends Component {
   render () {

@@ -14,17 +14,16 @@
     "format": "standard --fix"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "nuka-carousel": "^2.0.4",
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "babel-plugin-react-html-attrs": "^2.0.0",
+    "directory-named-webpack-plugin": "^2.1.0",
     "nwb": "0.15.x",
     "postcss-cssnext": "^2.10.0",
-    "postcss-modules-values": "^1.2.2",
     "snazzy": "latest",
     "standard": "latest"
   },

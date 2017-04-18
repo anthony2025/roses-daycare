@@ -1,7 +1,9 @@
-// $ npm install --dev postcss-cssnext
-// babel-plugin-react-html-attrs
+// $ yarn add -D postcss-cssnext
+// $ yarn add -D babel-plugin-react-html-attrs
+// $ yard add -D directory-named-webpack-plugin
 
 const path = require('path')
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 
 module.exports = {
   type: 'react-app',
@@ -11,10 +13,7 @@ module.exports = {
   },
   webpack: {
     aliases: {
-      components: path.resolve('src/components'),
-      containers: path.resolve('src/containers'),
-      views: path.resolve('src/views'),
-      styles: path.resolve('src/styles')
+      src: path.resolve('src')
     },
     html: {
       mountId: 'root',
@@ -28,6 +27,13 @@ module.exports = {
       postcss: {
         plugins: [
           require('postcss-cssnext')
+        ]
+      }
+    },
+    extra: {
+      resolve: {
+        plugins: [
+          new DirectoryNamedWebpackPlugin()
         ]
       }
     }

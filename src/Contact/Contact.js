@@ -1,8 +1,8 @@
 import React from 'react'
-import styles from 'styles/Contact.css'
+import styles from './Contact.css'
 
-import Form from 'components/Form.js'
-import Info from 'components/Info.js'
+import Form from 'src/Form'
+import Info from 'src/Info'
 
 export default props => (
   <div class={styles.contact}>
