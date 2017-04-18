@@ -9,12 +9,8 @@
   src: url(/font/signika-bold.otf);
 }
 
-:root {
-  --headerTopMargin: 30px;
-}
-
 body {
-  background: url(/img/background.png) no-repeat center/cover fixed;
+  background: url("/img/background.png") no-repeat center/cover fixed;
   font: 16px/1 signika, 'Helvetica Neue', Helvetica;
   color: white;
 }
@@ -26,7 +22,7 @@ body {
 }
 
 .header {
-  margin: var(--headerTopMargin) 0 20px 0;
+  margin: 30px 0;
 }
 
 .footer {

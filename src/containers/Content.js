@@ -1,20 +1,16 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styles from 'styles/Content.css'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
-import Carrousel from 'components/Carrousel.js'
-import ColorfulCards from 'components/ColorfulCards.js'
+import Home from 'views/Home.js'
+import Contact from 'views/Contact.js'
 
 export default class Content extends Component {
   render () {
     return (
-      <div class={styles.content  + " " + this.props.parentStyles}>
-        <Carrousel parentStyles={styles.carrousel}/>
-        <ColorfulCards parentStyles={styles.colorfulCards}/>
+      <div class={styles.content}>
+        <Route exact path='/' component={Home} />
+        <Route path='/contact' component={Contact} />
       </div>
     )
   }

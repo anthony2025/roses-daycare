@@ -1,24 +1,4 @@
-@custom-media --forDesktop (width >= 700px);
-@custom-media --forMobile (width <= 700px);
-
 .content {
   background-color: white;
   padding: 2%;
-}
-
-.carrousel {
-  height: 500px;
-}
-
-.colorfulCards {
-  margin-top: 1%;
-  width: 100%;
-}
-
-@media (--forMobile) {
-
-}
-
-@media (--forDesktop) {
-
 }

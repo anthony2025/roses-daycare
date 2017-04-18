@@ -17,8 +17,7 @@
   color: var(--primaryColor);
 }
 
-.activeItem {
-  composes: item;
+.active {
   color: var(--secondaryColor);
 }
 

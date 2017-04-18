@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/ColorfulCards.css'
+import styles from 'styles/Cards.css'
 
 export default props => (
   <div class={styles.cards + " " + props.parentStyles}>

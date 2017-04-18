@@ -13,6 +13,7 @@ module.exports = {
     aliases: {
       components: path.resolve('src/components'),
       containers: path.resolve('src/containers'),
+      views: path.resolve('src/views'),
       styles: path.resolve('src/styles')
     },
     html: {

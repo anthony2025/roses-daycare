@@ -1,0 +1,47 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+:root {
+  --primaryColor: #FF8282;
+  --secondaryColor: #9CD3A5;
+  --blueAccent: #79B9D9;
+  --pinkAccent: #FEBCBD;
+  --redAccent: #FD8384;
+  --greenAccent: #9ED2A6;
+}
+
+.contact {
+  background-color: var(--blueAccent);
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+
+@media (--forMobile) {
+  .contact {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .form,
+  .info {
+    width: 100%;
+  }
+}
+
+@media (--forDesktop) {
+  .contact {
+    flex-direction: row;
+  }
+  .form {
+  width: 60%;
+  }
+  .info {
+    width: 40%;
+  }
+}
