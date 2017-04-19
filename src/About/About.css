@@ -1,0 +1,41 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
+
+.about {
+  background-color: var(--red);
+  padding: 5%;
+  text-align: center;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-bottom: 55px;
+}
+
+.paragraph {
+  text-align: left;
+  margin: 0 20% 50px 20%;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+@media (--forMobile) {
+
+}
+
+@media (--forDesktop) {
+
+}

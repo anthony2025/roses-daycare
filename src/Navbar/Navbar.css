@@ -2,8 +2,10 @@
 @custom-media --forMobile (width <= 700px);
 
 :root {
-  --primaryColor: #FF8282;
-  --secondaryColor: #9CD3A5;
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
 }
 
 .navbar {
@@ -14,11 +16,11 @@
 }
 
 .item {
-  color: var(--primaryColor);
+  color: var(--red);
 }
 
 .active {
-  color: var(--secondaryColor);
+  color: var(--green);
 }
 
 @media (--forMobile) {
@@ -29,6 +31,6 @@
 
 @media (--forDesktop) {
   .item {
-    font-size: 18px;
+    font-size: 20px;
   }
 }

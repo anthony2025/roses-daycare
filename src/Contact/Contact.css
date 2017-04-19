@@ -2,16 +2,14 @@
 @custom-media --forMobile (width <= 700px);
 
 :root {
-  --primaryColor: #FF8282;
-  --secondaryColor: #9CD3A5;
-  --blueAccent: #79B9D9;
-  --pinkAccent: #FEBCBD;
-  --redAccent: #FD8384;
-  --greenAccent: #9ED2A6;
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
 }
 
 .contact {
-  background-color: var(--blueAccent);
+  background-color: var(--blue);
   padding: 5%;
   display: flex;
   flex-wrap: wrap;

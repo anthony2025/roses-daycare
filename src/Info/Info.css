@@ -1,19 +1,16 @@
 :root {
-  --primaryColor: #FF8282;
-  --secondaryColor: #9CD3A5;
-  --blueAccent: #79B9D9;
-  --pinkAccent: #FEBCBD;
-  --redAccent: #FD8384;
-  --greenAccent: #9ED2A6;
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
 }
-
 .item {
   margin: 11% 0;
 }
 
 .subtitle {
   font-size: 16px;
-  border-bottom: 5px solid var(--pinkAccent);
+  border-bottom: 5px solid var(--pink);
 }
 
 .field {

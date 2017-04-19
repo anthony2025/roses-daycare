@@ -6,10 +6,10 @@ import Cards from 'src/Cards'
 
 export default props => (
   <div class={styles.home + ' ' + props.parentStyles}>
-    <Carousel speed={2000} style={{height: '350px'}}>
-      <img style={{maxHeight: '350px'}} src='/img/6img.jpg' />
-      <img style={{maxHeight: '350px'}} src='/img/4img.jpg' />
-      <img style={{maxHeight: '350px'}} src='/img/7img.jpg' />
+    <Carousel speed={2000} height={'400px'}>
+      <img src='/img/6img.jpg' />
+      <img src='/img/4img.jpg' />
+      <img src='/img/7img.jpg' />
     </Carousel>
     <Cards parentStyles={styles.cards} />
   </div>

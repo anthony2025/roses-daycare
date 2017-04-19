@@ -2,12 +2,10 @@
 @custom-media --forMobile (width <= 700px);
 
 :root {
-  --primaryColor: #FF8282;
-  --secondaryColor: #9CD3A5;
-  --blueAccent: #79B9D9;
-  --pinkAccent: #FEBCBD;
-  --redAccent: #FD8384;
-  --greenAccent: #9ED2A6;
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
   --cardGap: 2%;
 }
 
@@ -22,23 +20,23 @@
 }
 
 .card:nth-child(4n) {
-  background-color: var(--blueAccent);
-  border-color: var(--greenAccent);
+  background-color: var(--blue);
+  border-color: var(--green);
   }
 
 .card:nth-child(4n+1) {
-  background-color: var(--pinkAccent);
-  border-color: var(--blueAccent);
+  background-color: var(--pink);
+  border-color: var(--blue);
   }
 
 .card:nth-child(4n+2) {
-  background-color: var(--greenAccent);
-  border-color: var(--redAccent);
+  background-color: var(--green);
+  border-color: var(--red);
   }
 
 .card:nth-child(4n+3) {
-  background-color: var(--redAccent);
-  border-color: var(--pinkAccent);
+  background-color: var(--red);
+  border-color: var(--pink);
   }
 
 .subtitle {
@@ -53,7 +51,7 @@
 
 .readMore {
   background-color: white;
-  color: var(--redAccent);
+  color: var(--red);
   padding: 5px;
   font-size: 14px;
   text-align: right;

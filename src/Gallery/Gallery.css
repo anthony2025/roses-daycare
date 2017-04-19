@@ -1,0 +1,17 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
+
+@media (--forMobile) {
+
+}
+
+@media (--forDesktop) {
+
+}
