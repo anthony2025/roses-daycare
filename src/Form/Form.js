@@ -66,7 +66,7 @@ export default class Form extends Component {
                     value={this.state.question}
                     onChange={this.handleChange}/>
         </label>
-        <button class={styles.submit} onClick={this.handleSubmit}>Send</button>
+        <button class={styles.submit} onClick={this.handleSubmit}>SEND</button>
       </form>
     )
   }
