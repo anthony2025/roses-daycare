@@ -2,6 +2,7 @@
   "name": "roses-daycare",
   "version": "1.0.0",
   "description": "static responsive webpage made for Rose's Daycare LLC",
+  "homepage": "https://anthony2025.github.io/roses-daycare",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",

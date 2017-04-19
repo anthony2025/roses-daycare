@@ -4,21 +4,21 @@ import styles from './Navbar.css'
 
 export default props => (
   <div class={styles.navbar + ' ' + props.parentStyles}>
-    <NavLink to='/'
+    <NavLink exact to='/'
       class={styles.item}
-      activeClassName='active'>Home</NavLink>
+      activeClassName={styles.active}>Home</NavLink>
     <NavLink to='/about'
       class={styles.item}
-      activeClassName='active'>About</NavLink>
+      activeClassName={styles.active}>About</NavLink>
     <NavLink to='/gallery'
       class={styles.item}
-      activeClassName='active'>Gallery</NavLink>
+      activeClassName={styles.active}>Gallery</NavLink>
     <NavLink to='/blog'
       class={styles.item}
-      activeClassName='active'>Blog</NavLink>
+      activeClassName={styles.active}>Blog</NavLink>
     <NavLink to='/contact'
       class={styles.item}
-      activeClassName='active'>Contact</NavLink>
+      activeClassName={styles.active}>Contact</NavLink>
   </div>
 )
 
