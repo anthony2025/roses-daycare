@@ -1,0 +1,23 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+.title {
+  text-align: center;
+}
+
+.bigTitle {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.smallTitle {
+  font-size: 30px;
+  margin: 15px 0 0 0;
+}
+
+
+@media (--forMobile) {
+}
+
+@media (--forDesktop) {
+}

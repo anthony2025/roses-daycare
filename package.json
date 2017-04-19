@@ -12,7 +12,8 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
     "lint": "standard --verbose | snazzy",
-    "format": "standard --fix"
+    "format": "standard --fix",
+    "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
     "prop-types": "^15.5.8",

@@ -5,7 +5,8 @@ import styles from './Carousel.css'
 export default class Carousel extends Component {
   staticpropTypes = {
     speed: PropTypes.number, // in milliseconds, defaults to 2000
-    height: PropTypes.string.isRequired
+    height: PropTypes.string.isRequired,
+    parentStyle: PropTypes.string // css-modules class for layout styling from the parent
   }
 
   state = {
@@ -31,7 +32,8 @@ export default class Carousel extends Component {
 
   render () {
     return (
-      <div class={styles.carousel} style={{height: this.props.height}}>
+      <div class={styles.carousel + ' ' + this.props.parentStyle}
+          style={{height: this.props.height}}>
         {this.props.children[this.state.counter]}
       </div>
     )

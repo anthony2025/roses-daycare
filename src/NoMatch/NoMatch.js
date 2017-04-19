@@ -6,6 +6,6 @@ export default ({location}) => (
     <div class={styles.title}>
       No match for <code>{location.pathname}</code>
     </div>
-    <img src='/img/404.jpg' />
+    <img class={styles.image} src='/img/404.jpg' />
   </div>
 )
