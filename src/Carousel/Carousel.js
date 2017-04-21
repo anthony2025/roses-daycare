@@ -4,22 +4,32 @@ import styles from './Carousel.css'
 
 export default class Carousel extends Component {
   staticpropTypes = {
-    speed: PropTypes.number, // in milliseconds, defaults to 2000
+    speed: PropTypes.number,
     height: PropTypes.string.isRequired,
-    parentStyle: PropTypes.string // css-modules class for layout styling from the parent
+    className: PropTypes.string
   }
 
+  DEFAULT_SPEED = 3000
+
   state = {
-    counter: 0
+    counter: 0,
+    interval: false
   }
 
   componentWillUnmount () {
-    clearInterval(this.interval)
+    this.stopTimer()
   }
 
   componentDidMount () {
-    const DEFAULT_SPEED = 2000;
-    this.interval = setInterval(this.nextImage, this.props.speed || DEFAULT_SPEED)
+    this.startTimer()
+  }
+
+  stopTimer = () => {
+    clearInterval(this.state.interval)
+  }
+
+  startTimer = () => {
+    this.setState({interval: setInterval(this.nextImage, this.props.speed || DEFAULT_SPEED)})
   }
 
   nextImage = () => {
@@ -30,10 +40,17 @@ export default class Carousel extends Component {
       : this.setState({counter: ++id})
   }
 
+  handleClick = () => {
+    this.stopTimer()
+    this.nextImage()
+    this.startTimer()
+  }
+
   render () {
     return (
-      <div class={styles.carousel + ' ' + this.props.parentStyle}
-          style={{height: this.props.height}}>
+      <div className={styles.carousel + ' ' + this.props.className}
+          style={{height: this.props.height}}
+          onClick={this.handleClick}>
         {this.props.children[this.state.counter]}
       </div>
     )

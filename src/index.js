@@ -1,6 +1,6 @@
 import React from 'react'
 import {render} from 'react-dom'
-import './index.css'
+import './reset.css'
 
 import App from 'src/App'
 

@@ -8,10 +8,17 @@
   --green: #9ED2A6;
 }
 
-@media (--forMobile) {
+.gallery {
+  background-color: var(--green);
+  padding: 3%;
+}
 
+.title {
+  margin: 30px 0 40px 0;
+}
+
+@media (--forMobile) {
 }
 
 @media (--forDesktop) {
-
 }

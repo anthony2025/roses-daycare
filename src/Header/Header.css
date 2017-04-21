@@ -3,6 +3,7 @@
 
 .header {
   display: flex;
+  font-family: signika;
 }
 
 .title {

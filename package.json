@@ -2,32 +2,29 @@
   "name": "roses-daycare",
   "version": "1.0.0",
   "description": "static responsive webpage made for Rose's Daycare LLC",
-  "homepage": "https://anthony2025.github.io/roses-daycare",
+  "homepage": "https://roses-daycare.firebaseapp.com/",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
     "clean": "nwb clean-app",
     "start": "nwb serve-react-app",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
     "lint": "standard --verbose | snazzy",
     "format": "standard --fix",
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "babel-plugin-react-html-attrs": "^2.0.0",
     "directory-named-webpack-plugin": "^2.1.0",
-    "nwb": "0.15.x",
+    "nwb": "^0.15.6",
     "postcss-cssnext": "^2.10.0",
-    "snazzy": "latest",
-    "standard": "latest"
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
+    "firebase-tools": "^3.6.1"
   },
   "author": "Anthony Ascencio",
   "license": "CC0",

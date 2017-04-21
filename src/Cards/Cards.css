@@ -40,20 +40,21 @@
   }
 
 .subtitle {
+  font-family: signika;
   font-weight: bold;
   font-size: 20px;
 }
 
 .description {
-  font-size: 16px;
-  margin: 20px 0;
+  font-size: 15px;
+  margin: 10px 0 15px 0;
 }
 
 .readMore {
   background-color: white;
   color: var(--red);
   padding: 5px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: right;
 }
 

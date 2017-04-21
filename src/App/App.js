@@ -10,10 +10,10 @@ export default class App extends Component {
   render () {
     return (
       <BrowserRouter>
-        <div class={styles.app}>
-          <Header parentStyles={styles.header} />
+        <div className={styles.app}>
+          <Header className={styles.header} />
           <Content />
-          <Footer parentStyles={styles.footer} />
+          <Footer className={styles.footer} />
         </div>
       </BrowserRouter>
     )

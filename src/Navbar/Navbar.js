@@ -2,24 +2,22 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styles from './Navbar.css'
 
-export default props => (
-  <div class={styles.navbar + ' ' + props.parentStyles}>
+export default ({className}) => (
+  <div className={styles.navbar + ' ' + className}>
     <NavLink exact to='/'
-      class={styles.item}
+      className={styles.item}
       activeClassName={styles.active}>Home</NavLink>
     <NavLink to='/about'
-      class={styles.item}
+      className={styles.item}
       activeClassName={styles.active}>About</NavLink>
     <NavLink to='/gallery'
-      class={styles.item}
+      className={styles.item}
       activeClassName={styles.active}>Gallery</NavLink>
     <NavLink to='/blog'
-      class={styles.item}
+      className={styles.item}
       activeClassName={styles.active}>Blog</NavLink>
     <NavLink to='/contact'
-      class={styles.item}
+      className={styles.item}
       activeClassName={styles.active}>Contact</NavLink>
   </div>
 )
-
-// activeClassName='active'

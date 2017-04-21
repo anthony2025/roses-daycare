@@ -3,9 +3,9 @@ import styles from './NoMatch.css'
 
 export default ({location}) => (
   <div>
-    <div class={styles.title}>
+    <div className={styles.title}>
       No match for <code>{location.pathname}</code>
     </div>
-    <img class={styles.image} src='/img/404.jpg' />
+    <img className={styles.image} src='/img/404.jpg' />
   </div>
 )

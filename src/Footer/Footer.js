@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './Footer.css'
 
-export default props => (
-  <div class={styles.footer + ' ' + props.parentStyles}>
-    <span class={styles.text}>
+export default ({className}) => (
+  <div className={styles.footer + ' ' + className}>
+    <a href='https://github.com/anthony2025/roses-daycare' className={styles.text}>
       Rose's Day Care LLC, 2017
       <br />
-      made with ♥ by anthonyascencio.me
-    </span>
+      made with ♥ by Anthony Ascencio
+    </a>
   </div>
 )

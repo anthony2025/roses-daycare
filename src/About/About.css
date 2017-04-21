@@ -14,7 +14,7 @@
 }
 
 .title {
-  margin-top: 25px;
+  margin: 30px 0 40px 0;
 }
 
 .paragraph {
@@ -24,7 +24,7 @@
 
 @media (--forMobile) {
   .paragraph {
-    font-size: 16px;
+    font-size: 14px;
     margin: 30px 5% 30px 5%;
   }
 }

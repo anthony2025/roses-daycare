@@ -1,4 +1,7 @@
-Static responsive webpage made for Rose's Daycare LLC, you can see this live at: https://rosesdaycare.io/
+Static responsive webpage made for Rose's Daycare LLC, you can see this live at: https://roses-daycare.firebaseapp.com
 
-### To Do
- * change .wrapper to :host
+### TODO
+ * test .wrapper containers again
+ * improve directory structure
+ * it needs more signika
+ * compomentarize further

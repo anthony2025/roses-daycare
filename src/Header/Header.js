@@ -4,12 +4,12 @@ import styles from './Header.css'
 
 import Navbar from 'src/Navbar'
 
-export default props => (
-  <div class={styles.header + ' ' + props.parentStyles}>
-    <Link to='/' class={styles.title}>
-      <div class={styles.smallTitle}>Rose's</div>
-      <div class={styles.largeTitle}>Daycare</div>
+export default ({className}) => (
+  <div className={styles.header + ' ' + className}>
+    <Link to='/' className={styles.title}>
+      <div className={styles.smallTitle}>Rose's</div>
+      <div className={styles.largeTitle}>Daycare</div>
     </Link>
-    <Navbar parentStyles={styles.navbar} />
+    <Navbar className={styles.navbar} />
   </div>
 )

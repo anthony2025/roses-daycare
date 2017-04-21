@@ -45,28 +45,28 @@ export default class Blog extends Component {
 
   render () {
     return (
-      <form class={styles.form  + " " + this.props.parentStyles}>
-        <label class={styles.item}>Name
-          <input class={styles.field}
+      <form className={styles.form  + " " + this.props.className}>
+        <label className={styles.item}>Name
+          <input className={styles.field}
                 name="name"
                 type="text"
                 value={this.state.name}
                 onChange={this.handleChange} />
         </label>
-        <label class={styles.item}>Email
-          <input class={styles.field}
+        <label className={styles.item}>Email
+          <input className={styles.field}
                 name="email"
                 type="text"
                 value={this.state.email}
                 onChange={this.handleChange} />
         </label>
-        <label class={styles.item}>Question(s)
-          <textarea class={styles.field}
+        <label className={styles.item}>Question(s)
+          <textarea className={styles.field}
                     name="question"
                     value={this.state.question}
                     onChange={this.handleChange}/>
         </label>
-        <button class={styles.submit} onClick={this.handleSubmit}>SEND</button>
+        <button className={styles.submit} onClick={this.handleSubmit}>SEND</button>
       </form>
     )
   }
