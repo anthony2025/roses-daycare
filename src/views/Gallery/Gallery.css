@@ -1,0 +1,39 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image {
+  border: 5px solid white;
+  height: 150px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.image img {
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (--forMobile) {
+  .gallery {
+    flex-direction: column;
+  }
+  .image {
+    width: 90%;
+  }
+}
+
+@media (--forDesktop) {
+  .gallery {
+    flex-direction: row;
+  }
+  .image {
+    width: 23%;
+  }
+}

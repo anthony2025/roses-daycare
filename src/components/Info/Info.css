@@ -1,0 +1,22 @@
+:root {
+  --pink: #FEBCBD;
+}
+
+.item {
+  margin: 0 0 10% 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-family: signika;
+  border-bottom: 3px solid var(--pink);
+}
+
+.field {
+  font-size: 19px;
+  margin: 15px 0;
+}
+
+.social {
+  margin: 10px;
+}

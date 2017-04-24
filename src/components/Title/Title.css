@@ -1,0 +1,80 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+.title {
+  text-align: center;
+}
+
+.bigTitle {
+  font-weight: bold;
+  font-family: signika;
+}
+
+.smallTitle {
+  margin-top: 25px;
+  font-family: Avenir Next;
+}
+
+/*
+  Lines on sides of smallTitle
+  https://css-tricks.com/line-on-sides-headers/
+  Magic. Do not touch.
+*/
+
+:root {
+  --linesWidth: 1px;
+  --linesSpacing: 15px;
+}
+
+.line-container {
+  text-align: center;
+}
+
+.smallTitle {
+  display: inline-block;
+  position: relative;
+}
+
+.smallTitle:before,
+.smallTitle:after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  top: 0;
+  border-bottom: var(--linesWidth) solid white;
+}
+
+.smallTitle:before {
+  right: 100%;
+  margin-right: var(--linesSpacing);
+}
+.smallTitle:after {
+  left: 100%;
+  margin-left: var(--linesSpacing);
+}
+
+@media (--forMobile) {
+  .bigTitle {
+    font-size: 30px;
+  }
+  .smallTitle {
+    font-size: 14px;
+  }
+  .smallTitle:before,
+  .smallTitle:after {
+    width: 30px;
+  }
+}
+
+@media (--forDesktop) {
+  .bigTitle {
+    font-size: 40px;
+  }
+  .smallTitle {
+    font-size: 20px;
+  }
+  .smallTitle:before,
+  .smallTitle:after {
+    width: 45px;
+  }
+}

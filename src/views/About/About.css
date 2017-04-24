@@ -1,0 +1,25 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+.paragraph {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.peopleGallery {
+  margin: 40px 25px;
+}
+
+@media (--forMobile) {
+  .paragraph {
+    font-size: 14px;
+    margin: 0 5% 30px 5%;
+  }
+}
+
+@media (--forDesktop) {
+  .paragraph {
+    font-size: 20px;
+    margin: 0 22% 25px 22%;
+  }
+}

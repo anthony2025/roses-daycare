@@ -1,0 +1,59 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
+
+.peopleGallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.person {
+  text-align: center;
+  overflow: hidden;
+  margin: 10px 0;
+  line-height: 1.3;
+}
+
+.photo {
+  width: 17vw;
+  height: 17vw;
+  border: 3px solid white;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 12px;
+}
+
+.position {
+  font-size: 10px;
+}
+
+
+@media (--forMobile) {
+  .peopleGallery {
+    flex-direction: column;
+  }
+  .photo {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media (--forDesktop) {
+  .peopleGallery {
+    flex-direction: row;
+  }
+  .photo {
+    width: 15vw;
+    height: 15vw;
+  }
+}

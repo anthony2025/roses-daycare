@@ -1,0 +1,11 @@
+@custom-media --forDesktop (width >= 700px);
+@custom-media --forMobile (width <= 700px);
+
+
+@media (--forMobile) {
+
+}
+
+@media (--forDesktop) {
+
+}

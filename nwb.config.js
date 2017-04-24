@@ -8,7 +8,9 @@ module.exports = {
   type: 'react-app',
   webpack: {
     aliases: {
-      src: path.resolve('src')
+      components: path.resolve('src/components'),
+      containers: path.resolve('src/containers'),
+      views: path.resolve('src/views')
     },
     html: {
       mountId: 'root',
