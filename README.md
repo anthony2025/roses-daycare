@@ -1,7 +1,5 @@
 A responsive website made for Rose's Daycare LLC powered by React and CSS Modules.
 
-![Screenshot](/public/screenshot.png?raw=true)
-
 ## Live at
 [roses-daycare.firebaseapp.com](https://roses-daycare.firebaseapp.com)
 
@@ -11,7 +9,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
   * Webpack and Babel via nwb
   * Firebase for a serverless database and hosting
 
-<br />
+![Screenshot](/public/screenshot.png?raw=true)
 
 ## Prerequisites
 [Node](http://nodejs.org/) >= 6.x.x must be installed.
