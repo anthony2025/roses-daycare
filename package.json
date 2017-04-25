@@ -1,7 +1,7 @@
 {
   "name": "roses-daycare",
   "version": "1.0.0",
-  "description": "static responsive webpage made for Rose's Daycare LLC",
+  "description": "Responsive webpage made for Rose's Daycare LLC",
   "homepage": "https://roses-daycare.firebaseapp.com/",
   "private": true,
   "scripts": {
