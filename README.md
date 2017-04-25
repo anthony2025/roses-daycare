@@ -1,4 +1,4 @@
-An static responsive website made for Rose's Daycare LLC powered by React and CSS Modules.
+A responsive website made for Rose's Daycare LLC powered by React and CSS Modules.
 
 ## Live at
 [roses-daycare.firebaseapp.com](https://roses-daycare.firebaseapp.com)
