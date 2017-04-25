@@ -1,6 +1,6 @@
 A responsive website made for Rose's Daycare LLC powered by React and CSS Modules.
 
-![Screenshot](/public/screenshot.jpg?raw=true)
+![Screenshot](/public/screenshot.png?raw=true)
 
 ## Live at
 [roses-daycare.firebaseapp.com](https://roses-daycare.firebaseapp.com)
