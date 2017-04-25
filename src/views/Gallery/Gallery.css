@@ -1,6 +1,10 @@
 @custom-media --forDesktop (width >= 700px);
 @custom-media --forMobile (width <= 700px);
 
+.gallery {
+
+  text-align: center;
+}
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +24,7 @@
   object-fit: cover;
 }
 
+
 @media (--forMobile) {
   .gallery {
     flex-direction: column;
@@ -27,6 +32,10 @@
   .image {
     width: 90%;
   }
+  .preview {
+    display: none;
+  }
+
 }
 
 @media (--forDesktop) {
@@ -35,5 +44,13 @@
   }
   .image {
     width: 23%;
+  }
+  .preview {
+    width: 70%;
+    height: auto;
+    margin: 0 0 40px 0;
+  }
+  .image img {
+    cursor: pointer;
   }
 }

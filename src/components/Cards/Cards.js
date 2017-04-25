@@ -15,8 +15,8 @@ export default function Cards ({className}) {
         <div className={styles.description}>Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.</div>
         <div className={styles.readMore}>Read more</div>
       </Link>
-      <Link to='/blog' className={styles.card}>
-        <div className={styles.subtitle}>Blog</div>
+      <Link to='/news' className={styles.card}>
+        <div className={styles.subtitle}>News</div>
         <div className={styles.description}>Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.</div>
         <div className={styles.readMore}>Read more</div>
       </Link>

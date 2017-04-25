@@ -46,7 +46,7 @@
 }
 
 .description {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
   margin: 10px 0 15px 0;
 }
@@ -55,7 +55,7 @@
   background-color: white;
   color: var(--red);
   padding: 5px;
-  font-size: 12px;
+  font-size: 13px;
   text-align: right;
 }
 

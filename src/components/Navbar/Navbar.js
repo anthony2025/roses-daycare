@@ -14,9 +14,9 @@ export default function Navbar ({className}) {
       <NavLink to='/gallery'
         className={styles.item}
         activeClassName={styles.active}>Gallery</NavLink>
-      <NavLink to='/blog'
+      <NavLink to='/news'
         className={styles.item}
-        activeClassName={styles.active}>Blog</NavLink>
+        activeClassName={styles.active}>News</NavLink>
       <NavLink to='/contact'
         className={styles.item}
         activeClassName={styles.active}>Contact</NavLink>

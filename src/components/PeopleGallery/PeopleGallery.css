@@ -30,12 +30,19 @@
   filter: grayscale(75%);
 }
 
+.photo:hover {
+  transition: .75s;
+  filter: grayscale(25%);
+}
+
 .name {
   font-size: 12px;
+  font-family: signika;
 }
 
 .position {
   font-size: 10px;
+  font-weight: 200;
 }
 
 

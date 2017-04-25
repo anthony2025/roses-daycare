@@ -16,7 +16,7 @@ export default function Home ({className}) {
 
   return (
     <div className={styles.home + ' ' + className}>
-      <Carousel speed={1000} height='400px'>
+      <Carousel height='400px'>
         {urls.map((url, index) => <img src={url} key={index} />)}
       </Carousel>
       <Cards className={styles.cards} />

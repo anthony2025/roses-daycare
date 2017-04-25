@@ -29,7 +29,7 @@ export default class Carousel extends Component {
   }
 
   startTimer = () => {
-    this.setState({interval: setInterval(this.nextImage, this.props.speed || DEFAULT_SPEED)})
+    this.setState({interval: setInterval(this.nextImage, this.props.speed || this.DEFAULT_SPEED)})
   }
 
   nextImage = () => {
