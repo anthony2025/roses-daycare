@@ -2,7 +2,6 @@
 @custom-media --forMobile (width <= 700px);
 
 .gallery {
-
   text-align: center;
 }
 .images {
@@ -12,7 +11,8 @@
 }
 
 .image {
-  border: 5px solid white;
+  border: 3px solid white;
+  border-radius: 3%;
   height: 150px;
   margin: 5px;
   overflow: hidden;
@@ -22,8 +22,37 @@
   height: inherit;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
+/*
+Determine modal dimensions according to its children
+Only works if the children don't exceed viewport dimensions
+Im not sure why, probably due to the absolute positioning
+*/
+.modal {
+  position: fixed;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 3px solid white;
+  border-radius: 3%;
+  overflow-y: hidden;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.modal:focus {
+  outline: 0;
+}
+
+.preview {
+  height: auto;
+  max-height: 90vh;
+  max-width: 90vw;
+}
 
 @media (--forMobile) {
   .gallery {
@@ -32,10 +61,6 @@
   .image {
     width: 90%;
   }
-  .preview {
-    display: none;
-  }
-
 }
 
 @media (--forDesktop) {
@@ -44,11 +69,6 @@
   }
   .image {
     width: 23%;
-  }
-  .preview {
-    width: 70%;
-    height: auto;
-    margin: 0 0 40px 0;
   }
   .image img {
     cursor: pointer;
