@@ -28,7 +28,6 @@
 /*
 Determine modal dimensions according to its children
 Only works if the children don't exceed viewport dimensions
-Im not sure why, probably due to the absolute positioning
 */
 .modal {
   position: fixed;
@@ -39,17 +38,11 @@ Im not sure why, probably due to the absolute positioning
   transform: translate(-50%,-50%);
   border: 3px solid white;
   border-radius: 3%;
-  overflow-y: hidden;
-  max-height: 90%;
-  max-width: 90%;
-}
-
-.modal:focus {
   outline: 0;
 }
 
+/* making sure children don't exceed viewport dimensions */
 .preview {
-  height: auto;
   max-height: 90vh;
   max-width: 90vw;
 }
