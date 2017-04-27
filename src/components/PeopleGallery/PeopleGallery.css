@@ -35,6 +35,11 @@
   filter: grayscale(25%);
 }
 
+.photo:focus {
+  transition: .75s;
+  filter: grayscale(25%);
+}
+
 .name {
   font-size: 12px;
   font-family: signika;
