@@ -6,6 +6,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 ## Technologies
   * React and React-Router
   * CSS Modules and PostCSS-cssnext
+  * Layout purely in Flexbox
   * Webpack and Babel via nwb
   * Firebase for a serverless database and hosting
 
@@ -21,7 +22,14 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 - `$ yarn start` will run the app's development server at [http://localhost:3000](http://localhost:3000) with hot module reloading.
 
 ## Production
-- `yarn build` creates a production build by default.
+- `$ yarn build` creates a production build by default.
    To create a development build, set the `NODE_ENV` environment variable to `development` while running this command.
-- `yarn run clean` will delete built resources.
+- `$ yarn run clean` will delete built resources.
+
+## To Do
+  * CSS variables
+  * PropTypes, DefaultProps
+  * Componentize
+  * Flow
+  * Replace react-modal with a custom modal per react-modal-dialog specifications
 

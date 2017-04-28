@@ -1,8 +1,6 @@
-// $ yarn add -D postcss-cssnext
-// $ yard add -D directory-named-webpack-plugin
-
 const path = require('path')
-const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
+const directoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
+const cssnext = require('postcss-cssnext')
 
 module.exports = {
   type: 'react-app',
@@ -23,14 +21,14 @@ module.exports = {
       },
       postcss: {
         plugins: [
-          require('postcss-cssnext')
+          cssnext
         ]
       }
     },
     extra: {
       resolve: {
         plugins: [
-          new DirectoryNamedWebpackPlugin()
+          new directoryNamedWebpackPlugin()
         ]
       }
     }

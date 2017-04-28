@@ -9,7 +9,7 @@ export default function Header ({className}) {
     <div className={styles.header + ' ' + className}>
       <Link to='/' className={styles.title}>
         <div className={styles.smallTitle}>Rose's</div>
-        <div className={styles.largeTitle}>Daycare</div>
+        <div className={styles.bigTitle}>Daycare</div>
       </Link>
       <Navbar className={styles.navbar} />
     </div>
