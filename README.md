@@ -30,7 +30,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
   * Gallery flex bug
   * Refactor Home & Contact
   * PropTypes, DefaultProps
-  * Replace react-modal with a custom made modal following react-modal-dialog ideas
+  * Replace react-modal with a custom-made modal following [react-modal-dialog] ideas
 
 
 [react-modal-dialog]: https://github.com/qimingweng/react-modal-dialog

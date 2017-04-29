@@ -20,7 +20,7 @@ export default function ViewCard ({
   subtitle,
   className}) {
   return (
-    // Do not allow styles from the parent
+    // Do not allow styling from outside
     <div className={styles.viewCard}
       style={{backgroundColor: colors[bgColor]}}>
       <Title className={styles.title} title={title} subtitle={subtitle} />
