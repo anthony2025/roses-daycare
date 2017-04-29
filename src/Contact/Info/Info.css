@@ -1,0 +1,21 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.item {
+  margin: 0 0 10% 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-family: signika;
+  border-bottom: 3px solid pink;
+}
+
+.field {
+  font-size: 19px;
+  font-weight: 200;
+  margin: 15px 0;
+}
+
+.social {
+  margin: 10px;
+}

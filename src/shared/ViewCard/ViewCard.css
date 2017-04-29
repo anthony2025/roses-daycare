@@ -1,0 +1,10 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.viewCard {
+  padding: 3%;
+}
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}

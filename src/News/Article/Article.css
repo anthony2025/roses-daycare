@@ -1,0 +1,38 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.article {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  text-align: center;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  margin: 10px auto;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+
+.paragraph {
+  text-align: left;
+  line-height: 1.25;
+  font-weight: 200;
+}
+
+@media mobile {
+  .paragraph {
+    font-size: 14px;
+    margin: 0 5% 30px 5%;
+  }
+}
+
+@media desktop {
+  .paragraph {
+    font-size: 15px;
+    margin: 0 22% 25px 22%;
+  }
+}

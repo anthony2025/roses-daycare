@@ -1,0 +1,9 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.article {
+  margin-bottom: 60px;
+}
+
+.link {
+  font-size: 12px;
+}

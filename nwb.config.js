@@ -1,14 +1,13 @@
 const path = require('path')
 const directoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
-const cssnext = require('postcss-cssnext')
+const cssNext = require('postcss-cssnext')
+const cssModulesVariables = require('postcss-modules-values')
 
 module.exports = {
   type: 'react-app',
   webpack: {
     aliases: {
-      components: path.resolve('src/components'),
-      containers: path.resolve('src/containers'),
-      views: path.resolve('src/views')
+      src: path.resolve('src')
     },
     html: {
       mountId: 'root',
@@ -21,7 +20,8 @@ module.exports = {
       },
       postcss: {
         plugins: [
-          cssnext
+          cssModulesVariables,
+          cssNext
         ]
       }
     },

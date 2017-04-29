@@ -1,0 +1,30 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media mobile {
+  .contact {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .form,
+  .info {
+    width: 100%;
+  }
+}
+
+@media desktop {
+  .contact {
+    flex-direction: row;
+  }
+  .form {
+    width: 60%;
+  }
+  .info {
+    margin-top: 30px;
+    width: 40%;
+  }
+}

@@ -1,0 +1,57 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.image {
+  border: 3px solid white;
+  border-radius: 3%;
+  height: 200px;
+  width: 100%;
+  margin: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/*
+  Modal dimensions respond to its children
+  Only works if the children don't exceed viewport dimensions
+*/
+.modal {
+  position: fixed;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 3px solid white;
+  border-radius: 3%;
+  outline: 0;
+}
+
+/* making sure children don't exceed viewport dimensions */
+.preview {
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+@media mobile {
+  .gallery {
+    flex-direction: column;
+  }
+  .image {
+    width: 90%
+  }
+}
+
+@media desktop {
+  .gallery {
+    flex-direction: row;
+  }
+  .image {
+    max-width: 30%;
+  }
+}

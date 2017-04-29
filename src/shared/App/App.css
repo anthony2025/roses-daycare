@@ -1,0 +1,54 @@
+@value blue, red, pink, green, desktop, mobile from "src/variables.css";
+
+@font-face {
+  font-family: signika;
+  src: url(/font/signika-regular.otf);
+}
+
+@font-face {
+  font-family: signika;
+  font-weight: bold;
+  src: url(/font/signika-bold.otf);
+}
+
+body {
+  background: url("/img/background.png") no-repeat center/cover fixed;
+  font: 16px/1 'Avenir Next', 'Helvetica Neue', Helvetica;
+  color: white;
+}
+
+a,
+button {
+  transition: .3s;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 4% 4%;
+}
+
+.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header {
+  margin-top: 30px;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.footer {
+  margin-top: 40px;
+}

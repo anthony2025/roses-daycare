@@ -27,9 +27,9 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 - `$ yarn run clean` will delete built resources.
 
 ## To Do
-  * CSS variables
+  * Gallery flex bug
+  * Refactor Home & Contact
+  * Github corner
   * PropTypes, DefaultProps
-  * Componentize
-  * Flow
-  * Replace react-modal with a custom modal per react-modal-dialog specifications
 
+  * Replace react-modal with a custom made modal following react-modal-dialog ideas
