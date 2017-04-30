@@ -7,7 +7,6 @@ Footer.propTypes = {
 }
 
 export default function Footer ({className}) {
-
   const webpage = 'https://github.com/anthony2025/roses-daycare'
   return (
     <div className={styles.footer + ' ' + className}>

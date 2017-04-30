@@ -9,7 +9,7 @@ import Title from 'src/shared/Title'
 
 ViewCard.propTypes = {
   children: PropTypes.node.isRequired,
-  bgColor: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired
 }
 
 const colors = {

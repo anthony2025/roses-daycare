@@ -1,5 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Info.css'
+
+Info.propTypes = {
+  className: PropTypes.string
+}
 
 export default function Info ({className}) {
   return (

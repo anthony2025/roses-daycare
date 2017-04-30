@@ -13,7 +13,9 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 ![Screenshot](/public/screenshot.png?raw=true)
 
 ## To Do
-  * Refactor Home & Contact
+  * Refactor Contact in components
+  * Move assets into its own folder
+  * Refactor Home with image preload
   * Refactor ViewCard into a proper HOC
   * Gallery flex bug
   * Replace react-modal with a custom-made modal following [react-modal-dialog] ideas

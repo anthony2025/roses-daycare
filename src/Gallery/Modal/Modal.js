@@ -7,7 +7,7 @@ import ReactModal from 'react-modal'
 Modal.propTypes = {
   isModalOpen: PropTypes.bool,
   handleCloseModal: PropTypes.func,
-  previewImage: PropTypes.string,
+  previewImage: PropTypes.string
 }
 
 export default function Modal ({

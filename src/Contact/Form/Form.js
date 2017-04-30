@@ -1,7 +1,14 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import styles from './Form.css'
 
+import post from './postToFirebase'
+
 export default class Form extends Component {
+  static propTypes = {
+    className: PropTypes.string
+  }
+
   state = {
     name: '',
     email: '',
@@ -14,33 +21,16 @@ export default class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const response = {
-      name : this.state.name.trim(),
-      email : this.state.email.trim(),
-      question : this.state.question.trim()
-    }
-    if (!response.name || !response.email || !response.question) return
-    this.postToFirebase(response)
-  }
-
-  postToFirebase = async (response) => {
     const url = 'https://roses-daycare.firebaseio.com/contact.json'
-    try {
-      let data = await fetch(url, {
-        body: JSON.stringify(response),
-        headers: {'Content-Type': 'application/json'},
-        method: 'POST'
-      })
-      this.setState({
-        name: '',
-        email: '',
-        question: 'Thank you, we will get back to you soon :)'
-      })
+    const data = {
+      name: this.state.name.trim(),
+      email: this.state.email.trim(),
+      question: this.state.question.trim(),
+      date: new Date().toJSON().slice(0,10).replace(/-/g,'/')
     }
-    catch (e) {
-      this.setState({name: 'Oops... an error ocurred, could you please send us an email?'})
-      console.error(this.props.url, e)
-    }
+    // all fields required, if any is empty break
+    if (!data.name || !data.email || !data.question) return null
+    post(data, url)
   }
 
   render () {
