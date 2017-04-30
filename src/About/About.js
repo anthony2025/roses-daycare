@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'react'
+import PropTypes from 'prop-types'
 import styles from './About.css'
 
 import ViewCard from 'src/shared/ViewCard'
