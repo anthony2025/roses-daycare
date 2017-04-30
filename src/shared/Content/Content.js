@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import styles from './Content.css'
 import {Switch, Route} from 'react-router-dom'
 
@@ -10,6 +11,10 @@ import Contact from 'src/Contact'
 import NoMatch from 'src/NoMatch'
 
 export default class Content extends Component {
+  static propTypes = {
+    className: PropTypes.string
+  }
+
   render () {
     return (
       <div className={styles.content + ' ' + this.props.className}>

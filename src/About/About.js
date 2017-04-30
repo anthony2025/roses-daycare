@@ -7,23 +7,23 @@ import Avatar from './Avatar'
 const people = [
   {
     name: 'Shirley Sanchez',
-    subtitle:'Principal',
-    img:'img/shirley.jpg'
+    subtitle: 'Principal',
+    img: 'img/shirley.jpg'
   },
   {
-    name:'Fabiola Pacheco',
-    subtitle:'Lead Teacher',
-    img:'img/fabiola.jpg'
+    name: 'Fabiola Pacheco',
+    subtitle: 'Lead Teacher',
+    img: 'img/fabiola.jpg'
   },
   {
-    name:'Carolina Bau',
-    subtitle:'Teacher',
-    img:'img/carolina.jpg'
+    name: 'Carolina Bau',
+    subtitle: 'Teacher',
+    img: 'img/carolina.jpg'
   },
   {
-    name:'Anthony Ascencio',
-    subtitle:'Marketing',
-    img:'img/anthony.jpg'
+    name: 'Anthony Ascencio',
+    subtitle: 'Marketing',
+    img: 'img/anthony.jpg'
   }
 ]
 

@@ -2,9 +2,15 @@
 // to helps us maintain a consistent look inside Content
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './ViewCard.css'
 
 import Title from 'src/shared/Title'
+
+ViewCard.propTypes = {
+  children: PropTypes.node.isRequired,
+  bgColor: PropTypes.string.isRequired,
+}
 
 const colors = {
   blue: '#79B9D9',

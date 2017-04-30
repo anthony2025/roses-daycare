@@ -12,7 +12,11 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className={styles.app}>
-          <GithubCorner repository='https://github.com/anthony2025/roses-daycare' />
+          <GithubCorner
+            repository='https://github.com/anthony2025/roses-daycare'
+            bgColor='white'
+            mainColor='#F2787A'
+          />
           <Header className={styles.header} />
           <Content className={styles.content} />
           <Footer className={styles.footer} />

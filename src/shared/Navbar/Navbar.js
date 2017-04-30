@@ -1,7 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Navbar.css'
 import {NavLink} from 'react-router-dom'
 
+Navbar.propTypes = {
+  className: PropTypes.string
+}
 export default function Navbar ({className}) {
   return (
     <div className={styles.navbar + ' ' + className}>

@@ -1,5 +1,5 @@
 const path = require('path')
-const directoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 const cssNext = require('postcss-cssnext')
 const cssModulesVariables = require('postcss-modules-values')
 
@@ -28,7 +28,7 @@ module.exports = {
     extra: {
       resolve: {
         plugins: [
-          new directoryNamedWebpackPlugin()
+          new DirectoryNamedWebpackPlugin()
         ]
       }
     }

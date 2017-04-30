@@ -1,9 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Header.css'
 import {Link} from 'react-router-dom'
 
 import Logo from 'src/shared/Logo'
 import Navbar from 'src/shared/Navbar'
+
+Header.propTypes = {
+  className: PropTypes.string
+}
 
 export default function Header ({className}) {
   return (
