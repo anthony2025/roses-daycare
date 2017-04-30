@@ -1,8 +1,13 @@
 import React from 'react'
+import PropTypes from 'react'
 import styles from './About.css'
 
 import ViewCard from 'src/shared/ViewCard'
 import Avatar from './Avatar'
+
+About.propTypes = {
+  className: PropTypes.string
+}
 
 const people = [
   {
