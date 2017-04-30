@@ -12,6 +12,12 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 
 ![Screenshot](/public/screenshot.png?raw=true)
 
+## To Do
+  * Refactor Home & Contact
+  * Refactor ViewCard into a proper HOC
+  * Gallery flex bug
+  * Replace react-modal with a custom-made modal following [react-modal-dialog] ideas
+
 ## Prerequisites
 [Node] >= 6.x.x must be installed.
 <br />
@@ -25,12 +31,6 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 - `$ yarn build` creates a production build by default.
    To create a development build, set the `NODE_ENV` environment variable to `development` while running this command.
 - `$ yarn run clean` will delete built resources.
-
-## To Do
-  * Refactor Home & Contact
-  * Refactor ViewCard into a proper HOC
-  * Gallery flex bug
-  * Replace react-modal with a custom-made modal following [react-modal-dialog] ideas
 
 [react-modal-dialog]: https://github.com/qimingweng/react-modal-dialog
 [react]: https://github.com/facebook/react
