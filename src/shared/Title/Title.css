@@ -21,6 +21,12 @@
   font-weight: 200;
 }
 
+/* Hide lines when a subtitle is not provided */
+.smallTitle:empty {
+  display: none;
+}
+
+
 .line-container {
   text-align: center;
 }
