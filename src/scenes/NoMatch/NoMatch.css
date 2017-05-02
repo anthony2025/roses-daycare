@@ -1,0 +1,11 @@
+.noMatch {
+  background-color: white;
+}
+
+.title {
+  color: gray(20%);
+}
+
+.image {
+  width: 100%;
+}

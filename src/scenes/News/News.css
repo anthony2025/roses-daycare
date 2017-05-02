@@ -1,0 +1,13 @@
+@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+
+.news {
+  background-color: red;
+}
+
+.article {
+  margin-bottom: 60px;
+}
+
+.link {
+  font-size: 12px;
+}

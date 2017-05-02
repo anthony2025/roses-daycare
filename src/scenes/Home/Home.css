@@ -1,0 +1,38 @@
+@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+
+:root {
+  --cardsGap: 2%;
+}
+
+.home {
+  background-color: white;
+}
+
+.cards {
+  display: flex;
+  margin-top: 2%;
+}
+
+@media mobile {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    margin: var(--cardsGap) 0;
+  }
+}
+
+@media desktop {
+  .cards {
+    flex-direction: row;
+  }
+  .card {
+    margin: 0 calc(var(--cardsGap)/3);
+  }
+  .card:first-of-type {
+    margin-left: 0;
+  }
+  .card:last-of-type {
+    margin-right: 0;
+  }
+}

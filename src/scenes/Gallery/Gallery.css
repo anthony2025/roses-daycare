@@ -1,0 +1,39 @@
+@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+
+.gallery {
+  background-color: blue;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.image {
+  border: 3px solid white;
+  border-radius: 3%;
+  height: 200px;
+  width: 100%;
+  margin: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media mobile {
+  .gallery {
+    flex-direction: column;
+  }
+  .image {
+    width: 90%
+  }
+}
+
+@media desktop {
+  .gallery {
+    flex-direction: row;
+  }
+  .image {
+    max-width: 30%;
+  }
+}

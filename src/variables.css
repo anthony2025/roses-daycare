@@ -1,7 +1,0 @@
-@value blue: #79B9D9;
-@value pink: #FEBCBD;
-@value red: #FD8384;
-@value green: #9ED2A6;
-
-@value desktop: (min-width: 700px);
-@value mobile: (max-width: 700px);

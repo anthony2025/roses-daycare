@@ -1,0 +1,13 @@
+.carousel {
+  background-color: gray(10%);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  height: 450px;
+}
+
+.carousel img {
+  height: inherit;
+  object-fit: cover;
+  width: 100%;
+}

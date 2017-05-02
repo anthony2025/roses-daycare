@@ -1,0 +1,7 @@
+.mainSection {
+  border: 6px solid white;
+}
+
+.mainSection > div {
+  padding: 1%;
+}
