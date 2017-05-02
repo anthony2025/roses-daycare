@@ -35,7 +35,7 @@ export default class Form extends Component {
 
   render () {
     return (
-      <form className={styles.form  + " " + this.props.className}>
+      <form className={styles.form  + ' ' + this.props.className}>
         <label className={styles.item}>Name
           <input className={styles.field}
                 name="name"

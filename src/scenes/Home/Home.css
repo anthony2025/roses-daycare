@@ -5,7 +5,9 @@
 }
 
 .home {
+  border: 6px solid white;
   background-color: white;
+  padding: 1%;
 }
 
 .cards {

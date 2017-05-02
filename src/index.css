@@ -3,7 +3,7 @@
 .app {
   display: flex;
   flex-direction: column;
-  margin: 4% 4%;
+  padding: 4%;
 }
 
 .header {

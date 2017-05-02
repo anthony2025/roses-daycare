@@ -1,9 +1,11 @@
 import React from 'react'
 import {render} from 'react-dom'
+
 import styles from './index.css'
 import 'src/styles/global.css'
 
 import {BrowserRouter} from 'react-router-dom'
+
 import GithubCorner from 'src/core/GithubCorner'
 import Header from 'src/core/Header'
 import MainSection from 'src/core/MainSection'

@@ -2,8 +2,14 @@
 
 .contact {
   background-color: blue;
+  padding: 30px 3%;
+  border: 6px solid white;
   display: flex;
   flex-wrap: wrap;
+}
+
+.title {
+  width: 100%;
 }
 
 @media mobile {

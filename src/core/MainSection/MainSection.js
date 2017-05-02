@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './MainSection.css'
 
 import {Switch, Route} from 'react-router-dom'
+
 import Home from 'src/scenes/Home'
 import About from 'src/scenes/About'
 import Gallery from 'src/scenes/Gallery'
@@ -14,9 +14,11 @@ MainSection.propTypes = {
   className: PropTypes.string
 }
 
+// Because children control their own background color
+// allowing styling in the parent adds more complexity than it solves
 export default function MainSection ({className}) {
   return (
-    <div className={styles.mainSection + ' ' + className}>
+    <div className={className}>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />

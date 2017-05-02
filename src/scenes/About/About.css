@@ -2,6 +2,8 @@
 
 .about {
   background-color: red;
+  padding: 30px 1%;
+  border: 6px solid white;
 }
 
 .paragraph {
