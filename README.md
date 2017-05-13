@@ -5,12 +5,15 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 
 ## Technologies
   * [React] and [react-router]
-  * [CSS Modules][css-modules] and [PostCSS-cssnext][css-next]
+  * [CSS Modules][css-modules] and [PostCSS-cssnext][css-next] for locally scoped styles
   * Layout purely in Flexbox
-  * Webpack config powered by [nwb]
-  * [Firebase] for a serverless database and hosting
+  * Webpack config powered by an [nwb] boilerplate
+  * [Firebase] for a serverless database and single page hosting
 
 ![Screenshot](/assets/screenshot.png?raw=true)
+
+## Future
+  * Replace react-modal with a custom made modal following [react-modal-dialog] ideas
 
 ## Prerequisites
 [Node] >= 6.x.x must be installed.
@@ -25,9 +28,6 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 - `$ yarn build` creates a production build by default.
    To create a development build, set the `NODE_ENV` environment variable to `development` while running this command.
 - `$ yarn run clean` will delete built resources.
-
-## To Do
-  * Replace react-modal with a custom-made modal following [react-modal-dialog] ideas
 
 [react-modal-dialog]: https://github.com/qimingweng/react-modal-dialog
 [react]: https://github.com/facebook/react
