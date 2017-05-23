@@ -23,7 +23,7 @@
   .header {
     flex-direction: row;
   }
-  .logo {
-    margin-bottom: 0;
+  .navbar {
+    margin-left: 10px;
   }
 }

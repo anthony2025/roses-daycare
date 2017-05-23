@@ -7,10 +7,6 @@ module.exports = {
       src: path.resolve('src'),
       assets: path.resolve('assets')
     },
-    html: {
-      mountId: 'root',
-      favicon: 'public/favicon.ico'
-    },
     rules: {
       css: {
         modules: true,

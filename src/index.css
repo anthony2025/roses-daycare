@@ -3,11 +3,10 @@
 .app {
   display: flex;
   flex-direction: column;
-  padding: 4%;
+  padding: 3%;
 }
 
 .header {
-  margin-top: 25px;
 }
 
 .mainSection {
