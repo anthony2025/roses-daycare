@@ -1,4 +1,4 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
 
 .gallery {
   background-color: blue;

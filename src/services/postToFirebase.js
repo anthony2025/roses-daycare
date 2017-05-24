@@ -11,5 +11,6 @@ export default async (data, url) => {
   } catch (error) {
     alert('Oops... an error ocurred .-. could you please send us an email?')
     console.error(error)
+    throw error
   }
 }
