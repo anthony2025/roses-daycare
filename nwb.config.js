@@ -11,11 +11,6 @@ module.exports = {
       css: {
         modules: true,
         localIdentName: ('[local]--[hash:base64:5]')
-      },
-      postcss: {
-        plugins: [
-          require('postcss-modules-values')
-        ]
       }
     }
   }

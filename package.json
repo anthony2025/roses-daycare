@@ -22,7 +22,6 @@
   "devDependencies": {
     "firebase-tools": "^3.6.1",
     "nwb": "^0.15.6",
-    "postcss-modules-values": "^1.2.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2"
   },

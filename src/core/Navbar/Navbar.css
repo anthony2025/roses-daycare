@@ -1,4 +1,9 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
 
 .navbar {
   align-items: center;
@@ -9,20 +14,20 @@
 }
 
 .item {
-  color: red;
+  color: var(--red);
 }
 
 .active {
-  color: green;
+  color: var(--green);
 }
 
-@media mobile {
+@media (max-width: 700px) {
   .item {
     font-size: 16px;
   }
 }
 
-@media desktop {
+@media (min-width: 700px) {
   .item {
     font-size: 20px;
   }

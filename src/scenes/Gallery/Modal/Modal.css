@@ -1,5 +1,3 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
-
 /*
   Modal dimensions respond to its children
   Only works if the children don't exceed viewport dimensions

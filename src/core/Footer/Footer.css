@@ -1,4 +1,9 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
 
 .footer {
   text-align: right;
@@ -11,5 +16,5 @@
 .text:hover {
   font-weight: 300;
   transition: .5s;
-  color: red;
+  color: var(--red);
 }

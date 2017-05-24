@@ -1,7 +1,12 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
 
 .gallery {
-  background-color: blue;
+  background-color: var(--blue);
   padding: 40px 1%;
   border: 6px solid white;
 }
@@ -23,7 +28,7 @@
   cursor: pointer;
 }
 
-@media mobile {
+@media (max-width: 700px) {
   .gallery {
     flex-direction: column;
   }
@@ -32,7 +37,7 @@
   }
 }
 
-@media desktop {
+@media (min-width: 700px) {
   .gallery {
     flex-direction: row;
   }

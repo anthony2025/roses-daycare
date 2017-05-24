@@ -1,4 +1,9 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
+:root {
+  --blue: #79B9D9;
+  --pink: #FEBCBD;
+  --red: #FD8384;
+  --green: #9ED2A6;
+}
 
 .form {
   text-align: center;
@@ -25,7 +30,7 @@
 .field:focus,
 .send:focus {
   outline: none;
-  border: 2px solid pink;
+  border: 2px solid var(--pink);
 }
 
 .item textarea {

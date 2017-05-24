@@ -1,5 +1,3 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
-
 .app {
   display: flex;
   flex-direction: column;

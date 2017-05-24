@@ -1,5 +1,3 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
-
 :root {
   --cardsGap: 2%;
 }
@@ -15,7 +13,7 @@
   margin-top: 2%;
 }
 
-@media mobile {
+@media (max-width: 700px) {
   .cards {
     flex-direction: column;
   }
@@ -24,7 +22,7 @@
   }
 }
 
-@media desktop {
+@media (min-width: 700px) {
   .cards {
     flex-direction: row;
   }
