@@ -8,7 +8,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
   * [CSS Modules][css-modules] and native CSS variables for encapsulated styles
   * Layout purely in Flexbox
   * Webpack config powered by an [nwb] boilerplate
-  * [Firebase] for a serverless database and single page hosting
+  * [Firebase] for a serverless backend and single page hosting
 
 ![Screenshot](/assets/screenshot.png?raw=true)
 

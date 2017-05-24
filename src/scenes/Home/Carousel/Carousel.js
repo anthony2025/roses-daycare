@@ -15,7 +15,7 @@ export default class Carousel extends Component {
 
   state = {
     counter: 0,
-    interval: false
+    interval: null
   }
 
   componentWillUnmount () {this.stopTimer()}

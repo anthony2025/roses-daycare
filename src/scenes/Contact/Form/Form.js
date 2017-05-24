@@ -30,7 +30,7 @@ export default class Form extends Component {
     }
     // all fields required, if any is empty break
     if (!data.name || !data.email || !data.question) return null
-    post(data, url)
+    postToDB(data, url)
   }
 
   render () {

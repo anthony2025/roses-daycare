@@ -14,7 +14,7 @@ MainSection.propTypes = {
   className: PropTypes.string
 }
 
-// Because children control their own background color and padding
+// Note to self: Because children control their own background color and padding
 // allowing styling in the parent adds more complexity than it solves
 export default function MainSection ({className}) {
   return (
