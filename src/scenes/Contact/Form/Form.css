@@ -1,23 +1,29 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
+
+.form {
+  text-align: center;
+}
 
 .item {
-  display: block;
-  margin: 0 0 9% 0;
-  font-size: 17px;
+  text-align: left;
+}
+
+.label {
+  margin: 20px 0 7px 0;
+  font-size: inherit;
+  font-family: signika;
 }
 
 .field {
   display: block;
-  min-height: 30px;
-  width: 90%;
-  max-width: 400px;
-  margin-top: 6px;
-  font-size: 16px;
+  min-height: 32px;
+  width: 100%;
+  font-size: inherit;
   color: #666;
 }
 
 .field:focus,
-.submit:focus {
+.send:focus {
   outline: none;
   border: 2px solid pink;
 }
@@ -27,12 +33,12 @@
   resize: none;
 }
 
-.submit {
+.send {
   height: 35px;
   width: 120px;
+  margin: 20px 0;
   border: 2px solid white;
   color: white;
   text-align: center;
-  margin-bottom: 10%;
   font-family: signika;
 }

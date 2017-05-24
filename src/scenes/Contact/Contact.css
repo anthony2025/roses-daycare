@@ -1,37 +1,40 @@
-@value blue, red, pink, green, desktop, mobile from "src/styles/variables.css";
+@value blue, red, pink, green, desktop, mobile from "src/styles/constants.css";
 
 .contact {
   background-color: blue;
-  padding: 40px 3%;
   border: 6px solid white;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title {
+.form,
+.info {
   width: 100%;
+  margin-top: 20px;
 }
 
-@media mobile {
+/* Small */
+@media (max-width: 500px) {
   .contact {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-  .form,
-  .info {
-    width: 100%;
+    font-size: 15px;
+    padding: 40px 5%;
   }
 }
 
-@media desktop {
+/* Medium */
+@media (min-width: 500px) and (max-width: 950px) {
   .contact {
-    flex-direction: row;
-  }
-  .form {
-    width: 60%;
-  }
-  .info {
-    margin-top: 30px;
-    width: 40%;
+    font-size: 19px;
+    padding: 40px 20%;
   }
 }
+
+@media (min-width: 950px) {
+  .contact {
+    font-size: 20px;
+    padding: 40px 30%;
+  }
+}
+
+/* Large */

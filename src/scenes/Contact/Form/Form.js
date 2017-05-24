@@ -19,7 +19,7 @@ export default class Form extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  handleSubmit = (event) => {
+  handleSend = (event) => {
     event.preventDefault()
     const url = 'https://roses-daycare.firebaseio.com/contact.json'
     const data = {
@@ -36,27 +36,46 @@ export default class Form extends Component {
   render () {
     return (
       <form className={styles.form  + ' ' + this.props.className}>
-        <label className={styles.item}>Name
-          <input className={styles.field}
-                name="name"
-                type="text"
-                value={this.state.name}
-                onChange={this.handleChange} />
-        </label>
-        <label className={styles.item}>Email
-          <input className={styles.field}
-                name="email"
-                type="text"
-                value={this.state.email}
-                onChange={this.handleChange} />
-        </label>
-        <label className={styles.item}>Question(s)
-          <textarea className={styles.field}
-                    name="question"
-                    value={this.state.question}
-                    onChange={this.handleChange}/>
-        </label>
-        <button className={styles.submit} onClick={this.handleSubmit}>SEND</button>
+        <div className={styles.item}>
+          <div className={styles.label}>
+            Name
+          </div>
+          <input
+            className={styles.field}
+            name="name"
+            type="text"
+            value={this.state.name}
+            onChange={this.handleChange} />
+        </div>
+
+        <div className={styles.item}>
+          <div className={styles.label}>
+            Email
+          </div>
+          <input
+            className={styles.field}
+            name="email"
+            type="text"
+            value={this.state.email}
+            onChange={this.handleChange} />
+        </div>
+
+        <div className={styles.item}>
+          <div className={styles.label}>
+            Question
+          </div>
+          <textarea
+            className={styles.field}
+            name="question"
+            value={this.state.question}
+            onChange={this.handleChange}/>
+        </div>
+
+        <button
+          className={styles.send}
+          onClick={this.handleSend}>
+          SEND
+        </button>
       </form>
     )
   }
