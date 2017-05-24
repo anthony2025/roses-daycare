@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Contact.css'
 
-import Title from 'src/core/Title'
-import Form from './Form'
-import Info from './Info'
+import Title from 'src/core/Title/Title'
+import Form from './Form/Form'
+import Info from './Info/Info'
 
 export default function Contact ({className}) {
   return (

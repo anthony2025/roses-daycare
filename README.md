@@ -5,7 +5,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 
 ## Technologies
   * [React] and [react-router]
-  * [CSS Modules][css-modules] and [PostCSS-cssnext][css-next] for locally scoped styles
+  * [CSS Modules][css-modules] and [PostCSS constants][postcss-modules-values] for encapsulated styles
   * Layout purely in Flexbox
   * Webpack config powered by an [nwb] boilerplate
   * [Firebase] for a serverless database and single page hosting
@@ -35,6 +35,6 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
 [nwb]: https://github.com/insin/nwb
 [firebase]: https://firebase.google.com/docs/reference/rest/database/
 [css-modules]: https://github.com/css-modules/css-modules
-[css-next]: http://cssnext.io/
+[postcss-modules-values]: https://github.com/css-modules/postcss-modules-values
 [node]: http://nodejs.org/
 [yarn]: http://yarnpkg.com/

@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './About.css'
 
-import Title from 'src/core/Title'
-import Avatar from 'src/core/Avatar'
+import Title from 'src/core/Title/Title'
+import Avatar from 'src/core/Avatar/Avatar'
 
 const people = [
   {

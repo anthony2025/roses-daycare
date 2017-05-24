@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 import {Switch, Route} from 'react-router-dom'
 
-import Home from 'src/scenes/Home'
-import About from 'src/scenes/About'
-import Gallery from 'src/scenes/Gallery'
-import News from 'src/scenes/News'
-import Contact from 'src/scenes/Contact'
-import NoMatch from 'src/scenes/NoMatch'
+import Home from 'src/scenes/Home/Home'
+import About from 'src/scenes/About/About'
+import Gallery from 'src/scenes/Gallery/Gallery'
+import News from 'src/scenes/News/News'
+import Contact from 'src/scenes/Contact/Contact'
+import NoMatch from 'src/scenes/NoMatch/NoMatch'
 
 MainSection.propTypes = {
   className: PropTypes.string

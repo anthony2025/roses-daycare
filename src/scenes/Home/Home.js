@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Home.css'
 
-import Carousel from './Carousel'
-import Card from './Card'
+import Carousel from './Carousel/Carousel'
+import Card from './Card/Card'
 
 const cards = [
   {

@@ -20,10 +20,8 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "directory-named-webpack-plugin": "^2.1.0",
     "firebase-tools": "^3.6.1",
     "nwb": "^0.15.6",
-    "postcss-cssnext": "^2.10.0",
     "postcss-modules-values": "^1.2.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2"

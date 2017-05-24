@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './News.css'
 
-import Title from 'src/core/Title'
-import Article from './Article'
+import Title from 'src/core/Title/Title'
+import Article from './Article/Article'
 
 const articles = [
   {

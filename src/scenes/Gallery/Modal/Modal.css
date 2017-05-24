@@ -20,4 +20,5 @@
 .previewImage {
   max-height: 90vh;
   max-width: 90vw;
+  border-radius: 2%;
 }

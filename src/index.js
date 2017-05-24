@@ -6,10 +6,10 @@ import 'src/styles/global.css'
 
 import {BrowserRouter} from 'react-router-dom'
 
-import GithubCorner from 'src/core/GithubCorner'
-import Header from 'src/core/Header'
-import MainSection from 'src/core/MainSection'
-import Footer from 'src/core/Footer'
+import GithubCorner from 'src/core/GithubCorner/GithubCorner'
+import Header from 'src/core/Header/Header'
+import MainSection from 'src/core/MainSection/MainSection'
+import Footer from 'src/core/Footer/Footer'
 
 const App = () => {
   return (

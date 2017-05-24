@@ -14,15 +14,7 @@ module.exports = {
       },
       postcss: {
         plugins: [
-          require('postcss-modules-values'),
-          require('postcss-cssnext')
-        ]
-      }
-    },
-    extra: {
-      resolve: {
-        plugins: [
-          new (require('directory-named-webpack-plugin'))()
+          require('postcss-modules-values')
         ]
       }
     }

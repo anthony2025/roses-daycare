@@ -13,7 +13,7 @@
   max-width: 400px;
   margin-top: 6px;
   font-size: 16px;
-  color: gray(40%);
+  color: #666;
 }
 
 .field:focus,
