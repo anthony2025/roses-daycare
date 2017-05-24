@@ -2,7 +2,6 @@
 
 .news {
   background-color: red;
-  padding: 40px 1%;
   border: 6px solid white;
 }
 
@@ -12,4 +11,16 @@
 
 .link {
   font-size: 12px;
+}
+
+@media mobile {
+  .news {
+    padding: 40px 5%;
+  }
+}
+
+@media desktop {
+  .news {
+    padding: 40px 22%;
+  }
 }

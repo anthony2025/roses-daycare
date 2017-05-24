@@ -10,7 +10,7 @@
 }
 
 .image {
-  width: 50%;
+  width: 100%;
   height: auto;
   margin: 10px auto;
   border: 2px solid white;
@@ -26,13 +26,13 @@
 @media mobile {
   .paragraph {
     font-size: 14px;
-    margin: 0 5% 30px 5%;
+    margin-bottom: 30px;
   }
 }
 
 @media desktop {
   .paragraph {
     font-size: 15px;
-    margin: 0 22% 25px 22%;
+    margin-bottom: 25px;
   }
 }
