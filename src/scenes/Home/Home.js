@@ -8,12 +8,12 @@ import Card from './Card/Card'
 
 export default class Home extends Component {
   IMAGES = [
-    require('assets/stock/img1.jpg'),
-    require('assets/stock/img2.jpg'),
-    require('assets/stock/img3.jpg'),
-    require('assets/stock/img4.jpg'),
-    require('assets/stock/img5.jpg'),
-    require('assets/stock/img6.jpg')
+    'stock/img1.jpg',
+    'stock/img2.jpg',
+    'stock/img3.jpg',
+    'stock/img4.jpg',
+    'stock/img5.jpg',
+    'stock/img6.jpg'
   ]
 
   state = {
