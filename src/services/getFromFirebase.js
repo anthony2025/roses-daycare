@@ -1,13 +1,9 @@
 import checkServerResponse from './checkServerResponse'
 
-export default async (data, url) => {
-  try {
-    const response = await fetch(url)
-    checkServerResponse(response)
-    return response
-  } catch (error) {
-    alert('Oops... an error ocurred .-.')
-    console.error(error)
-    return error
-  }
+export default (url, callback) => {
+  return fetch(url)
+    .then(response => checkServerResponse(response))
+    .then(response => response.json())
+    .then(data => callback(data))
+    .catch(error => {throw error})
 }

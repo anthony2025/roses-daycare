@@ -10,7 +10,7 @@ A responsive website made for Rose's Daycare LLC powered by React and CSS Module
   * Webpack config powered by an [nwb] boilerplate
   * [Firebase] for a serverless backend and single page hosting
 
-![Screenshot](/assets/screenshot.png?raw=true)
+![Screenshot](/public/screenshot.png?raw=true)
 
 ## Future
   * Replace react-modal with a custom made modal following [react-modal-dialog] ideas

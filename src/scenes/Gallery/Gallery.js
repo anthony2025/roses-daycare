@@ -5,13 +5,13 @@ import Title from 'src/core/Title/Title'
 import Modal from './Modal/Modal'
 
 export default class Gallery extends Component {
-  images = [
-    require('assets/stock/img1.jpg'),
-    require('assets/stock/img2.jpg'),
-    require('assets/stock/img3.jpg'),
-    require('assets/stock/img4.jpg'),
-    require('assets/stock/img5.jpg'),
-    require('assets/stock/img6.jpg'),
+  IMAGES = [
+    '/stock/img1.jpg',
+    '/stock/img2.jpg',
+    '/stock/img3.jpg',
+    '/stock/img4.jpg',
+    '/stock/img5.jpg',
+    '/stock/img6.jpg',
   ]
 
   static propTypes = {
@@ -32,7 +32,7 @@ export default class Gallery extends Component {
         <Title title='Photos &amp; Videos' subtitle='COME PEEK INSIDE' />
 
         <div className={styles.images}>
-          {this.images.map((image) => (
+          {this.IMAGES.map((image) => (
             <img
               className={styles.image}
               key={image}
@@ -40,7 +40,8 @@ export default class Gallery extends Component {
               onClick={this.handleOpenModal}
             />
           ))}
-          {this.images.map((image) => (
+          {/* Duplicated just to test the layout with more images */}
+          {this.IMAGES.map((image) => (
             <img
               className={styles.image}
               key={image}

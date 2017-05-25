@@ -14,7 +14,7 @@ export default function NoMatch ({location}) {
       <div className={styles.title}>
         No match for <code>{location.pathname}</code>
       </div>
-      <img className={styles.image} src={require('assets/404.jpg')} />
+      <img className={styles.image} src={'404.jpg'} />
     </div>
   )
 }
