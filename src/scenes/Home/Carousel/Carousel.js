@@ -13,9 +13,13 @@ export default class Carousel extends Component {
     speed: 1000,
   }
 
+  constructor (props) {
+    super(props)
+    this.interval = null
+  }
+
   state = {
     counter: 0,
-    interval: null
   }
 
   componentWillUnmount () {this.stopTimer()}
