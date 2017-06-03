@@ -14,7 +14,6 @@
 }
 
 .text:hover {
-  font-weight: 300;
-  transition: .5s;
+  transition: 1s;
   color: var(--red);
 }

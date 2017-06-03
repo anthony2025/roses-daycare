@@ -1,11 +1,10 @@
 .app {
   display: flex;
   flex-direction: column;
-  padding: 3%;
+  padding: 30px;
 }
 
-.header {
-}
+.header {}
 
 .mainSection {
   margin-top: 30px;
@@ -13,4 +12,18 @@
 
 .footer {
   margin-top: 40px;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+  .app {
+    padding: 30px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .app {
+    padding: 10px;
+  }
 }
