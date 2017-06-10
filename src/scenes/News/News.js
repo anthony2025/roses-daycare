@@ -3,7 +3,7 @@ import styles from './News.css'
 
 import getContent from 'src/services/getFromFirebase'
 
-import Title from 'src/core/Title/Title'
+import Title from 'src/components/Title/Title'
 import Article from './Article/Article'
 
 export default class News extends Component {

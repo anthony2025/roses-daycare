@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Contact.css'
 
-import Title from 'src/core/Title/Title'
+import Title from 'src/components/Title/Title'
 import Form from './Form/Form'
 import Info from './Info/Info'
 

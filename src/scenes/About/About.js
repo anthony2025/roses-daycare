@@ -3,8 +3,8 @@ import styles from './About.css'
 
 import getContent from 'src/services/getFromFirebase'
 
-import Title from 'src/core/Title/Title'
-import Avatar from 'src/core/Avatar/Avatar'
+import Title from 'src/components/Title/Title'
+import Avatar from 'src/components/Avatar/Avatar'
 
 export default class About extends Component {
   state = {

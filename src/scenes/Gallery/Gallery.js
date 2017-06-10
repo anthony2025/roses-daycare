@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styles from './Gallery.css'
 
-import Title from 'src/core/Title/Title'
+import Title from 'src/components/Title/Title'
 import Modal from './Modal/Modal'
 
 export default class Gallery extends Component {

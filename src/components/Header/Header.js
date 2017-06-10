@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styles from './Header.css'
 import {Link} from 'react-router-dom'
 
-import Logo from 'src/core/Logo/Logo'
-import Navbar from 'src/core/Navbar/Navbar'
+import Logo from 'src/components/Logo/Logo'
+import Navbar from 'src/components/Navbar/Navbar'
 
 Header.propTypes = {
   className: PropTypes.string
