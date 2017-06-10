@@ -7,7 +7,6 @@ import Title from 'src/core/Title/Title'
 import Article from './Article/Article'
 
 export default class News extends Component {
-
   state = {
     articles: []
   }
