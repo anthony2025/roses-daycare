@@ -1,4 +1,4 @@
-export default function checkServerResponse (response) {
+export default function checkServerResponse(response) {
   if (response.ok) {
     console.log('no errors with the server response :)')
     return response

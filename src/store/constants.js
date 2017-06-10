@@ -1,5 +1,0 @@
-export const GREEN = '#999'
-export const RED = '#999'
-export const PINK = '#999'
-export const BLUE = '#999'
-export const REPOSITORY = 'https://github.com/anthony2025/roses-daycare'

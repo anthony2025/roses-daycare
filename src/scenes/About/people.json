@@ -1,0 +1,22 @@
+[
+  {
+    "img": "avatars/shirley.jpg",
+    "name": "Shirley Sanchez",
+    "subtitle": "Principal"
+  },
+  {
+    "img": "avatars/fabiola.jpg",
+    "name": "Fabiola Pacheco",
+    "subtitle": "Lead Teacher"
+  },
+  {
+    "img": "avatars/carolina.jpg",
+    "name": "Carolina Bau",
+    "subtitle": "Teacher"
+  },
+  {
+    "img": "avatars/anthony.jpg",
+    "name": "Anthony Ascencio",
+    "subtitle": "Marketing"
+  }
+]

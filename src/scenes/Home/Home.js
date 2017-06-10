@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import styles from './Home.css'
-
-import getContent from 'src/services/getFromFirebase'
+import data from './data.json'
 
 import Carousel from './Carousel/Carousel'
 import Card from './Card/Card'
@@ -21,11 +20,8 @@ export default class Home extends Component {
   }
 
   componentDidMount () {
-    const contentUrl = 'https://roses-daycare.firebaseio.com/data/pages.json'
-    getContent(contentUrl, (data) => {
-      this.setState({
-        pages: data
-      })
+    this.setState({
+      pages: data
     })
   }
 

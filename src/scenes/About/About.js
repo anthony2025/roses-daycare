@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import styles from './About.css'
 
-import getContent from 'src/services/getFromFirebase'
+import people from './people.json'
+import paragraphs from './paragraphs.json'
 
 import Title from 'src/components/Title/Title'
 import Avatar from 'src/components/Avatar/Avatar'
@@ -12,25 +13,17 @@ export default class About extends Component {
     paragraphs: []
   }
 
-  componentDidMount () {
-    const peopleUrl = 'https://roses-daycare.firebaseio.com/data/people.json'
-    const paragraphsUrl = 'https://roses-daycare.firebaseio.com/data/about.json'
-    getContent(peopleUrl, (data) => {
-      this.setState({
-        people: data
-      })
-    })
-    getContent(paragraphsUrl, (data) => {
-      this.setState({
-        paragraphs: Object.values(data)
-      })
+  componentDidMount() {
+    this.setState({
+      people: people,
+      paragraphs: paragraphs
     })
   }
 
-  render () {
+  render() {
     return (
       <div className={styles.about}>
-        <Title title='About Us' subtitle='OUR STORY' className={styles.title} />
+        <Title title="About Us" subtitle="OUR STORY" className={styles.title} />
         {this.state.paragraphs.map(paragraph =>
           <div className={styles.paragraph} key={paragraph}>{paragraph}</div>
         )}

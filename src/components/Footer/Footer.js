@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Footer.css'
 
-import {REPOSITORY} from 'src/store/constants'
+import {REPOSITORY} from 'src/utils/constants'
 
 Footer.propTypes = {
   className: PropTypes.string

@@ -1,4 +1,4 @@
-import checkServerResponse from './checkServerResponse'
+import checkServerResponse from 'src/utils/checkServerResponse'
 
 export default async (data, url) => {
   try {
