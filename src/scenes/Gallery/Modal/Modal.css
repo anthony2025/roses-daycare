@@ -1,5 +1,5 @@
 /*
-  Modal dimensions respond to its children
+  react-modal dimensions respond to its children
   Only works if the children don't exceed viewport dimensions
 */
 .modal {

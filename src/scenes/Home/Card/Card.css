@@ -50,3 +50,22 @@
   font-size: 13px;
   text-align: right;
 }
+
+@media (max-width: 700px) {
+  .card {
+    margin: var(--cardsGap) 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    margin: 0 calc(var(--cardsGap)/3);
+  }
+  .card:first-of-type {
+    margin-left: 0;
+  }
+  .card:last-of-type {
+    margin-right: 0;
+  }
+}
+

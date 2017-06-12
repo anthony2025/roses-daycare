@@ -15,7 +15,6 @@ export default function Modal ({
   handleCloseModal,
   previewImage}) {
   return (
-    // Do not allow styling from outside
     <ReactModal
       isOpen={isModalOpen}
       contentLabel='Modal'

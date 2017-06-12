@@ -5,6 +5,12 @@
   --green: #9ED2A6;
 }
 
+.info {
+  width: 100%;
+  margin-top: 20px;
+}
+
+
 .item {
   margin-bottom: 30px;
 }

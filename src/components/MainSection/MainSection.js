@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import {Switch, Route} from 'react-router-dom'
 
@@ -10,21 +9,17 @@ import News from 'src/scenes/News/News'
 import Contact from 'src/scenes/Contact/Contact'
 import NoMatch from 'src/scenes/NoMatch/NoMatch'
 
-MainSection.propTypes = {
-  className: PropTypes.string
-}
-
-// Note to self: Because children control their own background color and padding
-// allowing styling in the parent adds more complexity than it solves
-export default function MainSection ({className}) {
+// Note to self: Because of the theming limitations of css-modules
+// converting this into an HOC adds more complexity than it solves
+export default function MainSection() {
   return (
-    <div className={className}>
+    <div>
       <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/gallery' component={Gallery} />
-        <Route path='/news' component={News} />
-        <Route path='/contact' component={Contact} />
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/gallery" component={Gallery} />
+        <Route path="/news" component={News} />
+        <Route path="/contact" component={Contact} />
         <Route component={NoMatch} />
       </Switch>
     </div>

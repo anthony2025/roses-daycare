@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './News.css'
 
 import {connect} from 'react-redux'
@@ -8,6 +9,10 @@ import mapObject from 'src/utils/mapObject'
 import Title from 'src/components/Title/Title'
 import Article from './Article/Article'
 
+News.propTypes = {
+  articles: PropTypes.object.isRequired
+}
+
 function News(props) {
   return (
     <div className={styles.news}>
@@ -15,7 +20,6 @@ function News(props) {
       <div className={styles.articles}>
         {mapObject(props.articles, (key, article) =>
           <Article
-            className={styles.article}
             title={article.title}
             image={article.image}
             text={article.text}
@@ -24,7 +28,7 @@ function News(props) {
         )}
       </div>
       <div className={styles.link}>
-        Our own blog will be coming soon.
+        Our very own blog will be coming soon.
       </div>
     </div>
   )

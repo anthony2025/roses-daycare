@@ -1,41 +1,25 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import styles from './Form.css'
 
-import postToDB from 'src/services/postToFirebase'
-
 export default class Form extends Component {
-  static propTypes = {
-    className: PropTypes.string
-  }
-
   state = {
     name: '',
     email: '',
     question: ''
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  handleSend = (event) => {
+  handleSend = event => {
     event.preventDefault()
-    const url = 'https://roses-daycare.firebaseio.com/contact.json'
-    const data = {
-      name: this.state.name.trim(),
-      email: this.state.email.trim(),
-      question: this.state.question.trim(),
-      date: new Date().toJSON().slice(0,10)
-    }
-    // all fields required, if any is empty break
-    if (!data.name || !data.email || !data.question) return null
-    postToDB(data, url)
+    this.props.onSend(this.state)
   }
 
   render () {
     return (
-      <form className={styles.form  + ' ' + this.props.className}>
+      <form className={styles.form}>
         <div className={styles.item}>
           <div className={styles.label}>
             Name

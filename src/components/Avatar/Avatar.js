@@ -6,18 +6,17 @@ Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  className: PropTypes.string
 }
 
-export default function Avatar ({img, name, subtitle, className}) {
+export default function Avatar (props) {
   return (
-    <div className={styles.avatar + ' ' + className}>
-      <img className={styles.image} src={img} />
+    <div className={styles.avatar}>
+      <img className={styles.image} src={props.img} />
       <div className={styles.name}>
-        {name}
+        {props.name}
       </div>
       <div className={styles.subtitle}>
-        {subtitle}
+        {props.subtitle}
       </div>
     </div>
   )

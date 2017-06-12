@@ -23,6 +23,19 @@
   font-size: 80px;
 }
 
+@media (max-width: 700px) {
+  .logo {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 700px) {
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
+
 @keyframes restartAnimation {}
 
 @keyframes shake {

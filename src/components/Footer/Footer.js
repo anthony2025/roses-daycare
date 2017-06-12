@@ -1,16 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Footer.css'
 
-import {REPOSITORY} from 'src/utils/constants'
+import {REPOSITORY} from 'src/store/constants'
 
-Footer.propTypes = {
-  className: PropTypes.string
-}
-
-export default function Footer ({className}) {
+export default function Footer() {
   return (
-    <div className={styles.footer + ' ' + className}>
+    <div className={styles.footer}>
       <a href={REPOSITORY} className={styles.text}>
         Rose's Day Care LLC, 2017
         <br />

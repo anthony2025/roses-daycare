@@ -17,22 +17,10 @@
   .cards {
     flex-direction: column;
   }
-  .card {
-    margin: var(--cardsGap) 0;
-  }
 }
 
 @media (min-width: 700px) {
   .cards {
     flex-direction: row;
-  }
-  .card {
-    margin: 0 calc(var(--cardsGap)/3);
-  }
-  .card:first-of-type {
-    margin-left: 0;
-  }
-  .card:last-of-type {
-    margin-right: 0;
   }
 }

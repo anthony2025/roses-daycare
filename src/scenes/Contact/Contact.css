@@ -13,12 +13,6 @@
   align-items: center;
 }
 
-.form,
-.info {
-  width: 100%;
-  margin-top: 20px;
-}
-
 /* Small */
 @media (max-width: 500px) {
   .contact {

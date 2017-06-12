@@ -1,22 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Header.css'
+
 import {Link} from 'react-router-dom'
 
 import Logo from 'src/components/Logo/Logo'
 import Navbar from 'src/components/Navbar/Navbar'
 
-Header.propTypes = {
-  className: PropTypes.string
-}
-
-export default function Header ({className}) {
+export default function Header() {
   return (
-    <div className={styles.header + ' ' + className}>
-      <Link to='/' className={styles.title}>
-        <Logo className={styles.logo} />
+    <div className={styles.header}>
+      <Link to="/">
+        <Logo />
       </Link>
-      <Navbar className={styles.navbar} />
+      <Navbar />
     </div>
   )
 }

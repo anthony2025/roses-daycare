@@ -1,39 +1,45 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Navbar.css'
 
 import {NavLink} from 'react-router-dom'
 
-Navbar.propTypes = {
-  className: PropTypes.string
-}
-
-export default function Navbar ({className}) {
+export default function Navbar() {
   return (
-    <div className={styles.navbar + ' ' + className}>
-      <NavLink exact to='/'
+    <div className={styles.navbar}>
+      <NavLink
+        exact
+        to="/"
         className={styles.item}
-        activeClassName={styles.active}>
+        activeClassName={styles.activeItem}
+      >
         Home
       </NavLink>
-      <NavLink to='/about'
+      <NavLink
+        to="/about"
         className={styles.item}
-        activeClassName={styles.active}>
+        activeClassName={styles.activeItem}
+      >
         About
       </NavLink>
-      <NavLink to='/gallery'
+      <NavLink
+        to="/gallery"
         className={styles.item}
-        activeClassName={styles.active}>
+        activeClassName={styles.activeItem}
+      >
         Gallery
       </NavLink>
-      <NavLink to='/news'
+      <NavLink
+        to="/news"
         className={styles.item}
-        activeClassName={styles.active}>
+        activeClassName={styles.activeItem}
+      >
         News
       </NavLink>
-      <NavLink to='/contact'
+      <NavLink
+        to="/contact"
         className={styles.item}
-        activeClassName={styles.active}>
+        activeClassName={styles.activeItem}
+      >
         Contact
       </NavLink>
     </div>

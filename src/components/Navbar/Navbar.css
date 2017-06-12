@@ -11,13 +11,16 @@
   justify-content: space-around;
   background-color: white;
   font-family: signika;
+  margin-top: auto; /* pushes navbar to bottom of flex container */
+  height: 30px;
+  width: 100%;
 }
 
 .item {
   color: var(--red);
 }
 
-.active {
+.activeItem {
   color: var(--green);
 }
 
@@ -25,10 +28,16 @@
   .item {
     font-size: 16px;
   }
+  .navbar {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 700px) {
   .item {
     font-size: 20px;
+  }
+  .navbar {
+    margin-left: 10px;
   }
 }

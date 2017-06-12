@@ -8,11 +8,11 @@ NoMatch.propTypes = {
   })
 }
 
-export default function NoMatch ({location}) {
+export default function NoMatch (props) {
   return (
     <div className={styles.noMatch}>
       <div className={styles.title}>
-        No match for <code>{location.pathname}</code>
+        No match for <code>{props.location.pathname}</code>
       </div>
       <img className={styles.image} src={'404.jpg'} />
     </div>

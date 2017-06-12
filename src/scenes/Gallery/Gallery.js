@@ -1,33 +1,15 @@
 import React, {Component} from 'react'
 import styles from './Gallery.css'
 
+import IMAGES from 'src/content/images'
 import {generate as id} from 'shortid'
 
 import Title from 'src/components/Title/Title'
 import Modal from './Modal/Modal'
 
 export default class Gallery extends Component {
-  IMAGES = [
-    '/stock/img1.jpg',
-    '/stock/img2.jpg',
-    '/stock/img3.jpg',
-    '/stock/img4.jpg',
-    '/stock/img5.jpg',
-    '/stock/img6.jpg',
-    '/stock/img1.jpg',
-    '/stock/img2.jpg',
-    '/stock/img3.jpg',
-    '/stock/img4.jpg',
-    '/stock/img5.jpg',
-    '/stock/img6.jpg'
-  ]
-
-  static propTypes = {
-    // none
-  }
-
   state = {
-    previewImage: '/img/1img.jpg',
+    previewImage: IMAGES[0],
     isModalOpen: false
   }
 
@@ -41,7 +23,7 @@ export default class Gallery extends Component {
         <Title title="Photos &amp; Videos" subtitle="COME PEEK INSIDE" />
 
         <div className={styles.images}>
-          {this.IMAGES.map(image =>
+          {IMAGES.map(image =>
             <img
               className={styles.image}
               key={id()}

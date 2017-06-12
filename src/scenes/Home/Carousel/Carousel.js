@@ -5,8 +5,7 @@ import styles from './Carousel.css'
 export default class Carousel extends Component {
   static propTypes = {
     images: PropTypes.array.isRequired,
-    speed: PropTypes.number,
-    className: PropTypes.string
+    speed: PropTypes.number
   }
 
   static defaultProps = {
@@ -44,7 +43,7 @@ export default class Carousel extends Component {
 
   render () {
     return (
-      <div className={styles.carousel + ' ' + this.props.className}
+      <div className={styles.carousel}
           style={{height: this.props.height}}
           onClick={this.handleClick}>
         <img src={this.props.images[this.state.counter]} />

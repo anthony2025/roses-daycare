@@ -4,16 +4,15 @@ import styles from './Title.css'
 
 Title.propTypes = {
   title: PropTypes.string,
-  subtitle: PropTypes.string,
-  className: PropTypes.string
+  subtitle: PropTypes.string
 }
 
-export default function Title ({title, subtitle, className}) {
+export default function Title (props) {
   return (
-    <div className={styles.title + ' ' + className}>
-      <div className={styles.bigTitle}>{title}</div>
+    <div className={styles.title}>
+      <div className={styles.bigTitle}>{props.title}</div>
       <div className={styles.lineContainer}>
-        <div className={styles.smallTitle}>{subtitle}</div>
+        <div className={styles.smallTitle}>{props.subtitle}</div>
       </div>
     </div>
   )

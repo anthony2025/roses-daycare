@@ -5,11 +5,19 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 import rootReducer from './reducers'
+import {fetchContent} from './actions'
+import {
+  get as loadFromCache,
+  post as saveToCache
+} from 'src/services/localStorage'
 
-const configureStore = () =>
-  createStore(
+export default () => {
+  let store = createStore(
     rootReducer,
+    loadFromCache(),
     composeWithDevTools(applyMiddleware(thunk), applyMiddleware(logger))
   )
-
-export default configureStore
+  store.subscribe(() => saveToCache(store.getState()))
+  store.dispatch(fetchContent)
+  return store
+}

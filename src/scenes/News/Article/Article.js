@@ -5,20 +5,15 @@ import styles from './Article.css'
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  className: PropTypes.string
+  text: PropTypes.string.isRequired
 }
 
-export default function Article ({
-  title,
-  image,
-  text,
-  className}) {
+export default function Article (props) {
   return (
-    <div className={styles.article + ' ' + className}>
-      <div className={styles.title}>{title}</div>
-      <img className={styles.image} src={image} />
-      <div className={styles.paragraph}>{text}</div>
+    <div className={styles.article}>
+      <div className={styles.title}>{props.title}</div>
+      <img className={styles.image} src={props.image} />
+      <div className={styles.paragraph}>{props.text}</div>
     </div>
   )
 }

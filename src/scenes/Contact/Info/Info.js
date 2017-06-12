@@ -1,14 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Info.css'
 
 Info.propTypes = {
-  info: PropTypes.any
+  info: PropTypes.object.isRequired,
 }
 
 export default function Info(props) {
   return (
-    <div className={styles.info + ' ' + props.className}>
+    <div className={styles.info}>
       <div className={styles.item}>
         <div className={styles.subtitle}>EMAIL</div>
         <div className={styles.field}>{props.info.email}</div>

@@ -10,7 +10,7 @@ module.exports = {
     rules: {
       css: {
         modules: true,
-        localIdentName: ('[local]--[hash:base64:5]')
+        localIdentName: '[local]--[hash:base64:5]'
       }
     }
   }

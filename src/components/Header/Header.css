@@ -1,27 +1,16 @@
 .header {
   display: flex;
-}
-
-.navbar {
-  margin-top: auto; /* pushes navbar to bottom of flex container */
-  height: 30px;
-  width: 100%;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
   }
-  .logo {
-    margin-bottom: 25px;
-  }
 }
 
 @media (min-width: 700px) {
   .header {
     flex-direction: row;
-  }
-  .navbar {
-    margin-left: 10px;
   }
 }

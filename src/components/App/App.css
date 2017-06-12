@@ -4,16 +4,6 @@
   padding: 30px;
 }
 
-.header {}
-
-.mainSection {
-  margin-top: 30px;
-}
-
-.footer {
-  margin-top: 40px;
-}
-
 /* DESKTOP */
 @media (min-width: 700px) {
   .app {
