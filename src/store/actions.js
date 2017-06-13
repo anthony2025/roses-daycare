@@ -1,5 +1,5 @@
 import {get as getFromDatabase} from 'src/services/database'
-import {DATABASE_URL} from 'src/store/constants'
+import {DATABASE_URL} from 'src/utils/constants'
 
 export const FETCH_CONTENT = 'FETCH_CONTENT'
 

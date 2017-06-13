@@ -1,22 +1,26 @@
 [
   {
-    "link": "/about",
+    "path": "/about",
     "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "About Us"
+    "title": "About Us",
+    "shortTitle": "About"
   },
   {
-    "link": "/gallery",
+    "path": "/gallery",
     "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "Gallery"
+    "title": "Gallery",
+    "shortTitle": "Gallery"
   },
   {
-    "link": "/news",
+    "path": "/news",
     "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "News"
+    "title": "News",
+    "shortTitle": "News"
   },
   {
-    "link": "/contact",
+    "path": "/contact",
     "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "shortTitle": "Contact"
   }
 ]

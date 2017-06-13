@@ -10,21 +10,18 @@ Modal.propTypes = {
   previewImage: PropTypes.string
 }
 
-export default function Modal ({
-  isModalOpen,
-  handleCloseModal,
-  previewImage}) {
+export default function Modal (props) {
   return (
     <ReactModal
-      isOpen={isModalOpen}
+      isOpen={props.isModalOpen}
       contentLabel='Modal'
-      onRequestClose={handleCloseModal}
+      onRequestClose={props.handleCloseModal}
       className={styles.modal}
     >
       <img
         className={styles.previewImage}
-        onClick={handleCloseModal}
-        src={previewImage}
+        onClick={props.handleCloseModal}
+        src={props.previewImage}
       />
     </ReactModal>
   )

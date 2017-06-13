@@ -1,47 +1,64 @@
 import React from 'react'
-import styles from './Navbar.css'
+import styled from 'styled-components'
+
+import PAGES from 'src/content/pages.json'
+import {RED, GREEN} from 'src/styling/constants'
 
 import {NavLink} from 'react-router-dom'
 
+const PAGES_WITH_HOME = [
+  {
+    exact: true,
+    path: '/',
+    title: 'Home',
+    shortTitle: 'Home'
+  },
+  ...PAGES
+]
+
+const Wrapper = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    font-family: signika;
+    margin-top: auto; /* pushes navbar to bottom of flex container */
+    height: 30px;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      margin-left: 0;
+    }
+    @media (min-width: 700px) {
+      margin-left: 10px;
+    }
+`
+
+const Item = styled(NavLink)`
+    color: ${RED};
+    &.${'active'} {color: ${GREEN};}
+
+    @media (max-width: 700px) {
+      font-size: 16px;
+    }
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
+`
+
 export default function Navbar() {
   return (
-    <div className={styles.navbar}>
-      <NavLink
-        exact
-        to="/"
-        className={styles.item}
-        activeClassName={styles.activeItem}
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/about"
-        className={styles.item}
-        activeClassName={styles.activeItem}
-      >
-        About
-      </NavLink>
-      <NavLink
-        to="/gallery"
-        className={styles.item}
-        activeClassName={styles.activeItem}
-      >
-        Gallery
-      </NavLink>
-      <NavLink
-        to="/news"
-        className={styles.item}
-        activeClassName={styles.activeItem}
-      >
-        News
-      </NavLink>
-      <NavLink
-        to="/contact"
-        className={styles.item}
-        activeClassName={styles.activeItem}
-      >
-        Contact
-      </NavLink>
-    </div>
+    <Wrapper>
+      {PAGES_WITH_HOME.map(page =>
+        <Item
+          exact={page.exact}
+          to={page.path}
+          key={page.title}
+          activeClassName='active'
+        >
+          {page.shortTitle}
+        </Item>
+      )}
+    </Wrapper>
   )
 }

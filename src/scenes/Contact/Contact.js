@@ -10,7 +10,7 @@ import Form from './Form/Form'
 import Info from './Info/Info'
 
 import {post as postToDatabase} from 'src/services/database'
-import {DATABASE_URL} from 'src/store/constants'
+import {DATABASE_URL} from 'src/utils/constants'
 
 Contact.propTypes = {
   info: PropTypes.object.isRequired

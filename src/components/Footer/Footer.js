@@ -1,16 +1,31 @@
 import React from 'react'
-import styles from './Footer.css'
+import styled from 'styled-components'
 
-import {REPOSITORY} from 'src/store/constants'
+import {REPOSITORY} from 'src/utils/constants'
+import {GREEN} from 'src/styling/constants'
+
+const Wrapper = styled.div`
+    text-align: right;
+    margin-top: 40px;
+`
+
+const Text = styled.a`
+    font-size: 12px;
+
+    &:hover {
+      transition: 1s;
+      color: ${GREEN};
+    }
+`
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
-      <a href={REPOSITORY} className={styles.text}>
+    <Wrapper>
+      <Text href={REPOSITORY} >
         Rose's Day Care LLC, 2017
         <br />
         made with ♥ by Anthony Ascencio
-      </a>
-    </div>
+      </Text>
+    </Wrapper>
   )
 }

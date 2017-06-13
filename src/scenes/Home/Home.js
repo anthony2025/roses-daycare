@@ -13,12 +13,12 @@ export default function Home() {
       <Carousel images={IMAGES} />
 
       <div className={styles.cards}>
-        {PAGES.map(card =>
+        {PAGES.map(page =>
           <Card
-            key={card.title}
-            title={card.title}
-            text={card.text}
-            link={card.link}
+            key={page.title}
+            title={page.title}
+            text={page.text}
+            link={page.path}
           />
         )}
       </div>

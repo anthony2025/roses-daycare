@@ -1,19 +1,51 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Title.css'
+import styled from 'styled-components'
+
+import WithHorizontalLines from 'src/styling/WithHorizontalLines'
 
 Title.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string
 }
 
-export default function Title (props) {
+const Wrapper = styled.div`
+    text-align: center;
+    margin-bottom: 40px;
+`
+
+const BigTitle = styled.div`
+    font-weight: bold;
+    font-family: signika;
+
+    @media (max-width: 700px) {
+      font-size: 30px;
+    }
+    @media (min-width: 700px) {
+      font-size: 40px;
+    }
+`
+
+const SmallTitle = styled.div`
+    margin-top: 20px;
+    font-family: Open Sans;
+    font-weight: 200;
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+    }
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
+`
+
+export default function Title(props) {
   return (
-    <div className={styles.title}>
-      <div className={styles.bigTitle}>{props.title}</div>
-      <div className={styles.lineContainer}>
-        <div className={styles.smallTitle}>{props.subtitle}</div>
-      </div>
-    </div>
+    <Wrapper>
+      <BigTitle>{props.title}</BigTitle>
+      <WithHorizontalLines>
+        <SmallTitle>{props.subtitle}</SmallTitle>
+      </WithHorizontalLines>
+    </Wrapper>
   )
 }
