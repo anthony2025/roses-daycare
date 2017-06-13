@@ -1,18 +1,28 @@
 import React from 'react'
-import styles from './Header.css'
+import styled from 'styled-components'
 
 import {Link} from 'react-router-dom'
 
 import Logo from 'src/components/Logo/Logo'
 import Navbar from 'src/components/Navbar/Navbar'
 
-export default function Header() {
-  return (
-    <div className={styles.header}>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <Navbar />
-    </div>
-  )
-}
+const Header = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
+`
+
+export default () =>
+  <Header >
+    <Link to="/">
+      <Logo />
+    </Link>
+    <Navbar />
+  </Header>
+
