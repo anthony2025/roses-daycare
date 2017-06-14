@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Contact.css'
+import styled from 'styled-components'
 
 import {connect} from 'react-redux'
 import {getContactInfo} from 'src/store/selectors'
@@ -30,17 +30,37 @@ const handleSend = formData => {
   }
 }
 
+const Wrapper = styled.div`
+    background-color: ${props => props.theme.blue};
+    border: 6px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 500px) {
+      font-size: 15px;
+      padding: 40px 5%;
+    }
+    @media (min-width: 500px) and (max-width: 950px) {
+      font-size: 19px;
+      padding: 40px 20%;
+    }
+    @media (min-width: 950px) {
+      font-size: 20px;
+      padding: 40px 30%;
+    }
+`
+
 function Contact(props) {
   return (
-    <div className={styles.contact}>
+    <Wrapper>
       <Title
         title="Contact Us"
         subtitle="ASK US A QUESTION"
-        className={styles.title}
       />
-      <Info className={styles.info} info={props.info} />
-      <Form className={styles.form} onSend={handleSend} />
-    </div>
+      <Info info={props.info} />
+      <Form onSend={handleSend} />
+    </Wrapper>
   )
 }
 

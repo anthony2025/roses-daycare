@@ -1,34 +1,55 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Info.css'
+import styled from 'styled-components'
 
 Info.propTypes = {
-  info: PropTypes.object.isRequired,
+  info: PropTypes.object.isRequired
 }
+
+const Wrapper = styled.div`
+    width: 100%;
+    margin-top: 20px;
+`
+
+const Item = styled.div`
+    margin-bottom: 30px;
+`
+
+const Subtitle = styled.div`
+    font-size: inherit;
+    font-family: signika;
+    border-bottom: 3px solid var(--pink);
+`
+
+const Field = styled.div`
+    font-size: inherit;
+    font-weight: 200;
+    margin-top: 10px;
+`
 
 export default function Info(props) {
   return (
-    <div className={styles.info}>
-      <div className={styles.item}>
-        <div className={styles.subtitle}>EMAIL</div>
-        <div className={styles.field}>{props.info.email}</div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.subtitle}>PHONE</div>
-        <div className={styles.field}>{props.info.phone}</div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.subtitle}>ADDRESS</div>
-        <div className={styles.field}>
+    <Wrapper>
+      <Item>
+        <Subtitle>EMAIL</Subtitle>
+        <Field>{props.info.email}</Field>
+      </Item>
+      <Item>
+        <Subtitle>PHONE</Subtitle>
+        <Field>{props.info.phone}</Field>
+      </Item>
+      <Item>
+        <Subtitle>ADDRESS</Subtitle>
+        <Field>
           {props.info.address1}
           <br />
           {props.info.address2}
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.subtitle}>FACEBOOK</div>
-        <div className={styles.field}>{props.info.facebook}</div>
-      </div>
-    </div>
+        </Field>
+      </Item>
+      <Item>
+        <Subtitle>FACEBOOK</Subtitle>
+        <Field>{props.info.facebook}</Field>
+      </Item>
+    </Wrapper>
   )
 }

@@ -1,6 +1,19 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types';
-import styles from './Carousel.css'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    height: 450px;
+`
+
+const Image = styled.img`
+    height: inherit; /* this centers the image in its container, somehow */
+    object-fit: cover;
+    width: 100%;
+`
 
 export default class Carousel extends Component {
   static propTypes = {
@@ -9,28 +22,33 @@ export default class Carousel extends Component {
   }
 
   static defaultProps = {
-    speed: 1000,
+    speed: 1000
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.interval = null
   }
 
   state = {
-    counter: 0,
+    counter: 0
   }
 
-  componentWillUnmount () {this.stopTimer()}
-  componentDidMount () {this.startTimer()}
+  componentWillUnmount() {
+    this.stopTimer()
+  }
+  componentDidMount() {
+    this.startTimer()
+  }
 
   stopTimer = () => clearInterval(this.state.interval)
-  startTimer = () => this.setState({interval: setInterval(this.nextImage, this.props.speed)})
+  startTimer = () =>
+    this.setState({interval: setInterval(this.nextImage, this.props.speed)})
 
   nextImage = () => {
     let id = this.state.counter
     const max = this.props.images.length - 1
-    ;(id >= max || id < 0)
+    id >= max || id < 0
       ? this.setState({counter: 0})
       : this.setState({counter: ++id})
   }
@@ -41,13 +59,11 @@ export default class Carousel extends Component {
     this.startTimer()
   }
 
-  render () {
+  render() {
     return (
-      <div className={styles.carousel}
-          style={{height: this.props.height}}
-          onClick={this.handleClick}>
-        <img src={this.props.images[this.state.counter]} />
-      </div>
+      <Wrapper onClick={this.handleClick}>
+        <Image src={this.props.images[this.state.counter]} />
+      </Wrapper>
     )
   }
 }

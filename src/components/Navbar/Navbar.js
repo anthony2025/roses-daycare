@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import PAGES from 'src/content/pages.json'
-import {RED, GREEN} from 'src/styling/constants'
 
 import {NavLink} from 'react-router-dom'
 
@@ -35,8 +34,8 @@ const Wrapper = styled.div`
 `
 
 const Item = styled(NavLink)`
-    color: ${RED};
-    &.${'active'} {color: ${GREEN};}
+    color: ${props => props.theme.red};
+    &.${'active'} {color: ${props => props.theme.green};}
 
     @media (max-width: 700px) {
       font-size: 16px;

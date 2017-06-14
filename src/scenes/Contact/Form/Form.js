@@ -1,5 +1,58 @@
 import React, {Component} from 'react'
-import styles from './Form.css'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+`
+
+const Item = styled.div`
+    text-align: left;
+`
+
+const Label = styled.div`
+    margin: 20px 0 7px 0;
+    font-family: signika;
+`
+
+const Field = styled.input`
+    display: block;
+    min-height: 32px;
+    width: 100%;
+    font-size: inherit;
+    color: #666;
+
+    &:focus {
+      outline: none;
+      border: 2px solid ${props => props.theme.pink};
+    }
+`
+
+const Textarea = styled.textarea`
+    display: block;
+    min-height: 32px;
+    width: 100%;
+    font-size: inherit;
+    color: #666;
+    height: 150px;
+    resize: none;
+`
+
+const SendButton = styled.button`
+    height: 35px;
+    width: 120px;
+    margin: 20px 0;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    font-family: signika;
+
+    &:focus {
+      outline: none;
+      border: 2px solid ${props => props.theme.pink};
+    }
+`
 
 export default class Form extends Component {
   state = {
@@ -19,48 +72,44 @@ export default class Form extends Component {
 
   render () {
     return (
-      <form className={styles.form}>
-        <div className={styles.item}>
-          <div className={styles.label}>
+      <Wrapper>
+        <Item>
+          <Label>
             Name
-          </div>
-          <input
-            className={styles.field}
+          </Label>
+          <Field
             name="name"
             type="text"
             value={this.state.name}
             onChange={this.handleChange} />
-        </div>
+        </Item>
 
-        <div className={styles.item}>
-          <div className={styles.label}>
+        <Item>
+          <Label>
             Email
-          </div>
-          <input
-            className={styles.field}
+          </Label>
+          <Field
             name="email"
             type="text"
             value={this.state.email}
             onChange={this.handleChange} />
-        </div>
+        </Item>
 
-        <div className={styles.item}>
-          <div className={styles.label}>
+        <Item>
+          <Label>
             Question
-          </div>
-          <textarea
-            className={styles.field}
+          </Label>
+          <Textarea
             name="question"
             value={this.state.question}
             onChange={this.handleChange}/>
-        </div>
+        </Item>
 
-        <button
-          className={styles.send}
+        <SendButton
           onClick={this.handleSend}>
           SEND
-        </button>
-      </form>
+        </SendButton>
+      </Wrapper>
     )
   }
 }

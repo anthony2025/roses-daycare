@@ -3,18 +3,12 @@ const path = require('path')
 module.exports = {
   type: 'react-app',
   babel: {
-    // plugins: ['styled-components']
+    plugins: ['styled-components']
   },
   webpack: {
     aliases: {
       src: path.resolve('src'),
       assets: path.resolve('assets')
-    },
-    rules: {
-      css: {
-        modules: true,
-        localIdentName: '[local]--[hash:base64:5]'
-      }
     }
   }
 }

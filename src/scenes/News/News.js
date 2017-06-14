@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './News.css'
+import styled from 'styled-components'
 
 import {connect} from 'react-redux'
 import {getArticles} from 'src/store/selectors'
@@ -13,24 +13,40 @@ News.propTypes = {
   articles: PropTypes.object.isRequired
 }
 
+const Wrapper = styled.div`
+    background-color: ${props => props.theme.red};
+    border: 6px solid white;
+
+    @media (max-width: 700px) {
+      padding: 40px 5%;
+    }
+    @media (min-width: 700px) {
+      padding: 40px 22%;
+    }
+`
+
+const Link = styled.div`
+  font-size: 12px;
+`
+
 function News(props) {
   return (
-    <div className={styles.news}>
+    <Wrapper>
       <Title title="News" subtitle="SEE WHAT WE'RE UP TO" />
-      <div className={styles.articles}>
-        {mapObject(props.articles, (key, article) =>
-          <Article
-            title={article.title}
-            image={article.image}
-            text={article.text}
-            key={key}
-          />
-        )}
-      </div>
-      <div className={styles.link}>
+
+      {mapObject(props.articles, (key, article) =>
+        <Article
+          title={article.title}
+          image={article.image}
+          text={article.text}
+          key={key}
+        />
+      )}
+
+      <Link>
         Our very own blog will be coming soon.
-      </div>
-    </div>
+      </Link>
+    </Wrapper>
   )
 }
 

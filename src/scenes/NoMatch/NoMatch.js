@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './NoMatch.css'
+import styled from 'styled-components'
 
 NoMatch.propTypes = {
   location: PropTypes.shape({
@@ -8,13 +8,25 @@ NoMatch.propTypes = {
   })
 }
 
+const Wrapper = styled.div`
+    background-color: white;
+`
+
+const Title = styled.div`
+    color: #666;
+`
+
+const Image = styled.img`
+    width: 100%;
+`
+
 export default function NoMatch (props) {
   return (
-    <div className={styles.noMatch}>
-      <div className={styles.title}>
+    <Wrapper>
+      <Title>
         No match for <code>{props.location.pathname}</code>
-      </div>
-      <img className={styles.image} src={'404.jpg'} />
-    </div>
+      </Title>
+      <Image src={'404.jpg'} />
+    </Wrapper>
   )
 }

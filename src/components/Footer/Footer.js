@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {REPOSITORY} from 'src/utils/constants'
-import {GREEN} from 'src/styling/constants'
 
 const Wrapper = styled.div`
     text-align: right;
@@ -14,7 +13,7 @@ const Text = styled.a`
 
     &:hover {
       transition: 1s;
-      color: ${GREEN};
+      color: ${props => props.theme.blue};
     }
 `
 
