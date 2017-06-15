@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {Link} from 'react-router-dom'
-import Logo from 'src/components/Logo/Logo'
-import Navbar from 'src/components/Navbar/Navbar'
+import Logo from 'components/Logo/Logo'
+import Navbar from 'components/Navbar/Navbar'
 
 const Wrapper = styled.div`
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     @media (max-width: 700px) {
       flex-direction: column;

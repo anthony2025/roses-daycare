@@ -9,7 +9,7 @@ import {fetchContent} from './actions'
 import {
   get as loadFromCache,
   post as saveToCache
-} from 'src/services/localStorage'
+} from 'services/localStorage'
 
 export default () => {
   let store = createStore(

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import PAGES from 'src/content/pages.json'
-import IMAGES from 'src/content/images.json'
+import pages from 'content/pages.json'
+import IMAGES from 'content/images.json'
 
 import Carousel from './Carousel/Carousel'
 import Card from './Card/Card'
@@ -25,18 +25,22 @@ const Cards = styled.div`
     }
 `
 
+const FilteredPages = Object.keys(pages)
+  .filter(key => !['noMatch', 'home'].includes(key))
+  .reduce((acc, curr) => ({...acc, [curr]: pages[curr]}), {})
+
 export default function Home() {
   return (
     <Wrapper>
       <Carousel images={IMAGES} />
 
       <Cards>
-        {PAGES.map(page =>
+        {Object.keys(FilteredPages).map(key =>
           <Card
-            key={page.title}
-            title={page.title}
-            text={page.text}
-            link={page.path}
+            key={key}
+            title={pages[key].longTitle}
+            text={pages[key].description}
+            path={pages[key].path}
           />
         )}
       </Cards>

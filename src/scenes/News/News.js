@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {connect} from 'react-redux'
-import {getArticles} from 'src/store/selectors'
-import mapObject from 'src/utils/mapObject'
+import {getArticles} from 'store/selectors'
 
-import Title from 'src/components/Title/Title'
+import Title from 'components/Title/Title'
 import Article from './Article/Article'
 
 News.propTypes = {
@@ -32,13 +31,13 @@ const Link = styled.div`
 function News(props) {
   return (
     <Wrapper>
-      <Title title="News" subtitle="SEE WHAT WE'RE UP TO" />
+      <Title title={props.title} subtitle={props.subtitle} />
 
-      {mapObject(props.articles, (key, article) =>
+      {Object.keys(props.articles).map(key =>
         <Article
-          title={article.title}
-          image={article.image}
-          text={article.text}
+          title={props.articles[key].title}
+          image={props.articles[key].image}
+          text={props.articles[key].text}
           key={key}
         />
       )}

@@ -17,12 +17,12 @@ const Wrapper = styled.div`
 
 const Name = styled.div`
     font-size: 12px;
-    font-family: signika;
+    font-family: SignikaLight;
 `
 
 const Subtitle = styled.div`
-    font-size: 10px;
-    font-weight: 200;
+    font-size: 9px;
+    font-family: SignikaLight
 `
 
 const Image = styled.img`

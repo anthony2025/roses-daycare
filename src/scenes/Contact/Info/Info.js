@@ -17,14 +17,14 @@ const Item = styled.div`
 
 const Subtitle = styled.div`
     font-size: inherit;
-    font-family: signika;
-    border-bottom: 3px solid var(--pink);
+    font-family: SignikaRegular;
+    border-bottom: 3px solid ${props => props.theme.pink};
 `
 
 const Field = styled.div`
     font-size: inherit;
-    font-weight: 200;
-    margin-top: 10px;
+    font-family: SignikaLight;
+    margin-top: 7px;
 `
 
 export default function Info(props) {

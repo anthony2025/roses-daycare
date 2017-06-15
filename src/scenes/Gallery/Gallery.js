@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import IMAGES from 'src/content/images'
+import IMAGES from 'content/images.json'
 import {generate as id} from 'shortid'
 
-import Title from 'src/components/Title/Title'
+import Title from 'components/Title/Title'
 import Modal from './Modal/Modal'
 
 const Wrapper = styled.div`
@@ -43,13 +43,13 @@ export default class Gallery extends Component {
   render() {
     return (
       <Wrapper>
-        <Title title="Photos &amp; Videos" subtitle="COME PEEK INSIDE" />
+        <Title title={this.props.title} subtitle={this.props.subtitle} />
 
         <Images>
           {IMAGES.map(image =>
             <Image
               key={id()}
-              src={image}
+              src={process.env.PUBLIC_URL + image}
               onClick={this.handleOpenModal}
             />
           )}

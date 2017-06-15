@@ -13,7 +13,7 @@ const Item = styled.div`
 
 const Label = styled.div`
     margin: 20px 0 7px 0;
-    font-family: signika;
+    font-family: SignikaRegular;
 `
 
 const Field = styled.input`
@@ -21,7 +21,7 @@ const Field = styled.input`
     min-height: 32px;
     width: 100%;
     font-size: inherit;
-    color: #666;
+    color: #333;
 
     &:focus {
       outline: none;
@@ -34,7 +34,7 @@ const Textarea = styled.textarea`
     min-height: 32px;
     width: 100%;
     font-size: inherit;
-    color: #666;
+    color: #333;
     height: 150px;
     resize: none;
 `
@@ -46,7 +46,7 @@ const SendButton = styled.button`
     border: 2px solid white;
     color: white;
     text-align: center;
-    font-family: signika;
+    font-family: SignikaLight;
 
     &:focus {
       outline: none;
@@ -75,7 +75,7 @@ export default class Form extends Component {
       <Wrapper>
         <Item>
           <Label>
-            Name
+            NAME
           </Label>
           <Field
             name="name"
@@ -86,7 +86,7 @@ export default class Form extends Component {
 
         <Item>
           <Label>
-            Email
+            EMAIL
           </Label>
           <Field
             name="email"
@@ -97,7 +97,7 @@ export default class Form extends Component {
 
         <Item>
           <Label>
-            Question
+            QUESTION
           </Label>
           <Textarea
             name="question"

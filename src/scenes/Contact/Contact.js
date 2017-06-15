@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {connect} from 'react-redux'
-import {getContactInfo} from 'src/store/selectors'
+import {getContactInfo} from 'store/selectors'
 
-import Title from 'src/components/Title/Title'
+import Title from 'components/Title/Title'
 import Form from './Form/Form'
 import Info from './Info/Info'
 
-import {post as postToDatabase} from 'src/services/database'
-import {DATABASE_URL} from 'src/utils/constants'
+import {post as postToDatabase} from 'services/database'
+import {DATABASE_URL} from 'store/constants'
 
 Contact.propTypes = {
   info: PropTypes.object.isRequired
@@ -54,10 +54,7 @@ const Wrapper = styled.div`
 function Contact(props) {
   return (
     <Wrapper>
-      <Title
-        title="Contact Us"
-        subtitle="ASK US A QUESTION"
-      />
+      <Title title={props.title} subtitle={props.subtitle} />
       <Info info={props.info} />
       <Form onSend={handleSend} />
     </Wrapper>

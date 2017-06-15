@@ -1,30 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import PEOPLE from 'src/content/people.json'
-import PARAGRAPHS from 'src/content/about.json'
+import people from 'content/people.json'
+import paragraphs from 'content/about.json'
 
-import Title from 'src/components/Title/Title'
-import Avatar from 'src/components/Avatar/Avatar'
+import Title from 'components/Title/Title'
+import Avatar from 'components/Avatar/Avatar'
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.red};
     padding: 40px 1%;
-    border: 6px solid white;
+    border: 3px solid white;
+    background-color: ${props => props.theme.red};
 `
 
-const Paragraph = styled.div`
+const Paragraphs = styled.div`
     text-align: left;
     line-height: 1.3;
-    font-weight: 200;
-
+    font-family: Avenir Next;
     @media (max-width: 700px) {
-        font-size: 14px;
-        margin: 0 5% 30px 5%;
+      font-size: 14px;
+      margin: 0 5% 30px 5%;
     }
     @media (min-width: 700px) {
-        font-size: 19px;
-        margin: 0 22% 25px 22%;
+      font-size: 19px;
+      margin: 0 22% 25px 22%;
     }
 `
 
@@ -42,22 +41,24 @@ const Avatars = styled.div`
     }
 `
 
-export default function About() {
+export default function About(props) {
   return (
     <Wrapper>
-      <Title title="About Us" subtitle="OUR STORY" />
+      <Title title={props.title} subtitle={props.subtitle} />
 
-      {PARAGRAPHS.map(paragraph =>
-        <Paragraph key={paragraph}>{paragraph}</Paragraph>
-      )}
+      <Paragraphs>
+        {Object.keys(paragraphs).map(key =>
+          <p key={key}>{paragraphs[key]}</p>
+        )}
+      </Paragraphs>
 
       <Avatars>
-        {PEOPLE.map(person =>
+        {Object.keys(people).map(key =>
           <Avatar
-            img={person.img}
-            name={person.name}
-            subtitle={person.subtitle}
-            key={person.name}
+            img={process.env.PUBLIC_URL + people[key].img}
+            name={people[key].name}
+            subtitle={people[key].subtitle}
+            key={key}
           />
         )}
       </Avatars>

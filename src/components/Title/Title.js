@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import WithHorizontalLines from 'src/styling/WithHorizontalLines'
+import WithHorizontalLines from 'styling/WithHorizontalLines'
 
 Title.propTypes = {
   title: PropTypes.string,
@@ -10,31 +10,30 @@ Title.propTypes = {
 }
 
 const Wrapper = styled.div`
+    color: white;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 `
 
 const BigTitle = styled.div`
-    font-weight: bold;
-    font-family: signika;
+    font-family: SignikaSemi;
 
-    @media (max-width: 700px) {
-      font-size: 30px;
-    }
     @media (min-width: 700px) {
       font-size: 40px;
+    }
+    @media (max-width: 700px) {
+      font-size: 30px;
     }
 `
 
 const SmallTitle = styled.div`
-    margin-top: 20px;
-    font-family: Open Sans;
-    font-weight: 200;
+    font-family: SignikaLight;
+    margin-top: 10px;
 
-    @media (max-width: 700px) {
-      font-size: 14px;
-    }
     @media (min-width: 700px) {
+      font-size: 30px;
+    }
+    @media (max-width: 700px) {
       font-size: 20px;
     }
 `

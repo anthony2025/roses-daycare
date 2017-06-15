@@ -62,7 +62,7 @@ export default class Carousel extends Component {
   render() {
     return (
       <Wrapper onClick={this.handleClick}>
-        <Image src={this.props.images[this.state.counter]} />
+        <Image src={process.env.PUBLIC_URL + this.props.images[this.state.counter]} />
       </Wrapper>
     )
   }

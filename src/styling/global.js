@@ -1,6 +1,6 @@
 import {injectGlobal} from 'styled-components'
 
-injectGlobal`
+export default () => injectGlobal`
     html {
       box-sizing: border-box;
     }
@@ -12,9 +12,12 @@ injectGlobal`
     }
 
     body {
-      background: url("/background.png") no-repeat center/cover fixed;
-      font: 16px/1 'Open Sans', 'Helvetica Neue', Helvetica;
-      color: white;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-image: url(${process.env.PUBLIC_URL}/background.png);
+      font-size: 16px/1;
     }
 
     a,
@@ -30,13 +33,20 @@ injectGlobal`
     }
 
     @font-face {
-      font-family: signika;
-      src: url(/signika-regular.otf);
+      font-family: SignikaRegular;
+      src: url(${process.env.PUBLIC_URL}/font/signika-regular.otf);
     }
 
     @font-face {
-      font-family: signika;
-      font-weight: bold;
-      src: url(/signika-bold.otf);
+      font-family: SignikaBold;
+      src: url(${process.env.PUBLIC_URL}/font/signika-bold.otf);
+    }
+    @font-face {
+      font-family: SignikaLight;
+      src: url(${process.env.PUBLIC_URL}/font/signika-light.otf);
+    }
+    @font-face {
+      font-family: SignikaSemi;
+      src: url(${process.env.PUBLIC_URL}/font/signika-semi.otf);
     }
 `

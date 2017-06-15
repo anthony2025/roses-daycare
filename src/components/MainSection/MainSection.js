@@ -1,26 +1,46 @@
 import React from 'react'
 
+import pages from 'content/pages.json'
 import {Switch, Route} from 'react-router-dom'
 
-import Home from 'src/scenes/Home/Home'
-import About from 'src/scenes/About/About'
-import Gallery from 'src/scenes/Gallery/Gallery'
-import News from 'src/scenes/News/News'
-import Contact from 'src/scenes/Contact/Contact'
-import NoMatch from 'src/scenes/NoMatch/NoMatch'
+import Home from 'scenes/Home/Home'
+import About from 'scenes/About/About'
+import Gallery from 'scenes/Gallery/Gallery'
+import News from 'scenes/News/News'
+import Contact from 'scenes/Contact/Contact'
+import NoMatch from 'scenes/NoMatch/NoMatch'
 
-// Note to self: Because of the theming limitations of css-modules
-// converting this into an HOC adds more complexity than it solves
+const getComponentByKey = key =>
+  ({
+    home: Home,
+    about: About,
+    gallery: Gallery,
+    news: News,
+    contact: Contact,
+    noMatch: NoMatch
+  }[key])
+
+const RouteWithProps = ({component, ...props}) =>
+  <Route
+    {...props}
+    render={innerProps =>
+      React.createElement(component, {...props, ...innerProps})}
+  />
+
 export default function MainSection() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/gallery" component={Gallery} />
-        <Route path="/news" component={News} />
-        <Route path="/contact" component={Contact} />
-        <Route component={NoMatch} />
+        {Object.keys(pages).map(key =>
+          <RouteWithProps
+            exact={pages[key].exact}
+            key={key}
+            title={pages[key].longTitle.toUpperCase()}
+            subtitle={pages[key].subtitle}
+            path={pages[key].path}
+            component={getComponentByKey(key)}
+          />
+        )}
       </Switch>
     </div>
   )

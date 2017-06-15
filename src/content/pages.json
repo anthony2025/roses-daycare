@@ -1,26 +1,40 @@
-[
-  {
+{
+  "home": {
+    "exact": true,
+    "path": "/",
+    "longTitle": "Home",
+    "shortTitle": "Home"
+  },
+  "about": {
     "path": "/about",
-    "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "About Us",
-    "shortTitle": "About"
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "About Us",
+    "shortTitle": "About",
+    "subtitle": "Our story"
   },
-  {
+  "gallery": {
     "path": "/gallery",
-    "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "Gallery",
-    "shortTitle": "Gallery"
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "Gallery",
+    "shortTitle": "Gallery",
+    "subtitle": "Come peek inside"
   },
-  {
+  "news": {
     "path": "/news",
-    "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "News",
-    "shortTitle": "News"
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "News",
+    "shortTitle": "News",
+    "subtitle": "See what we are up to"
   },
-  {
+  "contact": {
     "path": "/contact",
-    "text": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
-    "title": "Contact Us",
-    "shortTitle": "Contact"
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "Contact Us",
+    "shortTitle": "Contact",
+    "subtitle": "Ask us a question"
+  },
+  "noMatch": {
+    "longTitle": "NoMatch",
+    "shortTitle": "NoMatch"
   }
-]
+}

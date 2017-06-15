@@ -1,29 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import {darken} from 'polished'
 
-import PAGES from 'src/content/pages.json'
+import pages from 'content/pages.json'
 
 import {NavLink} from 'react-router-dom'
-
-const PAGES_WITH_HOME = [
-  {
-    exact: true,
-    path: '/',
-    title: 'Home',
-    shortTitle: 'Home'
-  },
-  ...PAGES
-]
 
 const Wrapper = styled.div`
     align-items: center;
     display: flex;
     justify-content: space-around;
-    background-color: white;
-    font-family: signika;
+    font-family: SignikaRegular;
     margin-top: auto; /* pushes navbar to bottom of flex container */
     height: 30px;
     width: 100%;
+    text-shadow: 0 0 1px white;
 
     @media (max-width: 700px) {
       margin-left: 0;
@@ -35,27 +26,34 @@ const Wrapper = styled.div`
 
 const Item = styled(NavLink)`
     color: ${props => props.theme.red};
-    &.${'active'} {color: ${props => props.theme.green};}
-
-    @media (max-width: 700px) {
-      font-size: 16px;
+    &.${'active'} {
+      color: ${props => darken(.1, props.theme.green)};
+      text-shadow: 0 0 20px white;
     }
+
     @media (min-width: 700px) {
-      font-size: 20px;
+      font-size: 3vw;
+    }
+    @media (max-width: 700px) {
+      font-size: 5vw;
     }
 `
+
+const filteredPages = Object.keys(pages)
+  .filter(key => 'noMatch' !== key)
+  .reduce((acc, curr) => ({...acc, [curr]: pages[curr]}), {})
 
 export default function Navbar() {
   return (
     <Wrapper>
-      {PAGES_WITH_HOME.map(page =>
+      {Object.keys(filteredPages).map(key =>
         <Item
-          exact={page.exact}
-          to={page.path}
-          key={page.title}
-          activeClassName='active'
+          exact={filteredPages[key].exact || false}
+          to={filteredPages[key].path || ''}
+          key={key}
+          activeClassName="active"
         >
-          {page.shortTitle}
+          {filteredPages[key].shortTitle}
         </Item>
       )}
     </Wrapper>

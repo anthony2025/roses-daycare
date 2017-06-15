@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 Card.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
-  link: PropTypes.string
+  path: PropTypes.string
 }
 
 const Wrapper = styled(Link)`
@@ -44,18 +44,19 @@ const Wrapper = styled(Link)`
 `
 
 const Title = styled.div`
-    font-family: signika;
-    font-weight: bold;
+    font-family: SignikaSemi;
     font-size: 20px;
 `
 
 const Text = styled.div`
+    font-family: serif;
     font-size: 14px;
     line-height: 1.2;
     margin: 10px 0 15px 0;
 `
 
 const ReadMore = styled.div`
+    font-family: SignikaRegular;
     background-color: white;
     color: ${props => props.theme.red};
     padding: 5px;
@@ -65,7 +66,7 @@ const ReadMore = styled.div`
 
 export default function Card(props) {
   return (
-    <Wrapper to={props.link}>
+    <Wrapper to={props.path}>
       <Title>{props.title}</Title>
       <Text>{props.text}</Text>
       <ReadMore>Read more</ReadMore>

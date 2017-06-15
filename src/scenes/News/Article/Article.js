@@ -28,14 +28,14 @@ const Image = styled.img`
 const Paragraph = styled.div`
     text-align: left;
     line-height: 1.25;
-    font-weight: 200;
+    font-family: SignikaLight;
 
     @media (max-width: 700px) {
       font-size: 14px;
       margin-bottom: 30px;
     }
     @media (min-width: 700px) {
-      font-size: 15px;
+      font-size: 15påx;
       margin-bottom: 25px;
     }
 `
@@ -43,8 +43,8 @@ const Paragraph = styled.div`
 export default function Article (props) {
   return (
     <Wrapper>
-      <Title>{props.title}</Title>
       <Image src={props.image} />
+      <Title>{props.title.toUpperCase()}</Title>
       <Paragraph>{props.text}</Paragraph>
     </Wrapper>
   )

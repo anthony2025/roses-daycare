@@ -26,7 +26,7 @@ export default function NoMatch (props) {
       <Title>
         No match for <code>{props.location.pathname}</code>
       </Title>
-      <Image src={'404.jpg'} />
+      <Image src={process.env.PUBLIC_URL + '404.jpg'} />
     </Wrapper>
   )
 }

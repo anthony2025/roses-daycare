@@ -1,24 +1,18 @@
 {
   "name": "roses-daycare",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Responsive webpage made for Rose's Daycare LLC",
   "homepage": "https://roses-daycare.firebaseapp.com/",
+  "author": "Anthony Ascencio",
+  "license": "CC0",
+  "repository": "https://github.com/anthony2025/roses-daycare",
   "private": true,
-  "scripts": {
-    "build": "nwb build-react-app",
-    "clean": "nwb clean-app",
-    "start": "nwb serve-react-app --reload",
-    "deploy": "yarn build && firebase deploy",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
-  },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.1.4",
+    "polished": "^1.1.3",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-modal": "^1.9.2",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
+    "react-modal": "^1.9.4",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
@@ -29,10 +23,14 @@
     "styled-components": "^2.0.1"
   },
   "devDependencies": {
-    "firebase-tools": "^3.6.1",
-    "nwb": "^0.16.3"
+    "firebase-tools": "^3.9.1",
+    "react-scripts": "1.0.7"
   },
-  "author": "Anthony Ascencio",
-  "license": "CC0",
-  "repository": "https://github.com/anthony2025/roses-daycare"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && firebase deploy"
+  }
 }

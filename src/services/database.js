@@ -1,5 +1,3 @@
-import checkServerResponse from 'src/utils/checkServerResponse'
-
 export const get = (url, callback) => {
   return fetch(url)
     .then(response => checkServerResponse(response))
@@ -24,4 +22,14 @@ export const post = async (data, url) => {
     alert('Oops... an error ocurred .-. could you please send us an email?')
     throw error
   }
+}
+
+const checkServerResponse = (response) => {
+  if (response.ok) {
+    console.log('no errors with the server response :)')
+    return response
+  }
+  let error = new Error(response.statusText)
+  error.response = response
+  throw error
 }
