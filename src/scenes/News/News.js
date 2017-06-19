@@ -13,9 +13,6 @@ News.propTypes = {
 }
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.red};
-    border: 6px solid white;
-
     @media (max-width: 700px) {
       padding: 40px 5%;
     }

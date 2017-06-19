@@ -16,7 +16,7 @@ export default () => injectGlobal`
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-image: url(${process.env.PUBLIC_URL}/background.png);
+      background-image: url(${process.env.PUBLIC_URL}/background.jpg);
       font-size: 16px/1;
     }
 

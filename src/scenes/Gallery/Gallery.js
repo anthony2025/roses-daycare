@@ -8,9 +8,7 @@ import Title from 'components/Title/Title'
 import Modal from './Modal/Modal'
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.blue};
     padding: 40px 2%;
-    border: 6px solid white;
 `
 
 const Images = styled.div`

@@ -1,8 +1,8 @@
-import {FETCH_CONTENT} from './actions'
+import {UPDATE_CONTENT} from './actions'
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case FETCH_CONTENT:
+    case UPDATE_CONTENT:
       return action.payload
     default:
       return state

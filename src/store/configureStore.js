@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 import rootReducer from './reducers'
-import {fetchContent} from './actions'
+import {updateContent} from './actions'
 import {
   get as loadFromCache,
   post as saveToCache
@@ -18,6 +18,6 @@ export default () => {
     composeWithDevTools(applyMiddleware(thunk), applyMiddleware(logger))
   )
   store.subscribe(() => saveToCache(store.getState()))
-  store.dispatch(fetchContent)
+  store.dispatch(updateContent)
   return store
 }

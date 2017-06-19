@@ -31,7 +31,7 @@ const Image = styled.img`
     border: 3px solid white;
     border-radius: 100%;
     object-fit: cover;
-    filter: grayscale(75%);
+    filter: grayscale(90%);
 
     &:hover,
     &:focus {

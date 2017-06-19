@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 const BigTitle = styled.div`
-    font-family: SignikaSemi;
+    font-family: SignikaSemi;s
 
     @media (min-width: 700px) {
       font-size: 40px;

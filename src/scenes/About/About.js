@@ -9,8 +9,6 @@ import Avatar from 'components/Avatar/Avatar'
 
 const Wrapper = styled.div`
     padding: 40px 1%;
-    border: 3px solid white;
-    background-color: ${props => props.theme.red};
 `
 
 const Paragraphs = styled.div`

@@ -10,7 +10,7 @@ import Form from './Form/Form'
 import Info from './Info/Info'
 
 import {post as postToDatabase} from 'services/database'
-import {DATABASE_URL} from 'store/constants'
+import {DATABASE_URL} from 'services/constants'
 
 Contact.propTypes = {
   info: PropTypes.object.isRequired
@@ -31,8 +31,6 @@ const handleSend = formData => {
 }
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.blue};
-    border: 6px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;

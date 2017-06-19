@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {REPOSITORY} from 'store/constants'
+import {REPOSITORY} from 'services/constants'
 
 import GithubCorner from 'components/GithubCorner/GithubCorner'
 import Header from 'components/Header/Header'

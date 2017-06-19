@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {REPOSITORY} from 'store/constants'
+import {REPOSITORY} from 'services/constants'
 
 const Wrapper = styled.div`
     text-align: right;
