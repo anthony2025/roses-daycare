@@ -12,7 +12,6 @@ Title.propTypes = {
 const Wrapper = styled.div`
     color: white;
     text-align: center;
-    margin-bottom: 30px;
 `
 
 const BigTitle = styled.div`

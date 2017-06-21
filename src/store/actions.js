@@ -1,5 +1,5 @@
 import {get as getFromDatabase} from 'services/database'
-import {DATABASE_URL} from 'services/constants'
+import {DATABASE_URL} from 'services/urls'
 
 export const UPDATE_CONTENT = 'UPDATE_CONTENT'
 

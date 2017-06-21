@@ -4,32 +4,28 @@ import styled from 'styled-components'
 
 Avatar.propTypes = {
   img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   subtitle: PropTypes.string
 }
 
 const Wrapper = styled.div`
     text-align: center;
-    overflow: hidden;
-    margin: 10px 0;
     line-height: 1.3;
-`
-
-const Name = styled.div`
-    font-size: 12px;
+    color: ${props => props.theme.text};
     font-family: SignikaLight;
 `
 
+const Name = styled.div`
+    font-size: 15px;
+`
+
 const Subtitle = styled.div`
-    font-size: 9px;
-    font-family: SignikaLight
+    font-size: 12px;
 `
 
 const Image = styled.img`
-    width: 17vw;
-    height: 17vw;
     border: 3px solid white;
-    border-radius: 100%;
+    border-radius: 50%;
     object-fit: cover;
     filter: grayscale(90%);
 
@@ -51,7 +47,7 @@ const Image = styled.img`
 
 export default function Avatar(props) {
   return (
-    <Wrapper>
+    <Wrapper className={props.className}>
       <Image src={props.img} />
       <Name>
         {props.name}

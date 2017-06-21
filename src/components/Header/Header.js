@@ -1,14 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {Link} from 'react-router-dom'
-import Logo from 'components/Logo/Logo'
-import Navbar from 'components/Navbar/Navbar'
+import Logo from 'components/Logo'
+import Navbar from 'components/Navbar'
 
 const Wrapper = styled.div`
     display: flex;
-    margin-bottom: 20px;
-
     @media (max-width: 700px) {
       flex-direction: column;
     }
@@ -17,13 +14,25 @@ const Wrapper = styled.div`
     }
 `
 
-export default function Header() {
+const StyledLogo = styled(Logo)`
+    @media (max-width: 700px) {
+      margin-bottom: 25px;
+    }
+    @media (min-width: 700px) {
+      margin-bottom: 0;
+    }
+`
+
+const StyledNavbar = styled(Navbar)`
+    margin-top: auto;
+    width: 100%;
+`
+
+export default function Header(props) {
   return (
-    <Wrapper>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <Navbar />
+    <Wrapper className={props.className}>
+      <StyledLogo />
+      <StyledNavbar />
     </Wrapper>
   )
 }

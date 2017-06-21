@@ -1,59 +1,58 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {darken} from 'polished'
-
-import pages from 'content/pages.json'
-
 import {NavLink} from 'react-router-dom'
 
-const Wrapper = styled.div`
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    font-family: SignikaRegular;
-    margin-top: auto; /* pushes navbar to bottom of flex container */
-    height: 30px;
-    width: 100%;
-    text-shadow: 0 0 1px white;
+Navbar.propTypes = {
+  pages: PropTypes.arrayOf(
+    PropTypes.shape({
+      exact: PropTypes.bool,
+      path: PropTypes.string.isRequired,
+      shortTitle: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
+}
 
-    @media (max-width: 700px) {
-      margin-left: 0;
-    }
-    @media (min-width: 700px) {
-      margin-left: 10px;
-    }
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    font-family: SignikaRegular;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.5);
 `
 
 const Item = styled(NavLink)`
-    color: ${props => props.theme.red};
-    &.${'active'} {
-      color: ${props => darken(.1, props.theme.green)};
-      text-shadow: 0 0 20px white;
+    &.active,
+    &:hover {
+      transition: .3s;
+      color: ${props => props.theme.primary};
+      text-shadow: 0 0 3px rgba(255,255,255,.5);
     }
 
-    @media (min-width: 700px) {
-      font-size: 3vw;
-    }
     @media (max-width: 700px) {
-      font-size: 5vw;
+      font-size: 6vw;
+    }
+    @media (min-width: 700px) and (max-width: 900px) {
+      font-size: 4vw;
+    }
+    @media (min-width: 900px) {
+      font-size: 3vw;
     }
 `
 
-const filteredPages = Object.keys(pages)
-  .filter(key => 'noMatch' !== key)
-  .reduce((acc, curr) => ({...acc, [curr]: pages[curr]}), {})
-
-export default function Navbar() {
+export default function Navbar(props) {
   return (
-    <Wrapper>
-      {Object.keys(filteredPages).map(key =>
+    <Wrapper className={props.className}>
+      {props.pages.map(page =>
         <Item
-          exact={filteredPages[key].exact || false}
-          to={filteredPages[key].path || ''}
-          key={key}
+          exact={page.exact}
+          to={page.path}
+          key={page.path}
           activeClassName="active"
         >
-          {filteredPages[key].shortTitle}
+          {page.shortTitle}
         </Item>
       )}
     </Wrapper>

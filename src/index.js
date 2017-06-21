@@ -1,18 +1,16 @@
 import React from 'react'
-// import registerServiceWorker from './registerServiceWorker'
+// import registerServiceWorker from 'services/serviceWorker'
 
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
-import App from 'components/App/App'
+import App from 'components/App'
 
-import injectGlobalCSS from 'styling/global.js'
+import injectResetCSS from 'styling/reset.js'
 import theme from 'styling/theme'
 import {ThemeProvider} from 'styled-components'
 
 import configureStore from 'store/configureStore'
 import {Provider} from 'react-redux'
-
-injectGlobalCSS()
 
 render(
   <Provider store={configureStore()}>
@@ -25,4 +23,5 @@ render(
   document.getElementById('root')
 )
 
+injectResetCSS()
 // registerServiceWorker()

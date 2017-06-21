@@ -1,0 +1,33 @@
+{
+  "home": {
+    "exact": true,
+    "path": "/",
+    "longTitle": "Home",
+    "shortTitle": "Home"
+  },
+  "about": {
+    "path": "/about",
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "About Us",
+    "shortTitle": "About",
+    "subtitle": "Our story"
+  },
+  "gallery": {
+    "path": "/gallery",
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "Gallery",
+    "shortTitle": "Gallery",
+    "subtitle": "Come peek inside"
+  },
+  "news": {
+    "path": "/news",
+    "description": "Hi! We are still working on this webpage, please do come back in a couple of weeks when we have everything running beautifully.",
+    "longTitle": "News",
+    "shortTitle": "News",
+    "subtitle": "See what we are up to"
+  },
+  "noMatch": {
+    "longTitle": "NoMatch",
+    "shortTitle": "NoMatch"
+  }
+}
