@@ -16,16 +16,16 @@ News.propTypes = {
 }
 
 const Articles = styled.div`
-    @media (max-width: 700px) {
-      padding: 40px 5%;
-    }
     @media (min-width: 700px) {
-      padding: 40px 22%;
+      padding: 40px 10%;
+    }
+    @media (max-width: 700px) {
+      padding: 10px 7%;
     }
 `
 
 const StyledArticle = styled(Article)`
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 `
 
 const Link = styled.div`
@@ -36,6 +36,7 @@ const Link = styled.div`
 export default function News(props) {
   return (
     <div className={props.className}>
+
       <Articles>
         {props.articles.map(article =>
           <StyledArticle

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import TransitionGroup from 'react-transition-group/TransitionGroup'
 import RouteWithProps from 'utils/RouteWithProps'
 import {Switch} from 'react-router-dom'
 

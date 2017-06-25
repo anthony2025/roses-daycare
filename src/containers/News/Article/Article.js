@@ -17,23 +17,41 @@ const Wrapper = styled.div`
     line-height: 1.5;
     font-size: 30px;
     display: flex;
-    align-items: center;
 
     @media (max-width: 700px) {
       flex-direction: column;
+      align-items: center;
     }
     @media (min-width: 700px) {
       flex-direction: row;
+      justify-items: space-between;
     }
 `
 
 const Title = styled.div`
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: ${props => props.theme.accent};
+`
+
+const Content = styled.div`
+    @media (min-width: 700px) {
+    }
 `
 
 const StyledImage = styled(Image)`
-    max-width: 40%;
     height: 100%;
     border: 2px solid ${props => props.theme.text};
+    @media (max-width: 700px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: 700px) {
+      max-width: 40%;
+      margin-top: 45px;
+      margin-right: 30px;
+    }
 `
 
 const Paragraph = styled.div`
@@ -42,7 +60,7 @@ const Paragraph = styled.div`
 
     @media (max-width: 700px) {
       font-size: 15px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
     @media (min-width: 700px) {
       font-size: 20px;
@@ -54,8 +72,11 @@ export default function Article (props) {
   return (
     <Wrapper className={props.className}>
       <StyledImage src={props.image} />
-      <Title>{props.title.toUpperCase()}</Title>
-      <Paragraph>{props.text}</Paragraph>
+
+      <Content>
+        <Title>{props.title.toUpperCase()}</Title>
+        <Paragraph>{props.text}</Paragraph>
+      </Content>
     </Wrapper>
   )
 }
