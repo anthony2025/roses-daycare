@@ -1,2 +1,1 @@
-import CarouselContainer from './CarouselContainer'
-export default CarouselContainer
+export {default} from './Carousel'

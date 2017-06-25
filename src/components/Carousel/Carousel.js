@@ -1,30 +1,50 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
-Carousel.propTypes = {
-  currentImage: PropTypes.string.isRequired,
-  clickHandler: PropTypes.func
-}
+export default class Carousel extends Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    speed: PropTypes.number
+  }
 
-const Wrapper = styled.div`
-    text-align: center;
-    cursor: pointer;
-    overflow: hidden;
-    border: 3px solid white;
-    border-radius: 5px;
-`
+  static defaultProps = {
+    speed: 2000
+  }
 
-const Image = styled.img`
-    height: inherit; /* this centers the image in its container, somehow */
-    object-fit: cover;
-    width: 100%;
-`
+  state = {
+    counter: 0
+  }
 
-export default function Carousel(props) {
-  return (
-    <Wrapper onClick={props.clickHandler} className={props.className}>
-      <Image src={process.env.PUBLIC_URL + props.currentImage} />
-    </Wrapper>
-  )
+  constructor(props) {
+    super(props)
+    this.interval = null
+    this.count = React.Children.count(this.props.children)
+  }
+
+  componentWillUnmount = () => this.removeTimer()
+  componentDidMount = () => this.newTimer()
+
+  removeTimer = () => clearInterval(this.state.interval)
+  newTimer = () =>
+    this.setState({interval: setInterval(this.nextImage, this.props.speed)})
+
+  nextImage = () => {
+    let id = this.state.counter
+    const max = this.count - 1
+    id >= max || id < 0
+      ? this.setState({counter: 0})
+      : this.setState({counter: ++id})
+  }
+
+  handleClick = () => {
+    this.removeTimer()
+    this.nextImage()
+    this.newTimer()
+  }
+
+  render() {
+    return React.cloneElement(this.props.children[this.state.counter], {
+      onClick: this.handleClick
+    })
+  }
 }

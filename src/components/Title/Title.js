@@ -10,7 +10,7 @@ Title.propTypes = {
 }
 
 const Wrapper = styled.div`
-    color: white;
+    color: ${props => props.theme.text};
     text-align: center;
 `
 

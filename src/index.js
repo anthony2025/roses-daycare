@@ -1,9 +1,9 @@
 import React from 'react'
-// import registerServiceWorker from 'services/serviceWorker'
+import registerServiceWorker from 'services/serviceWorker'
 
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
-import App from 'components/App'
+import App from 'containers/App'
 
 import injectResetCSS from 'styling/reset.js'
 import theme from 'styling/theme'
@@ -24,4 +24,4 @@ render(
 )
 
 injectResetCSS()
-// registerServiceWorker()
+registerServiceWorker()

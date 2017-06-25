@@ -18,8 +18,7 @@ const solarized = {
 }
 
 export default {
-  primary: solarized.magenta,
-  accent: solarized.violet,
+  primary: solarized.orange,
   text: solarized.base3,
   secondaryText: solarized.base1,
   background: solarized.base03

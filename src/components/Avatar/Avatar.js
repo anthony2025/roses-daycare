@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Image from 'components/Image'
+
 Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string,
@@ -23,16 +25,15 @@ const Subtitle = styled.div`
     font-size: 12px;
 `
 
-const Image = styled.img`
-    border: 3px solid white;
+const StyledImage = styled(Image)`
+    border: 3px solid ${props => props.theme.text};
     border-radius: 50%;
-    object-fit: cover;
-    filter: grayscale(90%);
 
     &:hover,
     &:focus {
       transition: .75s;
-      filter: grayscale(25%);
+      box-shadow: 0 0 20px ${props => props.theme.text};
+      filter: grayscale(75%);
     }
 
     @media (max-width: 700px) {
@@ -48,7 +49,7 @@ const Image = styled.img`
 export default function Avatar(props) {
   return (
     <Wrapper className={props.className}>
-      <Image src={props.img} />
+      <StyledImage src={props.img} />
       <Name>
         {props.name}
       </Name>

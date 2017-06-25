@@ -1,12 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import {Link} from 'react-router-dom'
-
 import shake from 'styling/shakeAnimation'
 
+Logo.propTypes = {
+  smallTitle: PropTypes.string.isRequired,
+  bigTitle: PropTypes.string.isRequired
+}
+
 const Wrapper = styled(Link)`
-    color: white;
+    color: ${props => props.theme.text};
     line-height: .75;
     font-family: SignikaBold;
     text-shadow: 1px 1px 1px rgba(255,255,255,.5);
@@ -41,8 +46,8 @@ const SmallTitle = styled.div`
 export default function Logo(props) {
   return (
     <Wrapper to="/" className={props.className}>
-      <SmallTitle>Rose's</SmallTitle>
-      <BigTitle>Daycare</BigTitle>
+      <SmallTitle>{props.smallTitle}</SmallTitle>
+      <BigTitle>{props.bigTitle}</BigTitle>
     </Wrapper>
   )
 }
