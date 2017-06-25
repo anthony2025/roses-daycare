@@ -1,15 +1,15 @@
 {
-  "short_name": "roses-daycare",
-  "name": "Roses Daycare",
+  "short_name": "Rose's",
+  "name": "Rose's Daycare",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "192x192",
+      "sizes": "48x48",
       "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#002B36",
+  "background_color": "#002B36"
 }

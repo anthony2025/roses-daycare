@@ -34,10 +34,6 @@ export default () => injectGlobal`
       src: url(${process.env.PUBLIC_URL}/font/signika-regular.otf);
     }
     @font-face {
-      font-family: SignikaBold;
-      src: url(${process.env.PUBLIC_URL}/font/signika-bold.otf);
-    }
-    @font-face {
       font-family: SignikaLight;
       src: url(${process.env.PUBLIC_URL}/font/signika-light.otf);
     }

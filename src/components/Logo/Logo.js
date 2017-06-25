@@ -13,7 +13,7 @@ Logo.propTypes = {
 const Wrapper = styled(Link)`
     color: ${props => props.theme.text};
     line-height: .75;
-    font-family: SignikaBold;
+    font-family: SignikaSemi;
     text-shadow: 1px 1px 1px rgba(255,255,255,.5);
 `
 

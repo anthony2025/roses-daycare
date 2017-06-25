@@ -23,10 +23,3 @@ export default {
   secondaryText: solarized.base1,
   background: solarized.base03
 }
-
-// const oldPalette = {
-//   blue: '#79B9D9',
-//   pink: '#FEBCBD',
-//   red: '#FD8384',
-//   green: '#9ED2A6'
-// }
