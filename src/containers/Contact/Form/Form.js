@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 Form.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  question: PropTypes.string.isRequired,
+  fields: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    question: PropTypes.string
+  }).isRequired,
   sendHandler: PropTypes.func.isRequired,
   changeHandler: PropTypes.func.isRequired
 }
@@ -68,50 +70,30 @@ const SendButton = styled.button`
 `
 
 export default function Form(props) {
+  let {question, ...fields} = props.fields
   return (
     <Wrapper className={props.className}>
-      <Item>
-        <Label>
-          NAME
-        </Label>
-        <Field
-          name="name"
-          type="text"
-          value={props.name}
-          onChange={props.changeHandler}
-        />
-      </Item>
-
-      <Item>
-        <Label>
-          EMAIL
-        </Label>
-        <Field
-          name="email"
-          type="text"
-          value={props.email}
-          onChange={props.changeHandler}
-        />
-      </Item>
-
-      <Item>
-        <Label>
-          PHONE
-        </Label>
-        <Field
-          name="phone"
-          type="text"
-          value={props.phone}
-          onChange={props.changeHandler}
-        />
-      </Item>
-
-      <Item>
-        <Label>
+      {Object.keys(fields).map(key =>
+        <Item key={key}>
+          <Label for={key}>
+            {key.toUpperCase()}
+          </Label>
+          <Field
+            name={key}
+            id={key}
+            type="text"
+            value={fields[key].name}
+            onChange={props.changeHandler}
+          />
+        </Item>
+      )}
+      <Item key="question">
+        <Label for="question">
           QUESTION
         </Label>
         <Textarea
           name="question"
+          id="question"
           value={props.question}
           onChange={props.changeHandler}
         />

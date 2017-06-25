@@ -6,6 +6,11 @@ import Form from './Form'
 import Info from './Info'
 
 Contact.propTypes = {
+  form: PropTypes.shape({
+    fields: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+    sendHandler: PropTypes.func.isRequired,
+    changeHandler: PropTypes.func.isRequired
+  }),
   info: PropTypes.shape({
     email: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
@@ -54,7 +59,11 @@ export default function Contact(props) {
         address2={props.info.address2}
         facebook={props.info.facebook}
       />
-      <StyledForm />
+      <StyledForm
+        fields={props.form.fields}
+        sendHandler={props.form.sendHandler}
+        changeHandler={props.form.changeHandler}
+      />
     </Wrapper>
   )
 }

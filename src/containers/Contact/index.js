@@ -1,1 +1,1 @@
-export {default} from './ContactProvider'
+export {default} from './ContactContainer'

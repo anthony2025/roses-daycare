@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
-import Form from './Form'
+import Contact from './Contact'
+
+import {connect} from 'react-redux'
+import {getContactInfo} from 'store/selectors'
 
 import {post as postToDatabase} from 'services/database'
 import {DATABASE_URL} from 'services/urls'
 
-export default class FormContainer extends Component {
+class ContactContainer extends Component {
   state = {
     name: '',
     email: '',
@@ -36,15 +39,25 @@ export default class FormContainer extends Component {
 
   render() {
     return (
-      <Form
-        name={this.state.name}
-        email={this.state.email}
-        phone={this.state.phone}
-        question={this.state.question}
-        sendHandler={this.handleSend}
-        changeHandler={this.handleChange}
+      <Contact
+        form={{
+          fields: {
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            question: this.state.question
+          },
+          sendHandler: this.handleSend,
+          changeHandler: this.handleChange
+        }}
         {...this.props}
       />
     )
   }
 }
+
+const mapStateToProps = state => ({
+  info: getContactInfo(state)
+})
+
+export default connect(mapStateToProps)(ContactContainer)
