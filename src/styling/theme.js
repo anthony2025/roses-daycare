@@ -18,9 +18,8 @@ const solarized = {
 }
 
 export default {
+  primary: solarized.base02,
   accent: solarized.magenta,
-  text: solarized.base02,
+  opposite: solarized.base2,
   background: '#FAFAFA',
-  invertText: solarized.base2,
-  invertBackground: solarized.base02,
 }

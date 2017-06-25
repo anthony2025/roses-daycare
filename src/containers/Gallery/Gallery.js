@@ -28,7 +28,8 @@ const CarouselImage = styled(Image)`
     height: 450px;
     max-width: 600px;
     margin-bottom: 20px;
-    box-shadow: 0 0 5px ${props => props.theme.text};
+    border: 3px solid ${props => props.theme.primary};
+    box-shadow: 0 1px 2px ${props => props.theme.primary};
     @media (min-width: 700px) {
       height: 450px;
       max-width: 600px;
@@ -50,6 +51,8 @@ const Thumbnails = styled.div`
 
 const Thumbnail = styled(Image)`
     margin: 5px;
+    box-shadow: 0px 2px 4px ${props => props.theme.primary};
+    // border: 1px solid ${props => props.theme.primary};
 `
 
 export default function Gallery(props) {

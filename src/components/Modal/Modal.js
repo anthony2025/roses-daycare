@@ -29,7 +29,7 @@ const ReactModalStyled = styled(ReactModal)`
       // making sure children don't exceed viewport dimensions
       max-height: 90vh;
       max-width: 90vw;
-      border: 3px solid ${props => props.theme.text};
+      border: 4px solid ${props => props.theme.primary};
     }
 `
 

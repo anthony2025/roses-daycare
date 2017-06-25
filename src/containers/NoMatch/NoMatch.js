@@ -11,7 +11,7 @@ NoMatch.propTypes = {
 }
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.text};
+    background-color: ${props => props.theme.primary};
     padding: 50px;
 `
 

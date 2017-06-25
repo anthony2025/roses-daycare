@@ -15,10 +15,10 @@ const Wrapper = styled.div`
     padding: 15px 20px;
     display: flex;
 
-    background-color: ${props => props.theme.invertBackground};
+    background-color: ${props => props.theme.primary};
     background-blend-mode: multiply;
-    color: ${props => props.theme.invertText};
-    border-top: 2px solid ${props => props.theme.text};
+    color: ${props => props.theme.opposite};
+    border-top: 2px solid ${props => props.theme.primary};
 
     font-family: SignikaLight;
     line-height: 1.5;

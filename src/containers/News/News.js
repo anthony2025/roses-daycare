@@ -25,11 +25,11 @@ const Articles = styled.div`
 `
 
 const StyledArticle = styled(Article)`
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 `
 
 const Link = styled.div`
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
     font-size: 12px;
 `
 

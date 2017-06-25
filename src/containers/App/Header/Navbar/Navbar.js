@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     justify-content: space-around;
 
     font-family: SignikaRegular;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
     text-shadow: 1px 1px 1px rgba(255,255,255,.4);
 
     & > *.active,

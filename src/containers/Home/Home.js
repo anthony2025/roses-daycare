@@ -28,7 +28,7 @@ const Paragraphs = styled.div`
     text-align: left;
     line-height: 1.3;
     font-family: Avenir Next;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
     @media (max-width: 700px) {
       font-size: 14px;
       margin: 0 5% 30px 5%;

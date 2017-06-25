@@ -12,19 +12,19 @@ Article.propTypes = {
 
 const Wrapper = styled.div`
     text-align: center;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
     font-family: SignikaLight;
     line-height: 1.5;
     font-size: 30px;
     display: flex;
 
+    @media (min-width: 700px) {
+      flex-direction: row;
+      align-items: center;
+    }
     @media (max-width: 700px) {
       flex-direction: column;
       align-items: center;
-    }
-    @media (min-width: 700px) {
-      flex-direction: row;
-      justify-items: space-between;
     }
 `
 
@@ -34,14 +34,9 @@ const Title = styled.div`
     color: ${props => props.theme.accent};
 `
 
-const Content = styled.div`
-    @media (min-width: 700px) {
-    }
-`
-
 const StyledImage = styled(Image)`
     height: 100%;
-    border: 2px solid ${props => props.theme.text};
+    border: 3px solid ${props => props.theme.primary};
     @media (max-width: 700px) {
       width: 100%;
       margin-bottom: 10px;
@@ -49,7 +44,6 @@ const StyledImage = styled(Image)`
 
     @media (min-width: 700px) {
       max-width: 40%;
-      margin-top: 45px;
       margin-right: 30px;
     }
 `
@@ -73,10 +67,10 @@ export default function Article (props) {
     <Wrapper className={props.className}>
       <StyledImage src={props.image} />
 
-      <Content>
+      <div>
         <Title>{props.title.toUpperCase()}</Title>
         <Paragraph>{props.text}</Paragraph>
-      </Content>
+      </div>
     </Wrapper>
   )
 }

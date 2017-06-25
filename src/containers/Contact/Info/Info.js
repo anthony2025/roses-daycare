@@ -11,7 +11,7 @@ Info.propTypes = {
 }
 
 const Wrapper = styled.div`
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
 `
 
 const Item = styled.div`
@@ -22,7 +22,7 @@ const Subtitle = styled.div`
     font-size: inherit;
     font-family: SignikaRegular;
     text-align: left;
-    border-bottom: 3px solid ${props => props.theme.accent};
+    border-bottom: 2px solid ${props => props.theme.accent};
 `
 
 const Field = styled.div`

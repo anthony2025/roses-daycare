@@ -14,7 +14,6 @@ Form.propTypes = {
 }
 
 const Wrapper = styled.div`
-    color: ${props => props.theme.text};
     text-align: center;
 `
 
@@ -24,42 +23,37 @@ const Item = styled.div`
 
 const Label = styled.div`
     margin: 20px 0 7px 0;
+    color: ${props => props.theme.primary};
     font-family: SignikaRegular;
 `
 
 const Field = styled.input`
+    color: ${props => props.theme.primary};
+    background-color: inherit;
+    border-width: 2px;
+    border-style: solid;
+    border-color: ${props => props.theme.primary};
     display: block;
     min-height: 32px;
     width: 100%;
     font-size: inherit;
-    color: #333;
+    outline: 0;
 
     &:focus {
-      outline: none;
-      border: 2px solid ${props => props.theme.accent};
+      border-color: ${props => props.theme.accent};
     }
 `
 
-const Textarea = styled.textarea`
-    display: block;
-    min-height: 32px;
-    width: 100%;
-    font-size: inherit;
-    color: #333;
+const Textarea = Field.withComponent('textarea').extend`
     height: 150px;
-    resize: none;
-    &:focus {
-      outline: none;
-      border: 2px solid ${props => props.theme.accent};
-    }
 `
 
 const SendButton = styled.button`
     height: 35px;
     width: 120px;
     margin: 20px 0;
-    border: 2px solid ${props => props.theme.text};
-    color: ${props => props.theme.text};
+    border: 2px solid ${props => props.theme.primary};
+    color: ${props => props.theme.primary};
     text-align: center;
     font-family: SignikaLight;
 

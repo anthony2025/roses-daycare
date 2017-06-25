@@ -13,7 +13,7 @@ Avatar.propTypes = {
 const Wrapper = styled.div`
     text-align: center;
     line-height: 1.3;
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.primary};
     font-family: SignikaLight;
 `
 
@@ -26,13 +26,13 @@ const Subtitle = styled.div`
 `
 
 const StyledImage = styled(Image)`
-    border: 3px solid ${props => props.theme.text};
+    border: 3px solid ${props => props.theme.primary};
     border-radius: 50%;
 
     &:hover,
     &:focus {
       transition: .75s;
-      box-shadow: 0 0 10px ${props => props.theme.text};
+      box-shadow: 0 0 10px ${props => props.theme.primary};
       filter: grayscale(75%);
     }
 
