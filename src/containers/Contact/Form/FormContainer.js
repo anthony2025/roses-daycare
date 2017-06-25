@@ -8,6 +8,7 @@ export default class FormContainer extends Component {
   state = {
     name: '',
     email: '',
+    phone: '',
     question: ''
   }
 
@@ -20,13 +21,16 @@ export default class FormContainer extends Component {
     const payload = {
       name: this.state.name.trim(),
       email: this.state.email.trim(),
+      phone: this.state.phone.trim(),
       question: this.state.question.trim(),
       date: new Date().toJSON().slice(0, 10)
     }
     // all fields required
-    if (payload.name && payload.email && payload.question) {
+    if (payload.name && payload.email && payload.phone && payload.question) {
       const url = DATABASE_URL + 'questions.json'
       postToDatabase(payload, url)
+    } else {
+      alert('please fill out all fields :)')
     }
   }
 
@@ -35,6 +39,7 @@ export default class FormContainer extends Component {
       <Form
         name={this.state.name}
         email={this.state.email}
+        phone={this.state.phone}
         question={this.state.question}
         sendHandler={this.handleSend}
         changeHandler={this.handleChange}

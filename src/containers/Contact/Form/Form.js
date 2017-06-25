@@ -5,6 +5,7 @@ import styled from 'styled-components'
 Form.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
   question: PropTypes.string.isRequired,
   sendHandler: PropTypes.func.isRequired,
   changeHandler: PropTypes.func.isRequired
@@ -89,6 +90,18 @@ export default function Form(props) {
           name="email"
           type="text"
           value={props.email}
+          onChange={props.changeHandler}
+        />
+      </Item>
+
+      <Item>
+        <Label>
+          PHONE
+        </Label>
+        <Field
+          name="phone"
+          type="text"
+          value={props.phone}
           onChange={props.changeHandler}
         />
       </Item>
