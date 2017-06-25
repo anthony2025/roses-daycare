@@ -22,7 +22,7 @@ const Subtitle = styled.div`
     font-size: inherit;
     font-family: SignikaRegular;
     text-align: left;
-    border-bottom: 3px solid ${props => props.theme.primary};
+    border-bottom: 3px solid ${props => props.theme.accent};
 `
 
 const Field = styled.div`

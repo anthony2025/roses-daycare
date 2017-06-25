@@ -36,7 +36,7 @@ const Field = styled.input`
 
     &:focus {
       outline: none;
-      border: 2px solid ${props => props.theme.primary};
+      border: 2px solid ${props => props.theme.accent};
     }
 `
 
@@ -50,7 +50,7 @@ const Textarea = styled.textarea`
     resize: none;
     &:focus {
       outline: none;
-      border: 2px solid ${props => props.theme.primary};
+      border: 2px solid ${props => props.theme.accent};
     }
 `
 
@@ -65,7 +65,7 @@ const SendButton = styled.button`
 
     &:focus {
       outline: none;
-      border: 2px solid ${props => props.theme.primary};
+      border: 2px solid ${props => props.theme.accent};
     }
 `
 

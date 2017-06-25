@@ -16,14 +16,23 @@ const Wrapper = styled.div`
     font-family: SignikaLight;
     line-height: 1.5;
     font-size: 30px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+    @media (min-width: 700px) {
+      flex-direction: row;
+    }
 `
 
 const Title = styled.div`
-    text-align: center;
 `
 
 const StyledImage = styled(Image)`
-    margin: 10px auto;
+    max-width: 40%;
+    height: 100%;
     border: 2px solid ${props => props.theme.text};
 `
 

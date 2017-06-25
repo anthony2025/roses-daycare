@@ -15,15 +15,17 @@ News.propTypes = {
   ).isRequired
 }
 
-// TODO: change this to width
 const Articles = styled.div`
-    margin-bottom: 60px;
     @media (max-width: 700px) {
       padding: 40px 5%;
     }
     @media (min-width: 700px) {
       padding: 40px 22%;
     }
+`
+
+const StyledArticle = styled(Article)`
+    margin-bottom: 50px;
 `
 
 const Link = styled.div`
@@ -36,7 +38,7 @@ export default function News(props) {
     <div className={props.className}>
       <Articles>
         {props.articles.map(article =>
-          <Article
+          <StyledArticle
             title={article.title}
             image={article.image}
             text={article.text}

@@ -11,7 +11,7 @@ Logo.propTypes = {
 }
 
 const Wrapper = styled(Link)`
-    color: ${props => props.theme.accentText};
+    color: ${props => props.theme.text};
     outline: 0;
     line-height: .75;
     font-family: SignikaSemi;

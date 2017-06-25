@@ -12,13 +12,13 @@ const Wrapper = styled.div`
     justify-content: space-around;
 
     font-family: SignikaRegular;
-    color: ${props => props.theme.accentText};
+    color: ${props => props.theme.text};
     text-shadow: 1px 1px 1px rgba(255,255,255,.4);
 
     & > *.active,
     & > *:hover {
       transition: .3s;
-      color: ${props => props.theme.primary};
+      color: ${props => props.theme.accent};
       text-shadow: none;
     }
 

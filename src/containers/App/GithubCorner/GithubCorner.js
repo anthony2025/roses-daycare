@@ -46,7 +46,7 @@ const Background = styled.svg`
 `
 
 const OctoBody = styled.path`
-    fill: ${props => props.theme.primary || 'black'};
+    fill: ${props => props.theme.accent || 'black'};
 `
 
 export default function GithubCorner(props) {

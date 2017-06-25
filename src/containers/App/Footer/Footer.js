@@ -15,14 +15,13 @@ const Wrapper = styled.div`
     padding: 15px 20px;
     display: flex;
 
-    background-color: ${props => props.theme.background}CC;
+    background-color: ${props => props.theme.invertBackground};
     background-blend-mode: multiply;
-    color: ${props => props.theme.secondaryText};
+    color: ${props => props.theme.invertText};
     border-top: 2px solid ${props => props.theme.text};
 
     font-family: SignikaLight;
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.4px;
 
     @media (min-width: 700px) {
@@ -36,17 +35,19 @@ const Wrapper = styled.div`
 
 const ContactInfo = styled.div`
     display: flex;
+    font-size: 16px;
 `
 
 const Labels = styled.div`
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.accent};
     margin-right: 50px;
 `
 
 const Copyright = styled.a`
+    font-size: 14px;
     &:hover {
       transition: 1s;
-      color: ${props => props.theme.primary};
+      color: ${props => props.theme.accent};
     }
 
     @media (min-width: 700px) {
