@@ -5,7 +5,7 @@ import RouteWithProps from 'utils/RouteWithProps'
 import {Switch} from 'react-router-dom'
 
 import Home from 'containers/Home'
-import About from 'containers/About'
+import Contact from 'containers/Contact'
 import Gallery from 'containers/Gallery'
 import News from 'containers/News'
 import NoMatch from 'containers/NoMatch'
@@ -22,7 +22,7 @@ MainSection.propTypes = {
 const getComponent = key =>
   ({
     home: Home,
-    about: About,
+    contact: Contact,
     gallery: Gallery,
     news: News,
     noMatch: NoMatch

@@ -2,59 +2,80 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Form from './Form'
-import Info from './Info'
+import Avatar from 'components/Avatar'
 
 Home.propTypes = {
-  info: PropTypes.shape({
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    address1: PropTypes.string.isRequired,
-    address2: PropTypes.string.isRequired,
-    facebook: PropTypes.string.isRequired
-  }).isRequired
+  paragraphs: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  people: PropTypes.objectOf(
+    PropTypes.shape({
+      img: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      subtitle: PropTypes.string.isRequired
+    })
+  ).isRequired
 }
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (max-width: 500px) {
-      font-size: 15px;
+    @media (min-width: 700px) {
+      padding: 40px 10%;
+    }
+    @media (max-width: 700px) {
       padding: 40px 5%;
     }
-    @media (min-width: 500px) and (max-width: 950px) {
+`
+
+const Paragraphs = styled.div`
+    text-align: left;
+    line-height: 1.3;
+    font-family: Avenir Next;
+    color: ${props => props.theme.text};
+    @media (max-width: 700px) {
+      font-size: 14px;
+      margin: 0 5% 30px 5%;
+    }
+    @media (min-width: 700px) {
       font-size: 19px;
-      padding: 40px 20%;
-    }
-    @media (min-width: 950px) {
-      font-size: 20px;
-      padding: 40px 30%;
+      margin: 0 22% 25px 22%;
     }
 `
 
-const StyledInfo = styled(Info)`
-    width: 100%;
-    margin-top: 20px;
+const Avatars = styled.div`
+    margin: 40px 25px 10px 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+    @media (min-width: 700px) {
+      flex-direction: row;
+    }
 `
 
-const StyledForm = styled(Form)`
-    width: 100%;
-    margin-top: 20px;
+const StyledAvatar = styled(Avatar)`
+    @media (max-width: 700px) {
+      margin: 10px 0;
+    }
 `
 
 export default function Home(props) {
   return (
     <Wrapper className={props.className}>
-      <StyledInfo
-        email={props.info.email}
-        phone={props.info.phone}
-        address1={props.info.address1}
-        address2={props.info.address2}
-        facebook={props.info.facebook}
-      />
-      <StyledForm />
+      <Paragraphs>
+        {props.paragraphs.map((p, index) => <p key={index}>{p}</p>)}
+      </Paragraphs>
+
+      <Avatars>
+        {Object.keys(props.people).map(key =>
+          <StyledAvatar
+            img={props.people[key].img}
+            name={props.people[key].name}
+            subtitle={props.people[key].subtitle}
+            key={key}
+          />
+        )}
+      </Avatars>
     </Wrapper>
   )
 }
