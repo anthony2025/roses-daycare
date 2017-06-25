@@ -12,8 +12,8 @@ const Wrapper = styled.div`
     justify-content: space-around;
 
     font-family: SignikaRegular;
-    color: ${props => props.theme.text};
-    text-shadow: 1px 1px 1px rgba(255,255,255,.5);
+    color: ${props => props.theme.accentText};
+    text-shadow: 1px 1px 1px rgba(255,255,255,.4);
 
     & > *.active,
     & > *:hover {

@@ -3,6 +3,7 @@ import {injectGlobal} from 'styled-components'
 export default () => injectGlobal`
     html {
       box-sizing: border-box;
+      height: 100%;
     }
 
     *,
@@ -12,6 +13,7 @@ export default () => injectGlobal`
     }
 
     body {
+      height: 100%;
       font-size: 16px;
       line-height: 1;
       margin: 0;

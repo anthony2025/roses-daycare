@@ -32,7 +32,7 @@ const StyledImage = styled(Image)`
     &:hover,
     &:focus {
       transition: .75s;
-      box-shadow: 0 0 20px ${props => props.theme.text};
+      box-shadow: 0 0 10px ${props => props.theme.text};
       filter: grayscale(75%);
     }
 

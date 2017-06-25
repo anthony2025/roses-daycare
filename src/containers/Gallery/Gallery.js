@@ -28,7 +28,7 @@ const CarouselImage = styled(Image)`
     height: 450px;
     max-width: 600px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px ${props => props.theme.text};
+    box-shadow: 0 0 5px ${props => props.theme.text};
     @media (min-width: 700px) {
       height: 450px;
       max-width: 600px;

@@ -11,10 +11,11 @@ Logo.propTypes = {
 }
 
 const Wrapper = styled(Link)`
-    color: ${props => props.theme.text};
+    color: ${props => props.theme.accentText};
+    outline: 0;
     line-height: .75;
     font-family: SignikaSemi;
-    text-shadow: 1px 1px 1px rgba(255,255,255,.5);
+    text-shadow: 1px 1px 1px rgba(255,255,255,.4);
 `
 
 const BigTitle = styled.div`

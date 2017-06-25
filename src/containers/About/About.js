@@ -55,7 +55,7 @@ const Avatars = styled.div`
 
 const StyledAvatar = styled(Avatar)`
     @media (max-width: 700px) {
-      margin: 20px 0;
+      margin: 10px 0;
     }
 `
 
