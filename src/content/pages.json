@@ -5,11 +5,11 @@
     "longTitle": "Home",
     "shortTitle": "Home"
   },
-  "contact": {
-    "path": "/contact",
-    "longTitle": "Contact Us",
-    "shortTitle": "Contact",
-    "subtitle": "Ask us a question"
+  "news": {
+    "path": "/news",
+    "longTitle": "News",
+    "shortTitle": "News",
+    "subtitle": "See what we are up to"
   },
   "gallery": {
     "path": "/gallery",
@@ -17,11 +17,11 @@
     "shortTitle": "Gallery",
     "subtitle": "Come peek inside"
   },
-  "news": {
-    "path": "/news",
-    "longTitle": "News",
-    "shortTitle": "News",
-    "subtitle": "See what we are up to"
+  "contact": {
+    "path": "/contact",
+    "longTitle": "Contact Us",
+    "shortTitle": "Contact",
+    "subtitle": "Ask us a question"
   },
   "noMatch": {
     "longTitle": "NoMatch",

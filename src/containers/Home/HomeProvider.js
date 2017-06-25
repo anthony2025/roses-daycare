@@ -1,12 +1,12 @@
 import Home from './Home'
-import injectProps from 'utils/injectProps'
+import {connect} from 'react-redux'
 
-import intro from 'content/intro'
+import {getIntro} from 'store/selectors'
 import people from 'content/people'
 
-const mapToProps = {
-  paragraphs: intro,
+const mapStateToProps = state => ({
+  paragraphs: getIntro(state),
   people: people
-}
+})
 
-export default injectProps(mapToProps)(Home)
+export default connect(mapStateToProps, null, null, {pure: false})(Home)

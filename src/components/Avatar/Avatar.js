@@ -33,7 +33,7 @@ const StyledImage = styled(Image)`
     &:focus {
       transition: .75s;
       box-shadow: 0 0 10px ${props => props.theme.primary};
-      filter: grayscale(75%);
+      filter: grayscale(90%);
     }
 
     @media (max-width: 700px) {
