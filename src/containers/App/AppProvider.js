@@ -8,11 +8,13 @@ import {REPOSITORY, DEV_EMAIL} from 'services/urls'
 
 const mapStateToProps = state => ({
   devEmail: DEV_EMAIL,
-  address: getFullAddress(state),
-  phone: getPhone(state),
-  email: getEmail(state),
   repository: REPOSITORY,
-  pages: pages
+  pages: pages,
+  info: {
+    phone: getPhone(state),
+    email: getEmail(state),
+    address: getFullAddress(state),
+  }
 })
 
 export default connect(mapStateToProps, null, null, {pure: false})(App)

@@ -11,7 +11,7 @@ Header.propTypes = {
     PropTypes.shape({
       exact: PropTypes.bool,
       path: PropTypes.string,
-      shortTitle: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired
     })
   ).isRequired
 }
@@ -54,7 +54,7 @@ export default function Header(props) {
             key={key}
             activeClassName="active"
           >
-            {pages[key].shortTitle}
+            {pages[key].name}
           </NavLink>
         )}
       </StyledNavbar>

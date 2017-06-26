@@ -12,7 +12,7 @@ const theme = {
 }
 
 Card.propTypes = {
-  title: PropTypes.string,
+  name: PropTypes.string,
   text: PropTypes.string.isRequired,
   path: PropTypes.string
 }
@@ -76,7 +76,7 @@ const ReadMore = styled.div`
 export default function Card(props) {
   return (
     <Wrapper to={props.path} className={props.className}>
-      <Title>{props.title}</Title>
+      <Title>{props.name}</Title>
       <Text>{props.text}</Text>
       <ReadMore>Read more</ReadMore>
     </Wrapper>

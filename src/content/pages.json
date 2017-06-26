@@ -2,29 +2,31 @@
   "home": {
     "exact": true,
     "path": "/",
-    "longTitle": "Home",
-    "shortTitle": "Home"
+    "name": "Home",
+    "subtitle": "About us"
   },
   "news": {
+    "exact": false,
     "path": "/news",
-    "longTitle": "News",
-    "shortTitle": "News",
+    "name": "News",
     "subtitle": "See what we are up to"
   },
   "gallery": {
+    "exact": false,
     "path": "/gallery",
-    "longTitle": "Gallery",
-    "shortTitle": "Gallery",
+    "name": "Gallery",
     "subtitle": "Come peek inside"
   },
   "contact": {
+    "exact": false,
     "path": "/contact",
-    "longTitle": "Contact Us",
-    "shortTitle": "Contact",
+    "name": "Contact Us",
     "subtitle": "Ask us a question"
   },
   "noMatch": {
-    "longTitle": "NoMatch",
-    "shortTitle": "NoMatch"
+    "exact": false,
+    "path": null,
+    "name": "No Match",
+    "subtitle": "404: Invalid Link"
   }
 }

@@ -16,11 +16,14 @@ Home.propTypes = {
 }
 
 const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @media (min-width: 700px) {
-      padding: 40px 10%;
+      padding: 10px 10%;
     }
     @media (max-width: 700px) {
-      padding: 40px 5%;
+      padding: 10px 6%;
     }
 `
 
@@ -29,33 +32,32 @@ const Paragraphs = styled.div`
     line-height: 1.3;
     font-family: Avenir Next;
     color: ${props => props.theme.primary};
+    font-size: 19px;
     @media (max-width: 700px) {
-      font-size: 14px;
       margin: 0 5% 30px 5%;
     }
     @media (min-width: 700px) {
-      font-size: 19px;
       margin: 0 22% 25px 22%;
     }
 `
 
 const Avatars = styled.div`
-    margin: 40px 25px 10px 25px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    @media (max-width: 700px) {
-      flex-direction: column;
-    }
-    @media (min-width: 700px) {
-      flex-direction: row;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
 `
 
 const StyledAvatar = styled(Avatar)`
+    @media (min-width: 700px) {
+      width: 15vw;
+      height: 15vw;
+      margin: 0 10px 50px 10px;
+    }
     @media (max-width: 700px) {
-      margin: 10px 0;
+      flex: 1;
+      width: 35vw;
+      height: 35vw;
+      margin-bottom: 50px;
     }
 `
 

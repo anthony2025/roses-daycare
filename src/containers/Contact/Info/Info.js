@@ -7,7 +7,6 @@ Info.propTypes = {
   phone: PropTypes.string.isRequired,
   address1: PropTypes.string.isRequired,
   address2: PropTypes.string.isRequired,
-  facebook: PropTypes.string.isRequired
 }
 
 const Wrapper = styled.div`
@@ -50,10 +49,6 @@ export default function Info(props) {
           <br />
           {props.address2}
         </Field>
-      </Item>
-      <Item>
-        <Subtitle>FACEBOOK</Subtitle>
-        <Field>{props.facebook}</Field>
       </Item>
     </Wrapper>
   )

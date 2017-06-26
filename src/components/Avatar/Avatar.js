@@ -28,21 +28,14 @@ const Subtitle = styled.div`
 const StyledImage = styled(Image)`
     border: 3px solid ${props => props.theme.primary};
     border-radius: 50%;
+    width: inherit;
+    height: inherit;
 
     &:hover,
     &:focus {
       transition: .75s;
       box-shadow: 0 0 10px ${props => props.theme.primary};
       filter: grayscale(90%);
-    }
-
-    @media (max-width: 700px) {
-      width: 40vw;
-      height: 40vw;
-    }
-    @media (min-width: 700px) {
-      width: 15vw;
-      height: 15vw;
     }
 `
 

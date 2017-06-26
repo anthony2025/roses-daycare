@@ -1,10 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import GithubCorner from './GithubCorner'
 import Header from './Header'
 import MainSection from './MainSection'
 import Footer from './Footer'
+
+App.propTypes = {
+  devEmail: PropTypes.string.isRequired,
+  repository: PropTypes.string.isRequired,
+  pages: PropTypes.object.isRequired,
+  info: PropTypes.shape({
+    address: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
+  }).isRequired
+}
 
 const Wrapper = styled.div`
     background-color: ${props => props.theme.background};
@@ -21,9 +33,9 @@ export default function App(props) {
       <MainSection pages={props.pages} />
       <Footer
         devEmail={props.devEmail}
-        address={props.address}
-        phone={props.phone}
-        email={props.email}
+        address={props.info.address}
+        phone={props.info.phone}
+        email={props.info.email}
       />
     </Wrapper>
   )
