@@ -22,14 +22,14 @@ const Wrapper = styled.div`
       text-shadow: none;
     }
 
-    @media (max-width: 700px) {
-      font-size: 6vw;
+    @media (min-width: 900px) {
+      font-size: 3.5vw;
     }
     @media (min-width: 700px) and (max-width: 900px) {
       font-size: 4vw;
     }
-    @media (min-width: 900px) {
-      font-size: 3vw;
+    @media (max-width: 700px) {
+      font-size: 6vw;
     }
 `
 

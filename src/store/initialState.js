@@ -21,7 +21,6 @@ export default {
     address1: '6020 Franconia Rd',
     address2: 'Springfield VA 22150',
     email: 'rosesdaycare@gmail.com',
-    facebook: 'facebook.com/rosesdaycare',
     phone: '571 219 1442'
   }
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Avatar from 'components/Avatar'
 
 Home.propTypes = {
-  paragraphs: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  paragraphs: PropTypes.arrayOf(PropTypes.string),
   people: PropTypes.objectOf(
     PropTypes.shape({
       img: PropTypes.string.isRequired,
@@ -61,11 +61,11 @@ const StyledAvatar = styled(Avatar)`
     }
 `
 
-export default function Home(props) {
+export default function Home({paragraphs, ...props}) {
   return (
     <Wrapper className={props.className}>
       <Paragraphs>
-        {props.paragraphs.map((p, index) => <p key={index}>{p}</p>)}
+        {paragraphs && paragraphs.map((p, index) => <p key={index}>{p}</p>)}
       </Paragraphs>
 
       <Avatars>

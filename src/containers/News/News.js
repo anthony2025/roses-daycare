@@ -10,9 +10,10 @@ News.propTypes = {
       title: PropTypes.string.isRequired,
       image: PropTypes.string,
       text: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired
     })
-  ).isRequired
+  )
 }
 
 const Articles = styled.div`
@@ -25,7 +26,9 @@ const Articles = styled.div`
 `
 
 const StyledArticle = styled(Article)`
-    margin-bottom: 35px;
+    margin-bottom: 45px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid ${props => props.theme.primary}
 `
 
 const Link = styled.div`
@@ -33,16 +36,17 @@ const Link = styled.div`
     font-size: 12px;
 `
 
-export default function News(props) {
+export default function News({articles, ...props}) {
   return (
     <div className={props.className}>
 
       <Articles>
-        {props.articles.map(article =>
+        {articles && articles.map(article =>
           <StyledArticle
             title={article.title}
             image={article.image}
             text={article.text}
+            date={article.date}
             key={article.id}
           />
         )}

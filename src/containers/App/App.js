@@ -15,7 +15,7 @@ App.propTypes = {
     address: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired
-  }).isRequired
+  })
 }
 
 const Wrapper = styled.div`

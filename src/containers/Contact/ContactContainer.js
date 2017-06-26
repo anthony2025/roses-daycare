@@ -14,8 +14,7 @@ class ContactContainer extends Component {
       email: PropTypes.string.isRequired,
       phone: PropTypes.string.isRequired,
       address1: PropTypes.string.isRequired,
-      address2: PropTypes.string.isRequired,
-      facebook: PropTypes.string.isRequired
+      address2: PropTypes.string.isRequired
     }).isRequired
   }
 

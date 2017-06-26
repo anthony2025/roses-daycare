@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import grayscale from 'styling/grayscaleEffect'
 import Image from 'components/Image'
 
 Avatar.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string,
-  subtitle: PropTypes.string
+  subtitle: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 const Wrapper = styled.div`
@@ -31,18 +33,13 @@ const StyledImage = styled(Image)`
     width: inherit;
     height: inherit;
 
-    &:hover,
-    &:focus {
-      transition: .75s;
-      box-shadow: 0 0 10px ${props => props.theme.primary};
-      filter: grayscale(90%);
-    }
+    ${props => (props.onClick ? `;` : grayscale)}
 `
 
 export default function Avatar(props) {
   return (
     <Wrapper className={props.className}>
-      <StyledImage src={props.img} />
+      <StyledImage src={props.img} onClick={props.onClick} />
       <Name>
         {props.name}
       </Name>

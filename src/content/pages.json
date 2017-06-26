@@ -20,7 +20,7 @@
   "contact": {
     "exact": false,
     "path": "/contact",
-    "name": "Contact Us",
+    "name": "Contact",
     "subtitle": "Ask us a question"
   },
   "noMatch": {

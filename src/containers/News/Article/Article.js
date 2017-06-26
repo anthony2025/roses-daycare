@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Image from 'components/Image'
+import Avatar from 'components/Avatar'
 
 Article.propTypes = {
   title: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   image: PropTypes.string,
   text: PropTypes.string.isRequired
 }
@@ -48,17 +50,30 @@ const StyledImage = styled(Image)`
     }
 `
 
+const Metadata = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const When = styled.div`
+    font-size: 15px;
+    margin: 0 10px 0 auto;
+`
+
+const Who = styled(Avatar)`
+    height: 40px;
+    width: 40px;
+`
+
 const Paragraph = styled.div`
     text-align: left;
     line-height: 1.25;
 
     @media (max-width: 700px) {
       font-size: 15px;
-      margin-bottom: 25px;
     }
     @media (min-width: 700px) {
       font-size: 20px;
-      margin-bottom: 25px;
     }
 `
 
@@ -70,6 +85,10 @@ export default function Article (props) {
       <div>
         <Title>{props.title.toUpperCase()}</Title>
         <Paragraph>{props.text}</Paragraph>
+        <Metadata>
+          <When>{props.date}</When>
+          <Who img="avatars/shirley.jpg" onClick={() => true}/>
+        </Metadata>
       </div>
     </Wrapper>
   )

@@ -56,7 +56,6 @@ export default function Contact(props) {
         phone={props.info.phone}
         address1={props.info.address1}
         address2={props.info.address2}
-        facebook={props.info.facebook}
       />
       <StyledForm
         fields={props.form.fields}
