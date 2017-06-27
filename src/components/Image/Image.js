@@ -4,11 +4,10 @@ import styled from 'styled-components'
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  onClick: PropTypes.func
 }
 
 const StyledImage = styled.img`
-    cursor: ${props => props.onClick ? 'pointer' : 'auto'};
+    cursor: inherit;
     border-radius: 1px;
     object-fit: cover;
     width: 100%;

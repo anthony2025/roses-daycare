@@ -5,15 +5,13 @@ import styled from 'styled-components'
 import Article from './Article'
 
 News.propTypes = {
-  articles: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      image: PropTypes.string,
-      text: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired
-    })
-  )
+  articles: PropTypes.shape({
+    title: PropTypes.string,
+    image: PropTypes.string,
+    text: PropTypes.string,
+    date: PropTypes.string,
+    id: PropTypes.string
+  })
 }
 
 const Articles = styled.div`
@@ -27,7 +25,7 @@ const Articles = styled.div`
 
 const StyledArticle = styled(Article)`
     margin-bottom: 45px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-bottom: 1px solid ${props => props.theme.primary}
 `
 
@@ -39,17 +37,19 @@ const Link = styled.div`
 export default function News({articles, ...props}) {
   return (
     <div className={props.className}>
-
       <Articles>
-        {articles && articles.map(article =>
-          <StyledArticle
-            title={article.title}
-            image={article.image}
-            text={article.text}
-            date={article.date}
-            key={article.id}
-          />
-        )}
+        {Object.keys(articles).length >= 0 &&
+          Object.keys(articles).map(key =>
+            <StyledArticle
+              title={articles[key].title}
+              image={articles[key].image}
+              text={articles[key].text}
+              date={articles[key].date}
+              onClick={props.modalOpenHandler(articles[key].author)}
+              author={articles[key].author}
+              key={key}
+            />
+          )}
       </Articles>
 
       <Link>

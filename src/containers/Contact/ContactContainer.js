@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import Contact from './Contact'
 
 import {connect} from 'react-redux'
@@ -9,15 +8,6 @@ import {post as postToDatabase} from 'services/database'
 import {DATABASE_URL} from 'services/urls'
 
 class ContactContainer extends Component {
-  static propTypes = {
-    info: PropTypes.shape({
-      email: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
-      address1: PropTypes.string.isRequired,
-      address2: PropTypes.string.isRequired
-    }).isRequired
-  }
-
   state = {
     name: '',
     email: '',

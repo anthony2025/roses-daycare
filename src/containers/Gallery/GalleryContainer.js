@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
+import images from 'store/images'
+
 import Gallery from './Gallery'
-import images from 'content/images'
+import Image from 'components/Image'
+import Modal from 'components/Modal'
 
 class GalleryContainer extends Component {
   state = {
@@ -15,15 +18,23 @@ class GalleryContainer extends Component {
 
   render() {
     return (
-      <Gallery
-        className={this.props.className}
-        images={images}
-        previewImage={this.state.previewImage}
-        isModalOpen={this.state.isModalOpen}
-        modalOpenHandler={this.handleModalOpen}
-        modalCloseHandler={this.handleModalClose}
-        {...this.props}
-      />
+      <div>
+        <Gallery
+          images={images}
+          modalOpenHandler={this.handleModalOpen}
+          {...this.props}
+        />
+
+        <Modal
+          isModalOpen={this.state.isModalOpen}
+          modalCloseHandler={this.handleModalClose}
+        >
+          <Image
+            onClick={this.handleModalClose}
+            src={this.state.previewImage}
+          />
+        </Modal>
+      </div>
     )
   }
 }

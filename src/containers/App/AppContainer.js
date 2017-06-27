@@ -3,7 +3,7 @@ import App from './App'
 import {connect} from 'react-redux'
 import {getFullAddress, getPhone, getEmail} from 'store/selectors'
 
-import pages from 'content/pages'
+import pages from 'store/pages'
 import {REPOSITORY, DEV_EMAIL} from 'services/urls'
 
 const mapStateToProps = state => ({

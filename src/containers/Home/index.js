@@ -1,1 +1,1 @@
-export {default} from './HomeProvider'
+export {default} from './HomeContainer'

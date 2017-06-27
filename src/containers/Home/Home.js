@@ -8,11 +8,12 @@ Home.propTypes = {
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   people: PropTypes.objectOf(
     PropTypes.shape({
-      img: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       subtitle: PropTypes.string.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  modalOpenHandler: PropTypes.func
 }
 
 const Wrapper = styled.div`
@@ -49,9 +50,9 @@ const Avatars = styled.div`
 
 const StyledAvatar = styled(Avatar)`
     @media (min-width: 700px) {
-      width: 15vw;
-      height: 15vw;
-      margin: 0 10px 50px 10px;
+      width: 16vw;
+      height: 16vw;
+      margin: 0 15px 50px 5px;
     }
     @media (max-width: 700px) {
       flex: 1;
@@ -61,7 +62,7 @@ const StyledAvatar = styled(Avatar)`
     }
 `
 
-export default function Home({paragraphs, ...props}) {
+export default function Home({paragraphs, people, ...props}) {
   return (
     <Wrapper className={props.className}>
       <Paragraphs>
@@ -69,11 +70,13 @@ export default function Home({paragraphs, ...props}) {
       </Paragraphs>
 
       <Avatars>
-        {Object.keys(props.people).map(key =>
+        {people && Object.keys(people).map(key =>
           <StyledAvatar
-            img={props.people[key].img}
-            name={props.people[key].name}
-            subtitle={props.people[key].subtitle}
+            image={people[key].image}
+            name={people[key].name}
+            subtitle={people[key].subtitle}
+            border={3}
+            onClick={props.modalOpenHandler(key)}
             key={key}
           />
         )}

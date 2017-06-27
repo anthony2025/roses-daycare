@@ -4,14 +4,10 @@ import styled from 'styled-components'
 
 import Image from 'components/Image'
 import Carousel from 'components/Carousel'
-import Modal from 'components/Modal'
 
 Gallery.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  previewImage: PropTypes.string.isRequired,
-  isModalOpen: PropTypes.bool.isRequired,
   modalOpenHandler: PropTypes.func.isRequired,
-  modalCloseHandler: PropTypes.func.isRequired
 }
 
 const Wrapper = styled.div`
@@ -42,6 +38,7 @@ const CarouselImage = styled(Image)`
 `
 
 const Thumbnails = styled.div`
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
@@ -76,16 +73,6 @@ export default function Gallery(props) {
           />
         )}
       </Thumbnails>
-
-      <Modal
-        isModalOpen={props.isModalOpen}
-        modalCloseHandler={props.modalCloseHandler}
-      >
-        <Image
-          onClick={props.modalCloseHandler}
-          src={props.previewImage}
-        />
-      </Modal>
     </Wrapper>
   )
 }

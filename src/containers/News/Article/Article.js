@@ -9,7 +9,8 @@ Article.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   image: PropTypes.string,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  author: PropTypes.string
 }
 
 const Wrapper = styled.div`
@@ -83,11 +84,11 @@ export default function Article (props) {
       <StyledImage src={props.image} />
 
       <div>
-        <Title>{props.title.toUpperCase()}</Title>
+        <Title>{props.title && props.title.toUpperCase()}</Title>
         <Paragraph>{props.text}</Paragraph>
         <Metadata>
           <When>{props.date}</When>
-          <Who img="avatars/shirley.jpg" onClick={() => true}/>
+          <Who image={`avatars/${props.author}.jpg`} onClick={props.onClick}/>
         </Metadata>
       </div>
     </Wrapper>
