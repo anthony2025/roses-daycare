@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import appear from 'styling/appearAnimation'
 import Avatar from 'components/Avatar'
 
 Home.propTypes = {
@@ -21,11 +22,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     @media (min-width: 700px) {
-      padding: 10px 10%;
+      padding: 10px 10% 20px 10%;
     }
     @media (max-width: 700px) {
       padding: 10px 6%;
     }
+    animation: ${appear} .9s ease;
 `
 
 const Paragraphs = styled.div`
@@ -60,6 +62,7 @@ const StyledAvatar = styled(Avatar)`
       height: 35vw;
       margin-bottom: 50px;
     }
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 `
 
 export default function Home({paragraphs, people, ...props}) {

@@ -26,27 +26,37 @@ const Wrapper = styled.div`
     @media (min-width: 700px) {
       flex-direction: row;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 700px) and (min-height: 500px) {
       flex-direction: column;
     }
 `
 
 const Name = styled.div`
-    font-size: 24px;
+    @media (min-width: 700px) {
+        font-size: 24px;
+    }
+    @media (max-width: 700px) and (min-height: 500px) {
+        font-size: 20px;
+    }
 `
 
 const Subtitle = styled.div`
-    font-size: 14px;
     color: ${props => props.theme.accent};
     margin-bottom: 20px;
+    font-size: 14px;
 `
 
 const Description = styled.div`
-    font-size: 18px;
+    @media (min-width: 700px) {
+        font-size: 20px;
+    }
+    @media (max-width: 700px) and (min-height: 500px) {
+        font-size: 16px;
+    }
 `
 
 const Content = styled.div`
-  margin: 10%;
+    margin: 10%;
 `
 
 const StyledImage = styled(Image)`

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import appear from 'styling/appearAnimation'
 import Form from './Form'
 import Info from './Info'
 
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
 
     @media (max-width: 500px) {
       font-size: 15px;
-      padding: 40px 5%;
+      padding: 40px 10%;
     }
     @media (min-width: 500px) and (max-width: 950px) {
       font-size: 19px;
@@ -36,6 +37,7 @@ const Wrapper = styled.div`
       font-size: 20px;
       padding: 40px 30%;
     }
+    animation: ${appear} .9s ease;
 `
 
 const StyledInfo = styled(Info)`

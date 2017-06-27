@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import appear from 'styling/appearAnimation'
 import Image from 'components/Image'
 import Carousel from 'components/Carousel'
 
@@ -18,6 +19,7 @@ const Wrapper = styled.div`
     @media (max-width: 700px) {
       padding: 40px 5%;
     }
+    animation: ${appear} .9s ease;
 `
 
 const CarouselImage = styled(Image)`
@@ -39,6 +41,7 @@ const Thumbnails = styled.div`
     justify-items: center;
     align-items: stretch;
     grid-gap: 5px 15px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 `
 
 const Thumbnail = styled(Image)`

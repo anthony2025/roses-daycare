@@ -18,7 +18,6 @@ export const post = async (data, url) => {
     )
     return 'Thank you, we will get back to you soon :)'
   } catch (error) {
-    return 'Oops... an error ocurred .-. could you please send us an email?'
     throw error
   }
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import RouteWithProps from 'utils/RouteWithProps'
-import {Switch} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 
 import Home from 'containers/Home'
 import Contact from 'containers/Contact'
@@ -33,7 +32,7 @@ export default function MainSection(props) {
   return (
     <Switch>
       {Object.keys(pages).map(key =>
-        <RouteWithProps
+        <Route
           exact={pages[key].exact}
           key={key}
           path={pages[key].path}

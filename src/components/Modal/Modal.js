@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import appear from 'styling/appearAnimation'
 import ReactModal from 'react-modal'
 
 Modal.propTypes = {
@@ -24,6 +25,7 @@ const ReactModalStyled = styled(ReactModal)`
       width: 90vw;
       max-height: 90vh;
       cursor: pointer;
+      animation: ${appear} .6s ease;
     }
 
     & > * {

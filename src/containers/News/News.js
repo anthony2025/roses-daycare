@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import appear from 'styling/appearAnimation'
 import Article from './Article'
 
 News.propTypes = {
@@ -21,6 +22,7 @@ const Articles = styled.div`
     @media (max-width: 700px) {
       padding: 10px 7%;
     }
+    animation: ${appear} .9s ease;
 `
 
 const StyledArticle = styled(Article)`
