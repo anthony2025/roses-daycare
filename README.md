@@ -17,7 +17,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 ## Technologies
 <div id='technologies'/>
 
-* [React] and [react-router] allow us to code in components, which forces us towards code reusability and design consistency.
+* [React] and [React-Router] allow us to code in components, which forces us towards code reusability and design consistency.
 * [Redux] plus some help from Local Storage let us hydrate and cache the page with updated content.
 * [Firebase] and [Zapier] gives us serverless backend solutions. Firebase is used as a very minimal CMS until a more complex solution is needed, as well as for SPA hosting. We use Zapier with a webhook to notify us via email when a new question arrives.
 * [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution.
@@ -61,10 +61,11 @@ The blog extension is expected for next year, to host more of their day to day a
 
 For the project to run a file named .env should be created in the root folder of the project, with the following structure:
 ```bash
-REPOSITORY=https://link_to_YOUR_project_repository.com
-DEV_EMAIL=yourEmail@gmail.com
-DATABASE_URL=https://anEmptyFirebaseDatabase.firebaseio.com/
-EMAIL_HOOK=https://hooks.zapier.com/hooks/catch/thisOneIsOptional/YouCanIncludeAZapierCatchHookHere/
+NODE_PATH=src/
+REACT_APP_REPOSITORY=https://link_to_YOUR_project_repository.com
+REACT_APP_DEV_EMAIL=yourEmail@gmail.com
+REACT_APP_DATABASE_URL=https://anEmptyFirebaseDatabase.firebaseio.com/
+REACT_APP_EMAIL_HOOK=https://hooks.zapier.com/hooks/catch/thisOneIsOptional/YouCanIncludeAZapierCatchHookHere/
 ```
 
 

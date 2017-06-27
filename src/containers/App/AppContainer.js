@@ -4,11 +4,10 @@ import {connect} from 'react-redux'
 import {getFullAddress, getPhone, getEmail} from 'store/selectors'
 
 import pages from 'store/pages'
-import {REPOSITORY, DEV_EMAIL} from 'services/urls'
 
 const mapStateToProps = state => ({
-  devEmail: DEV_EMAIL,
-  repository: REPOSITORY,
+  devEmail: process.env.REACT_APP_DEV_EMAIL,
+  repository: process.env.REACT_APP_REPOSITORY,
   pages: pages,
   info: {
     phone: getPhone(state),
