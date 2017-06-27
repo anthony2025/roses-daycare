@@ -15,7 +15,7 @@ const StyledImage = styled.img`
 
 export default function Image(props) {
   return (
-    <StyledImage
+  <StyledImage
       className={props.className}
       src={process.env.PUBLIC_URL + props.src}
       {...props}

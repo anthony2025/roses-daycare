@@ -13,13 +13,12 @@ export const post = async (data, url) => {
     checkServerResponse(
       await fetch(url, {
         body: JSON.stringify(data),
-        headers: {'Content-Type': 'application/json'},
         method: 'POST'
       })
     )
-    alert('Thank you, we will get back to you soon :)')
+    return 'Thank you, we will get back to you soon :)'
   } catch (error) {
-    alert('Oops... an error ocurred .-. could you please send us an email?')
+    return 'Oops... an error ocurred .-. could you please send us an email?'
     throw error
   }
 }

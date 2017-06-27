@@ -30,17 +30,15 @@ const Label = styled.div`
 const Field = styled.input`
     color: ${props => props.theme.primary};
     background-color: inherit;
-    border-width: 2px;
-    border-style: solid;
-    border-color: ${props => props.theme.primary};
     display: block;
     min-height: 32px;
     width: 100%;
     font-size: inherit;
     outline: 0;
+    border: 2px solid ${props => props.theme.primary};
 
     &:focus {
-      border-color: ${props => props.theme.accent};
+      border: 2px solid ${props => props.theme.accent};
     }
 `
 
@@ -52,13 +50,13 @@ const SendButton = styled.button`
     height: 35px;
     width: 120px;
     margin: 20px 0;
+    outline: 0;
     border: 2px solid ${props => props.theme.primary};
     color: ${props => props.theme.primary};
     text-align: center;
     font-family: SignikaLight;
 
     &:focus {
-      outline: none;
       border: 2px solid ${props => props.theme.accent};
     }
 `
@@ -69,7 +67,7 @@ export default function Form(props) {
     <Wrapper className={props.className}>
       {Object.keys(fields).map(key =>
         <Item key={key}>
-          <Label for={key}>
+          <Label htmlFor={key}>
             {key.toUpperCase()}
           </Label>
           <Field
@@ -83,7 +81,7 @@ export default function Form(props) {
       )}
 
       <Item key="question">
-        <Label for="question">
+        <Label htmlFor="question">
           QUESTION
         </Label>
         <Textarea

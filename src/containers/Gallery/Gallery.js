@@ -21,18 +21,14 @@ const Wrapper = styled.div`
 `
 
 const CarouselImage = styled(Image)`
-    height: 450px;
+    height: 400px;
+    width: 80%;
     max-width: 600px;
     margin-bottom: 20px;
     border: 3px solid ${props => props.theme.primary};
     box-shadow: 0 1px 2px ${props => props.theme.primary};
-    @media (min-width: 700px) {
-      height: 450px;
-      max-width: 600px;
-    }
     @media (max-width: 700px) {
-      width: 90%;
-      max-height: 200px;
+      display: none;
     }
 `
 
@@ -49,6 +45,11 @@ const Thumbnail = styled(Image)`
     margin: 5px;
     box-shadow: 0px 2px 4px ${props => props.theme.primary};
     border: 1px solid ${props => props.theme.primary};
+    &:focus {
+      outline: none;
+      border: 3px solid ${props => props.theme.accent};
+      box-shadow: 0px 0px 10fpx 0px ${props => props.theme.accent};
+    }
 `
 
 export default function Gallery(props) {

@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import {getContactInfo} from 'store/selectors'
 
 import {post as postToDatabase} from 'services/database'
-import {DATABASE_URL} from 'services/urls'
+import {DATABASE_URL, EMAIL_HOOK} from 'services/urls'
 
 class ContactContainer extends Component {
   state = {
@@ -28,10 +28,12 @@ class ContactContainer extends Component {
       question: this.state.question.trim(),
       date: new Date().toJSON().slice(0, 10)
     }
-    // all fields required
-    if (payload.name && payload.email && payload.phone && payload.question) {
-      const url = DATABASE_URL + 'questions.json'
-      postToDatabase(payload, url)
+    let areAllFieldsFilled =
+      payload.name && payload.email && payload.phone && payload.question
+    if (areAllFieldsFilled) {
+      const dbUrl = DATABASE_URL + 'questions.json'
+      postToDatabase(payload, dbUrl).then(res => alert(res))
+      postToDatabase(payload, EMAIL_HOOK)
     } else {
       alert('please fill out all fields :)')
     }
