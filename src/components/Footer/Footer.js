@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     background-color: ${props => props.theme.primary};
     background-blend-mode: multiply;
     color: ${props => props.theme.opposite};
-    border-top: 2px solid ${props => props.theme.primary};
+    border-top: 3px solid ${props => props.theme.opposite};
 
     font-family: SignikaLight;
     line-height: 1.5;
@@ -57,6 +57,8 @@ const Copyright = styled.a`
     @media (max-width: 700px) {
       text-align: center;
       margin: 25px 0 0 0;
+      padding-top: 10px;
+      border-top: 1px solid ${props => props.theme.opposite};
     }
 `
 

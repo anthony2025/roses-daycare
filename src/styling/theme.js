@@ -17,9 +17,15 @@ const solarized = {
   green: '#859900'
 }
 
+const getRandomizedAccentColor = () => {
+  const colors = ['orange', 'red', 'magenta', 'violet', 'blue', 'cyan']
+  const randomInteger = Math.floor(Math.random() * colors.length)
+  return solarized[colors[randomInteger]]
+}
+
 export default {
   primary: solarized.base02,
-  accent: solarized.magenta,
+  accent: getRandomizedAccentColor(),
   opposite: solarized.base2,
-  background: '#FAFAFA',
+  background: '#FAFAFA'
 }

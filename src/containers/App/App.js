@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import GithubCorner from './GithubCorner'
-import Header from './Header'
+import GithubCorner from 'components/GithubCorner'
+import Header from 'components/Header'
 import MainSection from './MainSection'
-import Footer from './Footer'
+import Footer from 'components/Footer'
 
 App.propTypes = {
   devEmail: PropTypes.string,
