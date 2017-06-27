@@ -1,4 +1,4 @@
-![Rose's Daycare](/public/logo.svg?raw=true)
+![Rose's Daycare](/public/logo.png?raw=true)
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
@@ -11,7 +11,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 - [Motivation](#motivation)
 - [Future](#future)
 - [Prerequisites](#prerequisites)
-- [Development Flow](#development)
+- [Development](#development)
 - [License](#license)
 
 ## Technologies
@@ -19,13 +19,12 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 
 * [React] and [react-router] allow us to code in components, which forces us towards code reusability and design consistency.
 * [Redux] plus some help from Local Storage let us hydrate and cache the page with updated content.
-* [Firebase] and [Zapier] gives us serverless backend solutions. [Firebase] is used as a very minimal CMS until a more complex solution is needed, as well as for SPA hosting. We use [Zapier] with a webhook to notify us via email when a new question arrives.
+* [Firebase] and [Zapier] gives us serverless backend solutions. Firebase is used as a very minimal CMS until a more complex solution is needed, as well as for SPA hosting. We use Zapier with a webhook to notify us via email when a new question arrives.
 * [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution.
 * The new **Flexbox** and **Grid** standards provide a fully responsive and consistent layout system.
 * CSS3 **Transitions** and **Animations** help us add a touch of interactivity and playfulness. It's a kids business after all.
-<br><br/>
 * ~~NWB babel and webpack configuration~~ moved the project to create-react-app.
-* ~~CSS Modules~~ moved the project to styled-components. (commit 1970d78e8f4f91b39788421a7fbab1a1363af664)
+* ~~CSS Modules~~ moved the project to styled-components.
 
 ## Screenshot
 <div id='screenshot'/>
@@ -69,14 +68,14 @@ EMAIL_HOOK=https://hooks.zapier.com/hooks/catch/thisOneIsOptional/YouCanIncludeA
 ```
 
 
-## Development Flow
+## Development
 <div id='development'/>
 
 This project currently uses [create-react-app], look at their incredible documentation if more advanced configuration is needed.
 * `$ yarn install` in the app's root directory will install everything needed for development.
 * `$ yarn start` will run the app's development server.
 * `$ yarn build` creates an optimized production build.
-* `$ yarn deploy` will build and deploy to firebase (previous [firebase] configuration will be required).
+* `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
 
 
 ## License
