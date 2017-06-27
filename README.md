@@ -59,8 +59,8 @@ The blog extension is expected for next year, to host more of their day to day a
 * [Firebase] a database on the free tier.
 * [Zapier] a free zap with a catch webhook (optional, for email notifications).
 
-For the project to run a file named .env should be created in the root folder of the project, with the following structure:
-```bash
+For the project to run the following environment variables should be available. You can either add them into .env, or create a .env.local file in the root folder of the project (recommended), following this structure:
+```makefile
 NODE_PATH=src/
 REACT_APP_REPOSITORY=https://link_to_YOUR_project_repository.com
 REACT_APP_DEV_EMAIL=yourEmail@gmail.com
