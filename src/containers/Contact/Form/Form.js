@@ -8,9 +8,9 @@ Form.propTypes = {
     email: PropTypes.string,
     phone: PropTypes.string,
     question: PropTypes.string
-  }).isRequired,
-  sendHandler: PropTypes.func.isRequired,
-  changeHandler: PropTypes.func.isRequired
+  }),
+  sendHandler: PropTypes.func,
+  changeHandler: PropTypes.func
 }
 
 const Wrapper = styled.div`

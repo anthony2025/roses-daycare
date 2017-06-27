@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 Info.propTypes = {
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  address1: PropTypes.string.isRequired,
-  address2: PropTypes.string.isRequired,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  address1: PropTypes.string,
+  address2: PropTypes.string,
 }
 
 const Wrapper = styled.div`

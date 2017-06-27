@@ -8,11 +8,11 @@ Home.propTypes = {
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   people: PropTypes.objectOf(
     PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      subtitle: PropTypes.string.isRequired
+      image: PropTypes.string,
+      name: PropTypes.string,
+      subtitle: PropTypes.string
     })
-  ).isRequired,
+  ),
   modalOpenHandler: PropTypes.func
 }
 

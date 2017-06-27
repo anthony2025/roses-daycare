@@ -5,9 +5,9 @@ import styled from 'styled-components'
 import ReactModal from 'react-modal'
 
 Modal.propTypes = {
-  isModalOpen: PropTypes.bool.isRequired,
-  modalCloseHandler: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired
+  isModalOpen: PropTypes.bool,
+  modalCloseHandler: PropTypes.func,
+  children: PropTypes.node
 }
 
 const ReactModalStyled = styled(ReactModal)`
@@ -23,13 +23,13 @@ const ReactModalStyled = styled(ReactModal)`
       outline: 0;
       width: 90vw;
       max-height: 90vh;
+      cursor: pointer;
     }
 
     & > * {
       // making sure children don't exceed viewport dimensions
       max-height: 90vh;
       max-width: 90vw;
-      border: 4px solid ${props => props.theme.primary};
     }
 `
 

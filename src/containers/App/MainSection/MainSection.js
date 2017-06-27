@@ -16,7 +16,7 @@ MainSection.propTypes = {
       exact: PropTypes.bool,
       path: PropTypes.string
     })
-  ).isRequired
+  )
 }
 
 const getComponent = key =>

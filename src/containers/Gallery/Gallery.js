@@ -6,8 +6,8 @@ import Image from 'components/Image'
 import Carousel from 'components/Carousel'
 
 Gallery.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  modalOpenHandler: PropTypes.func.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string),
+  modalOpenHandler: PropTypes.func,
 }
 
 const Wrapper = styled.div`
@@ -34,7 +34,6 @@ const CarouselImage = styled(Image)`
       width: 90%;
       max-height: 200px;
     }
-
 `
 
 const Thumbnails = styled.div`
@@ -49,7 +48,7 @@ const Thumbnails = styled.div`
 const Thumbnail = styled(Image)`
     margin: 5px;
     box-shadow: 0px 2px 4px ${props => props.theme.primary};
-    // border: 1px solid ${props => props.theme.primary};
+    border: 1px solid ${props => props.theme.primary};
 `
 
 export default function Gallery(props) {

@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom'
 import shake from 'styling/shakeAnimation'
 
 Logo.propTypes = {
-  smallTitle: PropTypes.string.isRequired,
-  bigTitle: PropTypes.string.isRequired
+  smallTitle: PropTypes.string,
+  bigTitle: PropTypes.string
 }
 
 const Wrapper = styled(Link)`

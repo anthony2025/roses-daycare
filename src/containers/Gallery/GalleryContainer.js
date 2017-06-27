@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import images from 'store/images'
+import images from './images'
 
 import Gallery from './Gallery'
 import Image from 'components/Image'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 Navbar.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node
 }
 
 const Wrapper = styled.div`

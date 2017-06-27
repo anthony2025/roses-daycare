@@ -13,7 +13,7 @@ const theme = {
 
 Card.propTypes = {
   name: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   path: PropTypes.string
 }
 

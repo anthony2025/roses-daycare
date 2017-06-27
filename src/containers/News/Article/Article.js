@@ -6,10 +6,10 @@ import Image from 'components/Image'
 import Avatar from 'components/Avatar'
 
 Article.propTypes = {
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  date: PropTypes.string,
   image: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   author: PropTypes.string
 }
 

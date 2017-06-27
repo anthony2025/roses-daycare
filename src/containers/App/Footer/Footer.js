@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 Footer.propTypes = {
-  devEmail: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired
+  devEmail: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  address: PropTypes.string
 }
 
 const Wrapper = styled.div`

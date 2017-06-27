@@ -10,15 +10,19 @@ ModalBio.propTypes = {
 }
 
 const Wrapper = styled.div`
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.5;
-    padding: 10px;
+    padding: 20px;
+
     background-color: ${props => props.theme.primary};
     color: ${props => props.theme.opposite};
+    border-radius: 5px;
+    border: 1px solid ${props => props.theme.opposite};
+
     font-family: SignikaLight;
+    line-height: 1.5;
+    cursor: pointer;
     @media (min-width: 700px) {
       flex-direction: row;
     }
@@ -28,16 +32,17 @@ const Wrapper = styled.div`
 `
 
 const Name = styled.div`
-    font-size: 19px;
+    font-size: 24px;
 `
 
 const Subtitle = styled.div`
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    color: ${props => props.theme.accent};
+    margin-bottom: 20px;
 `
 
 const Description = styled.div`
-    font-size: 19px;
+    font-size: 18px;
 `
 
 const Content = styled.div`
@@ -45,7 +50,7 @@ const Content = styled.div`
 `
 
 const StyledImage = styled(Image)`
-    border: 3px solid ${props => props.theme.primary};
+    border: 1px solid ${props => props.theme.opposite};
     border-radius: 5px;
     width: 40%;
     height: auto;
@@ -67,7 +72,7 @@ export default function ModalBio(props) {
           {props.person.name}
         </Name>
         <Subtitle>
-          {props.person.subtitle}
+          {props.person.subtitle && props.person.subtitle.toUpperCase()}
         </Subtitle>
         <Description>
           {props.person.description}

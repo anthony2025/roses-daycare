@@ -6,8 +6,8 @@ import Image from 'components/Image'
 
 NoMatch.propTypes = {
   location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired
-  }).isRequired
+    pathname: PropTypes.string
+  })
 }
 
 const Wrapper = styled.div`

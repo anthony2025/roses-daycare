@@ -11,9 +11,9 @@ Header.propTypes = {
     PropTypes.shape({
       exact: PropTypes.bool,
       path: PropTypes.string,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string
     })
-  ).isRequired
+  )
 }
 
 const Wrapper = styled.div`

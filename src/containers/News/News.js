@@ -31,7 +31,8 @@ const StyledArticle = styled(Article)`
 
 const Link = styled.div`
     color: ${props => props.theme.primary};
-    font-size: 12px;
+    font-size: 14px;
+    margin: 0 0 20px 20px;
 `
 
 export default function News({articles, ...props}) {

@@ -8,13 +8,13 @@ import MainSection from './MainSection'
 import Footer from './Footer'
 
 App.propTypes = {
-  devEmail: PropTypes.string.isRequired,
-  repository: PropTypes.string.isRequired,
-  pages: PropTypes.object.isRequired,
+  devEmail: PropTypes.string,
+  repository: PropTypes.string,
+  pages: PropTypes.object,
   info: PropTypes.shape({
-    address: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
+    address: PropTypes.string,
+    phone: PropTypes.string,
+    email: PropTypes.string
   })
 }
 

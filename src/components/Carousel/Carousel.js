@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default class Carousel extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     speed: PropTypes.number
   }
 

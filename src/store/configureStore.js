@@ -6,10 +6,7 @@ import logger from 'redux-logger'
 
 import rootReducer from './reducers'
 import {updateContent} from './actions'
-import {
-  get as loadFromCache,
-  post as saveToCache
-} from 'services/localStorage'
+import {get as loadFromCache, post as saveToCache} from 'services/localStorage'
 
 export default () => {
   let store = createStore(

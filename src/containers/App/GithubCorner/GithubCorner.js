@@ -9,7 +9,7 @@ import styled, {keyframes} from 'styled-components'
 
 GithubCorner.propTypes = {
   left: PropTypes.bool,
-  repository: PropTypes.string.isRequired
+  repository: PropTypes.string
 }
 
 GithubCorner.defaultProps = {

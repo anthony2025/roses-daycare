@@ -7,9 +7,9 @@ import Info from './Info'
 
 Contact.propTypes = {
   form: PropTypes.shape({
-    fields: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
-    sendHandler: PropTypes.func.isRequired,
-    changeHandler: PropTypes.func.isRequired
+    fields: PropTypes.objectOf(PropTypes.string),
+    sendHandler: PropTypes.func,
+    changeHandler: PropTypes.func
   }),
   info: PropTypes.shape({
     email: PropTypes.string,
