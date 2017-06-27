@@ -23,10 +23,11 @@ const Wrapper = styled.div`
     font-family: SignikaLight;
     line-height: 1.5;
     cursor: pointer;
+    overflow: hidden;
     @media (min-width: 700px) {
       flex-direction: row;
     }
-    @media (max-width: 700px) and (min-height: 500px) {
+    @media (max-width: 700px) and (min-height: 480px) {
       flex-direction: column;
     }
 `
@@ -35,23 +36,28 @@ const Name = styled.div`
     @media (min-width: 700px) {
         font-size: 24px;
     }
-    @media (max-width: 700px) and (min-height: 500px) {
+    @media (max-width: 700px) {
         font-size: 20px;
     }
 `
 
 const Subtitle = styled.div`
     color: ${props => props.theme.accent};
-    margin-bottom: 20px;
     font-size: 14px;
+    @media (min-width: 700px) {
+      margin-bottom: 1.5em;
+    }
+    @media (max-width: 700px) {
+      margin-bottom: .5em;
+    }
 `
 
 const Description = styled.div`
     @media (min-width: 700px) {
-        font-size: 20px;
+      font-size: 20px;
     }
-    @media (max-width: 700px) and (min-height: 500px) {
-        font-size: 16px;
+    @media (max-width: 700px) {
+      font-size: 14px;
     }
 `
 
@@ -62,7 +68,7 @@ const Content = styled.div`
 const StyledImage = styled(Image)`
     border: 1px solid ${props => props.theme.opposite};
     border-radius: 5px;
-    width: 40%;
+    width: 35%;
     height: auto;
 `
 

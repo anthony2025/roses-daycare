@@ -11,7 +11,7 @@ Info.propTypes = {
 
 const Wrapper = styled.div`
     color: ${props => props.theme.primary};
-    font-size: 22px;
+    font-size: 21px;
 `
 
 const Item = styled.div`
