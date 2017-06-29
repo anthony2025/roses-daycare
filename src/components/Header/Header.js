@@ -17,28 +17,28 @@ Header.propTypes = {
 }
 
 const Wrapper = styled.div`
-    padding: 25px;
-    display: flex;
-    @media (max-width: 700px) {
-      flex-direction: column;
-    }
-    @media (min-width: 700px) {
-      flex-direction: row;
-    }
+  padding: 25px;
+  display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
 `
 
 const StyledLogo = styled(Logo)`
-    @media (max-width: 700px) {
-      margin-bottom: 25px;
-    }
-    @media (min-width: 700px) {
-      margin-bottom: 0;
-    }
+  @media (max-width: 700px) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: 700px) {
+    margin-bottom: 0;
+  }
 `
 
 const StyledNavbar = styled(Navbar)`
-    margin-top: auto;
-    width: 100%;
+  margin-top: auto;
+  width: 100%;
 `
 
 export default function Header(props) {

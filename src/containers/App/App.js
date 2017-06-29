@@ -19,10 +19,10 @@ App.propTypes = {
 }
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.background};
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: ${props => props.theme.background};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `
 
 export default function App(props) {

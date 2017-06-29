@@ -21,10 +21,7 @@ class NewsContainer extends Component {
   render() {
     return (
       <div>
-        <News
-          modalOpenHandler={this.handleModalOpen}
-          {...this.props}
-        />
+        <News modalOpenHandler={this.handleModalOpen} {...this.props} />
         <Modal
           isModalOpen={this.state.isModalOpen}
           modalCloseHandler={this.handleModalClose}

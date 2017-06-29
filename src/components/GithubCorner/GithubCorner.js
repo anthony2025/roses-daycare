@@ -17,37 +17,37 @@ GithubCorner.defaultProps = {
 }
 
 const octocatWave = keyframes`
-    0% {transform: rotate(0deg);}
-    20% {transform: rotate(-25deg);}
-    40% {transform: rotate(10deg);}
-    60% {transform: rotate(-25deg);}
-    80% {transform: rotate(10deg);}
-    100% {transform: rotate(0deg);}
+  0% {transform: rotate(0deg);}
+  20% {transform: rotate(-25deg);}
+  40% {transform: rotate(10deg);}
+  60% {transform: rotate(-25deg);}
+  80% {transform: rotate(10deg);}
+  100% {transform: rotate(0deg);}
 `
 
 const Wrapper = styled.a`
-    position: absolute;
-    top: 0;
-    right: ${props => props.left ? 'auto' : '0'};
+  position: absolute;
+  top: 0;
+  right: ${props => (props.left ? 'auto' : '0')};
 `
 
 const OctoArm = styled.path`
-    transform-origin: 130px 106px;
-    ${Wrapper}:hover & {animation: ${octocatWave} 560ms ease-in-out;}
+  transform-origin: 130px 106px;
+  ${Wrapper}:hover & {
+    animation: ${octocatWave} 560ms ease-in-out;
+  }
 
-    @media (max-width: 500px) {
-      ${Wrapper}:hover & {animation: none;}
-      animation: ${octocatWave} 560ms ease-in-out;
+  @media (max-width: 500px) {
+    ${Wrapper}:hover & {
+      animation: none;
     }
+    animation: ${octocatWave} 560ms ease-in-out;
+  }
 `
 
-const Background = styled.svg`
-    fill: white;
-`
+const Background = styled.svg`fill: white;`
 
-const OctoBody = styled.path`
-    fill: ${props => props.theme.accent};
-`
+const OctoBody = styled.path`fill: ${props => props.theme.accent};`
 
 export default function GithubCorner(props) {
   return (

@@ -30,7 +30,7 @@ export default {
   people: {
     anthony: {
       description:
-        "Anthony is our marketing star, you will find him around our blog and facebook page, keeping parents up to date in all our activities.",
+        'Anthony is our marketing wizard, you will find him around our blog and facebook page, keeping parents up to date on what is going up inside.',
       image: 'avatars/anthony.jpg',
       name: 'Anthony Ascencio',
       subtitle: 'Marketing'
@@ -44,7 +44,7 @@ export default {
     },
     fabiola: {
       description:
-        "Ms. Fabiola is a loving mother of two girls, and a natural born leader. With sheer enthusiasm and absolute patience she directs our crafts and activities every morning.",
+        'Ms. Fabiola has an infinite patience and creativity to come up with new crafts and activities. She is a loving mother of two girls, and a natural born leader.',
       image: 'avatars/fabiola.jpg',
       name: 'Fabiola Pacheco',
       subtitle: 'Lead Teacher'

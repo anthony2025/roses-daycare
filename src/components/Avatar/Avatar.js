@@ -13,30 +13,26 @@ Avatar.propTypes = {
 }
 
 const Wrapper = styled.div`
-    cursor: pointer;
-    text-align: center;
-    line-height: 1.3;
-    color: ${props => props.theme.primary};
-    font-family: SignikaLight;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.3;
+  color: ${props => props.theme.primary};
+  font-family: SignikaLight;
 `
 
-const Name = styled.div`
-    font-size: 15px;
-`
+const Name = styled.div`font-size: 15px;`
 
-const Subtitle = styled.div`
-    font-size: 12px;
-`
+const Subtitle = styled.div`font-size: 12px;`
 
 const StyledImage = styled(Image)`
-    border: ${props => props.border}px solid ${props => props.theme.primary};
-    border-radius: 50%;
-    width: inherit;
-    height: inherit;
-    &:hover {
-      transition: .75s;
-      filter: grayscale(90%);
-    }
+  border: ${props => props.border}px solid ${props => props.theme.primary};
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  &:hover {
+    transition: .75s;
+    filter: grayscale(90%);
+  }
 `
 
 export default function Avatar(props) {

@@ -7,4 +7,3 @@ export default ({component, ...props}) =>
     render={innerProps =>
       React.createElement(component, {...props, ...innerProps})}
   />
-

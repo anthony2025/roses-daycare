@@ -13,52 +13,48 @@ Form.propTypes = {
   changeHandler: PropTypes.func
 }
 
-const Wrapper = styled.div`
-    text-align: center;
-`
+const Wrapper = styled.div`text-align: center;`
 
-const Item = styled.div`
-    text-align: left;
-`
+const Item = styled.div`text-align: left;`
 
 const Label = styled.div`
-    margin: 20px 0 7px 0;
-    color: ${props => props.theme.primary};
-    font-family: SignikaRegular;
+  margin: 20px 0 7px 0;
+  color: ${props => props.theme.primary};
+  font-family: SignikaRegular;
 `
 
 const Field = styled.input`
-    color: ${props => props.theme.primary};
-    background-color: inherit;
-    display: block;
-    min-height: 32px;
-    width: 100%;
-    font-size: inherit;
-    outline: 0;
-    border: 2px solid ${props => props.theme.primary};
+  color: ${props => props.theme.primary};
+  background-color: inherit;
+  display: block;
+  min-height: 32px;
+  width: 100%;
+  font-size: inherit;
+  outline: 0;
+  border: 2px solid ${props => props.theme.primary};
 
-    &:focus {
-      border: 2px solid ${props => props.theme.accent};
-    }
+  &:focus {
+    border: 2px solid ${props => props.theme.accent};
+  }
 `
 
 const Textarea = Field.withComponent('textarea').extend`
-    height: 150px;
+  height: 150px;
 `
 
 const SendButton = styled.button`
-    height: 35px;
-    width: 120px;
-    margin: 20px 0;
-    outline: 0;
-    border: 2px solid ${props => props.theme.primary};
-    color: ${props => props.theme.primary};
-    text-align: center;
-    font-family: SignikaLight;
+  height: 35px;
+  width: 120px;
+  margin: 20px 0;
+  outline: 0;
+  border: 2px solid ${props => props.theme.primary};
+  color: ${props => props.theme.primary};
+  text-align: center;
+  font-family: SignikaLight;
 
-    &:focus {
-      border: 2px solid ${props => props.theme.accent};
-    }
+  &:focus {
+    border: 2px solid ${props => props.theme.accent};
+  }
 `
 
 export default function Form(props) {
@@ -81,9 +77,7 @@ export default function Form(props) {
       )}
 
       <Item key="question">
-        <Label htmlFor="question">
-          QUESTION
-        </Label>
+        <Label htmlFor="question">QUESTION</Label>
         <Textarea
           name="question"
           id="question"
@@ -92,9 +86,7 @@ export default function Form(props) {
         />
       </Item>
 
-      <SendButton onClick={props.sendHandler}>
-        SEND
-      </SendButton>
+      <SendButton onClick={props.sendHandler}>SEND</SendButton>
     </Wrapper>
   )
 }

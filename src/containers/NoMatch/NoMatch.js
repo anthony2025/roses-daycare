@@ -11,15 +11,13 @@ NoMatch.propTypes = {
 }
 
 const Wrapper = styled.div`
-    background-color: ${props => props.theme.primary};
-    padding: 50px;
+  background-color: ${props => props.theme.primary};
+  padding: 50px;
 `
 
-const Text = styled.div`
-    color: ${props => props.theme.background};
-`
+const Text = styled.div`color: ${props => props.theme.background};`
 
-export default function NoMatch (props) {
+export default function NoMatch(props) {
   return (
     <Wrapper className={props.className}>
       <Text>

@@ -22,7 +22,7 @@ export const post = async (data, url) => {
   }
 }
 
-const checkServerResponse = (response) => {
+const checkServerResponse = response => {
   if (response.ok) {
     console.log('no errors with the server response :)')
     return response

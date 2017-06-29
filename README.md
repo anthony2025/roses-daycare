@@ -78,6 +78,8 @@ This project currently uses [create-react-app], look at their incredible documen
 * `$ yarn build` creates an optimized production build.
 * `$ yarn test` will run Jest in watch mode.
 * `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
+* `$ yarn analyse` will show a size visualization of our production bundle.
+* `$ yarn format` will run Prettier on the whole codebase.
 
 
 ## License

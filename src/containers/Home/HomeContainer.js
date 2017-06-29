@@ -22,10 +22,7 @@ class HomeContainer extends Component {
   render() {
     return (
       <div>
-        <Home
-          modalOpenHandler={this.handleModalOpen}
-          {...this.props}
-        />
+        <Home modalOpenHandler={this.handleModalOpen} {...this.props} />
         <Modal
           isModalOpen={this.state.isModalOpen}
           modalCloseHandler={this.handleModalClose}
@@ -45,4 +42,6 @@ const mapStateToProps = state => ({
   people: getPeople(state)
 })
 
-export default connect(mapStateToProps, null, null, {pure: false})(HomeContainer)
+export default connect(mapStateToProps, null, null, {pure: false})(
+  HomeContainer
+)

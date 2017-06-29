@@ -12,7 +12,7 @@ const mapStateToProps = state => ({
   info: {
     phone: getPhone(state),
     email: getEmail(state),
-    address: getFullAddress(state),
+    address: getFullAddress(state)
   }
 })
 
