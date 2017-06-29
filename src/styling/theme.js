@@ -18,7 +18,15 @@ const solarized = {
 }
 
 const getRandomizedAccentColor = () => {
-  const colors = ['orange', 'red', 'magenta', 'violet', 'blue', 'cyan']
+  const colors = [
+    'orange',
+    'red',
+    'magenta',
+    'magenta',
+    'violet',
+    'blue',
+    'cyan'
+  ]
   const randomInteger = Math.floor(Math.random() * colors.length)
   return solarized[colors[randomInteger]]
 }

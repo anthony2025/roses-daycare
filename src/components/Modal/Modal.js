@@ -41,7 +41,7 @@ export default function Modal (props) {
       isOpen={props.isModalOpen}
       contentLabel='Modal'
       onRequestClose={props.modalCloseHandler}
-      className='modal'
+      className={props.className + ' modal'}
     >
       {props.children}
     </ReactModalStyled>

@@ -5,7 +5,7 @@ export default {
       date: 'May 26, 2017',
       image: '/stock/stock4.jpg',
       text:
-        'Welcome! we are a family operated home day care in the Franconia area. For over 20 years we have make sure our kids can grow in a loving and understanding environment. We value early stimulation and play time, to show kids to be inquisitive and curious about the environment that surrounds them.',
+        'Welcome! we are a family operated day care in the Franconia area. For over 20 years we have make sure our kids can grow in a loving and understanding home. We value early stimulation and play time, and teach kids to be inquisitive and curious about the environment that surrounds them.',
       title: 'Making Homemade Clay'
     },
     f82a: {
@@ -30,28 +30,28 @@ export default {
   people: {
     anthony: {
       description:
-        "Shirley is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
+        "Anthony is our marketing star, you will find him around our blog and facebook page, keeping parents up to date in all our activities.",
       image: 'avatars/anthony.jpg',
       name: 'Anthony Ascencio',
       subtitle: 'Marketing'
     },
     carolina: {
       description:
-        "Shirley is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
+        "Ms. Carolina is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
       image: 'avatars/carolina.jpg',
       name: 'Carolina Bau',
       subtitle: 'Teacher'
     },
     fabiola: {
       description:
-        "Shirley is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
+        "Ms. Fabiola is a loving mother of two girls, and a natural born leader. With sheer enthusiasm and absolute patience she directs our crafts and activities every morning.",
       image: 'avatars/fabiola.jpg',
       name: 'Fabiola Pacheco',
       subtitle: 'Lead Teacher'
     },
     shirley: {
       description:
-        "Shirley is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
+        "Ms. Shirley is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
       image: 'avatars/shirley.jpg',
       name: 'Shirley Sanchez',
       subtitle: 'Principal'

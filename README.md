@@ -20,8 +20,8 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 * [React] and [React-Router] allow us to code in components, which forces us towards code reusability and design consistency.
 * [Redux] plus some help from Local Storage let us hydrate and cache the page with updated content.
 * [Firebase] and [Zapier] gives us serverless backend solutions. Firebase is used as a very minimal CMS until a more complex solution is needed, as well as for SPA hosting. We use Zapier with a webhook to notify us via email when a new question arrives.
-* [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution.
-* The new **Flexbox** and **Grid** standards provide a fully responsive and consistent layout system.
+* [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution. Also their ThemeProvider makes changing the theme programatically a delight.
+* The new **Flexbox** and **Grid** standards provide a fully responsive and solid layout system.
 * CSS3 **Transitions** and **Animations** help us add a touch of interactivity and playfulness. It's a kids business after all.
 * ~~NWB babel and webpack configuration~~ moved the project to create-react-app.
 * ~~CSS Modules~~ moved the project to styled-components.
@@ -37,7 +37,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 
 Rose's daycare is an small family business but from time to time one of their little rascals goes away. They needed a site to help them find a new client quickly when this happens.
 
-They wanted to share contact information, a bit of story of themselves and staff, plus a way for people to ask questions with email notifications.
+They wanted to share contact information, a bit of story of themselves and staff, plus a way to receive email notifications when people ask questions.
 
 The page should also serve to keep parents in the loop of what their children are up to. At the moment the News page serves as a short outlet for snippets and photos of what is going on during the week. An addition of a more involved blog is planned.
 
@@ -73,16 +73,17 @@ REACT_APP_EMAIL_HOOK=https://hooks.zapier.com/hooks/catch/thisOneIsOptional/YouC
 <div id='development'/>
 
 This project currently uses [create-react-app], look at their incredible documentation if more advanced configuration is needed.
-* `$ yarn install` in the app's root directory will install everything needed for development.
+* `$ yarn install` in the app's root directory will install all the necessary dependencies.
 * `$ yarn start` will run the app's development server.
 * `$ yarn build` creates an optimized production build.
+* `$ yarn test` will run Jest in watch mode.
 * `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
 
 
 ## License
 <div id='license'/>
 
-Thanks to the generosity of the folks at Rose's, this project is dedicated to the public domain, with a CC0 license. No attribution is required and no warranties are provided: use as you wish.
+Thanks to the the great folks at Rose's, this project is dedicated to the public domain, with a CC0 license. No attribution is required and no warranties are provided: use as you wish.
 
 The libraries used are property of their respective authors.
 

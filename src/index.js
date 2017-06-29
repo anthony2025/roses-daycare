@@ -1,5 +1,5 @@
 import React from 'react'
-// import registerServiceWorker from 'services/serviceWorker'
+import registerServiceWorker from 'services/serviceWorker'
 
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
@@ -24,4 +24,4 @@ render(
 )
 
 injectResetCSS()
-// registerServiceWorker()
+registerServiceWorker()
