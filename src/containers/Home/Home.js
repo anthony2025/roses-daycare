@@ -36,11 +36,11 @@ const Paragraphs = styled.div`
   font-family: Avenir Next;
   color: ${props => props.theme.primary};
   font-size: 19px;
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     margin: 0 5% 30px 5%;
   }
-  @media (min-width: 700px) {
-    margin: 0 22% 25px 22%;
+  @media (min-width: 1000px) {
+    margin: 0 20% 25px 20%;
   }
 `
 

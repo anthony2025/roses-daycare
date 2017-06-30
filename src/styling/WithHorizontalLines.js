@@ -1,5 +1,4 @@
 /*
- * Anthony Ascencio, CC0 2017
  * inspired by https://css-tricks.com/line-on-sides-headers/
  * Usage example:
  *
