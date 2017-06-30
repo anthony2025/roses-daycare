@@ -10,6 +10,7 @@
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-css-loaders": "^0.0.3",
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.3",
     "react-modal": "^2.2.0",

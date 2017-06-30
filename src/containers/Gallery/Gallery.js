@@ -13,19 +13,13 @@ Gallery.propTypes = {
 
 const Wrapper = styled.div`
   text-align: center;
-  @media (min-width: 700px) {
-    padding: 40px 10%;
-  }
-  @media (max-width: 700px) {
-    padding: 40px 5%;
-  }
   animation: ${appear} .9s ease;
+  padding: 20px 0 40px 0;
 `
 
 const CarouselImage = styled(Image)`
   height: 400px;
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
   margin-bottom: 20px;
   box-shadow: 0 8px 14x ${props => props.theme.primary}33;
   @media (max-width: 700px) {
@@ -34,6 +28,12 @@ const CarouselImage = styled(Image)`
 `
 
 const Thumbnails = styled.div`
+  @media (min-width: 700px) {
+    padding: 0 10%;
+  }
+  @media (max-width: 700px) {
+    padding: 0 5%;
+  }
   cursor: pointer;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
