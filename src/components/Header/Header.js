@@ -1,20 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Logo from 'components/Logo'
-import Navbar from './Navbar'
+import Navbar from 'components/Navbar'
 import {NavLink} from 'react-router-dom'
-
-Header.propTypes = {
-  pages: PropTypes.objectOf(
-    PropTypes.shape({
-      exact: PropTypes.bool,
-      path: PropTypes.string,
-      name: PropTypes.string
-    })
-  )
-}
 
 const Wrapper = styled.div`
   padding: 25px;
@@ -42,21 +31,22 @@ const StyledNavbar = styled(Navbar)`
 `
 
 export default function Header(props) {
-  const {noMatch, ...pages} = props.pages
   return (
     <Wrapper className={props.className}>
       <StyledLogo smallTitle="Rose's" bigTitle="Daycare" />
       <StyledNavbar>
-        {Object.keys(pages).map(key =>
-          <NavLink
-            exact={pages[key].exact}
-            to={pages[key].path}
-            key={key}
-            activeClassName="active"
-          >
-            {pages[key].name}
-          </NavLink>
-        )}
+        <NavLink exact={true} to="/" activeClassName="active">
+          Home
+        </NavLink>
+        <NavLink to="/news" activeClassName="active">
+          News
+        </NavLink>
+        <NavLink to="/gallery" activeClassName="active">
+          Gallery
+        </NavLink>
+        <NavLink to="/contact" activeClassName="active">
+          Contact
+        </NavLink>
       </StyledNavbar>
     </Wrapper>
   )

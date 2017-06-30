@@ -4,13 +4,12 @@ import styled from 'styled-components'
 
 import GithubCorner from 'components/GithubCorner'
 import Header from 'components/Header'
-import MainSection from './MainSection'
+import Routes from 'containers/Routes'
 import Footer from 'components/Footer'
 
 App.propTypes = {
   devEmail: PropTypes.string,
   repository: PropTypes.string,
-  pages: PropTypes.object,
   info: PropTypes.shape({
     address: PropTypes.string,
     phone: PropTypes.string,
@@ -21,6 +20,7 @@ App.propTypes = {
 const Wrapper = styled.div`
   background-color: ${props => props.theme.background};
   height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -29,8 +29,8 @@ export default function App(props) {
   return (
     <Wrapper>
       <GithubCorner repository={props.repository} />
-      <Header pages={props.pages} />
-      <MainSection pages={props.pages} />
+      <Header />
+      <Routes />
       <Footer
         devEmail={props.devEmail}
         address={props.info.address}
