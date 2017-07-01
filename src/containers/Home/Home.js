@@ -79,16 +79,18 @@ export default function Home({paragraphs, people, ...props}) {
 
       <Avatars>
         {people &&
-          Object.keys(people).map(key =>
-            <StyledAvatar
-              image={people[key].image}
-              name={people[key].name}
-              subtitle={people[key].subtitle}
-              border={3}
-              onClick={props.modalOpenHandler(key)}
-              key={key}
-            />
-          )}
+          Object.keys(people)
+            .reverse()
+            .map(key =>
+              <StyledAvatar
+                image={people[key].image}
+                name={people[key].name}
+                subtitle={people[key].subtitle}
+                border={3}
+                onClick={props.modalOpenHandler(key)}
+                key={key}
+              />
+            )}
       </Avatars>
     </Wrapper>
   )
