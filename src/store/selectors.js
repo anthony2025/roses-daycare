@@ -1,6 +1,7 @@
 export const getArticles = state => state.articles
 export const getPeople = state => state.people
 export const getIntro = state => state.intro
+export const getImages = state => state.images
 export const getContactInfo = state => state.contactInfo
 export const getPhone = state => state.contactInfo.phone
 export const getEmail = state => state.contactInfo.email

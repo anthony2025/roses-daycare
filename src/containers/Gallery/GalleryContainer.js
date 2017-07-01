@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import images from './images'
+import {connect} from 'react-redux'
+import {getImages} from 'store/selectors'
 
 import Gallery from './Gallery'
 import Image from 'components/Image'
@@ -7,7 +8,7 @@ import Modal from 'components/Modal'
 
 class GalleryContainer extends Component {
   state = {
-    previewImage: images[0],
+    previewImage: this.props.images[0],
     isModalOpen: false
   }
 
@@ -20,7 +21,7 @@ class GalleryContainer extends Component {
     return (
       <div>
         <Gallery
-          images={images}
+          images={this.props.images}
           modalOpenHandler={this.handleModalOpen}
           {...this.props}
         />
@@ -39,4 +40,8 @@ class GalleryContainer extends Component {
   }
 }
 
-export default GalleryContainer
+const mapStateToProps = state => ({
+  images: getImages(state)
+})
+
+export default connect(mapStateToProps)(GalleryContainer)

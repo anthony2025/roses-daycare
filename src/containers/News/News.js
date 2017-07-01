@@ -49,7 +49,7 @@ export default function News({articles, ...props}) {
               text={articles[key].text}
               date={articles[key].date}
               onClick={props.modalOpenHandler(articles[key].author)}
-              author={articles[key].author}
+              author={props.people[articles[key].author]}
               key={key}
             />
           )}

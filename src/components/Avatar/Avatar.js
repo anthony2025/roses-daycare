@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   line-height: 1.3;
   color: ${props => props.theme.primary};
   font-family: SignikaLight;
+  border-radius: 50%;
 `
 
 const Name = styled.div`font-size: 15px;`
@@ -26,6 +27,7 @@ const Subtitle = styled.div`font-size: 12px;`
 
 const StyledImage = styled(Image)`
   border: ${props => props.border}px solid ${props => props.theme.primary};
+  box-shadow: 0 4px 9px 2px ${props => props.theme.primary}33;
   border-radius: 50%;
   width: inherit;
   height: inherit;

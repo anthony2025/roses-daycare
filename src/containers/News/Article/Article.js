@@ -61,7 +61,7 @@ const When = styled.div`
   margin: 0 10px 0 auto;
 `
 
-const Who = styled(Avatar)`
+const Author = styled(Avatar)`
   height: 40px;
   width: 40px;
 `
@@ -94,7 +94,7 @@ export default function Article(props) {
           <When>
             {props.date}
           </When>
-          <Who image={`avatars/${props.author}.jpg`} onClick={props.onClick} />
+          <Author image={props.author.image} onClick={props.onClick} />
         </Metadata>
       </div>
     </Wrapper>
