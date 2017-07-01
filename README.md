@@ -45,7 +45,7 @@ The page should also serve to keep parents in the loop of what their children ar
 <div id='future'/>
 
 The blog extension is expected for next year, to host more of their day to day activities :steam_locomotive::train::train::train::train::train: This will require a more robust CMS solution and refactoring the codebase a bit. We will be working on the later until confirmed. Others smaller issues include:
-* The redux store needs to be further unit tested.
+* The store logic needs to be further unit tested. (Why only the store logic? because we are terrible, terrible people.)
 * Currently modals are being handled with React component state. We might move this to Redux for the sake of organization.
 * react-modal might probably be replaced with a custom made modal following [react-modal-dialog] ideas
 * We will be improving the design, starting with that lazy looking contact page.

@@ -57,11 +57,11 @@ const Description = styled.div`
     font-size: 20px;
   }
   @media (max-width: 700px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 `
 
-const Content = styled.div`margin: 10%;`
+const Content = styled.div`margin: 30px;`
 
 const StyledImage = styled(Image)`
   border: 1px solid ${props => props.theme.opposite};

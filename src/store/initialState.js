@@ -30,21 +30,21 @@ export default {
   people: {
     anthony: {
       description:
-        'Anthony is our marketing wizard, you will find him around our blog and facebook page, keeping parents up to date on what is going up inside.',
+        'Anthony is our marketing wizard, you will find him around the blog and facebook page, keeping parents up to date on what we are up to each week.',
       image: 'avatars/anthony.jpg',
       name: 'Anthony Ascencio',
       subtitle: 'Marketing'
     },
     carolina: {
       description:
-        "Ms. Carolina is Rose's daughter and our current Principal. She holds a B.S. in Business Administration, 7 years in experience in child care at multiple centers, and an unending love for kids and her own children.",
+        'Ms. Carolina has been our most beloved teacher for the last five years. She teaches kids to share and empathize with one another, and shower each one of them with infinite affection.',
       image: 'avatars/carolina.jpg',
       name: 'Carolina Bau',
       subtitle: 'Teacher'
     },
     fabiola: {
       description:
-        'Ms. Fabiola has an infinite patience and creativity to come up with new crafts and activities. She is a loving mother of two girls, and a natural born leader.',
+        'Ms. Fabiola has an infinite creativity to come up with new crafts and activities. She is a loving mother of two girls, and a natural born leader.',
       image: 'avatars/fabiola.jpg',
       name: 'Fabiola Pacheco',
       subtitle: 'Lead Teacher'

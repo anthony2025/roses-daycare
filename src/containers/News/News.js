@@ -33,7 +33,7 @@ const StyledArticle = styled(Article)`
 
 const Link = styled.div`
   color: ${props => props.theme.primary};
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 20px 20px;
 `
 

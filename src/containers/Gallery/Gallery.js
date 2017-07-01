@@ -14,7 +14,7 @@ Gallery.propTypes = {
 const Wrapper = styled.div`
   text-align: center;
   animation: ${appear} .9s ease;
-  padding: 20px 0 40px 0;
+  padding: 30px 0 50px 0;
 `
 
 const CarouselImage = styled(Image)`
@@ -34,6 +34,7 @@ const Thumbnails = styled.div`
   @media (max-width: 700px) {
     padding: 0 5%;
   }
+  margin-top: 30px;
   cursor: pointer;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
