@@ -1,4 +1,4 @@
-![Rose's Daycare](/assets/logo.png?raw=true)
+![Rose's Daycare](/public/logo.png?raw=true)
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
@@ -29,7 +29,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 ## Screenshot
 <div id='screenshot'/>
 
-![Screenshot](/assets/screenshot.png?raw=true)
+![Screenshot](/public/screenshot.png?raw=true)
 
 
 ## Motivation
