@@ -59,13 +59,24 @@ The blog extension is expected for next year, to host more of their day to day a
 * [Firebase] a database on the free tier.
 * [Zapier] a free zap with a catch webhook (optional, for email notifications).
 
-For the project to run the following environment variables should be available. You can either add them into .env, or create a .env.local file in the root folder of the project (recommended), following this structure:
-```makefile
-NODE_PATH=src/
-REACT_APP_REPOSITORY=https://link_to_YOUR_project_repository.com
-REACT_APP_DEV_EMAIL=yourEmail@gmail.com
-REACT_APP_DATABASE_URL=https://anEmptyFirebaseDatabase.firebaseio.com/
-REACT_APP_EMAIL_HOOK=https://hooks.zapier.com/hooks/catch/thisOneIsOptional/YouCanIncludeAZapierCatchHookHere/
+For the project to run the following environment variables must be available. You can find them in your Firebase console. You can either add them into .env, or create a .env.local file in the root folder of the project (recommended).
+```
+# Github Repo, used in fork corner
+REACT_APP_REPOSITORY (optional)
+# Email in mailto links, used in footer
+REACT_APP_DEV_EMAIL (optional)
+
+# Zapier email notifications hook
+# or similar service (optional)
+REACT_APP_EMAIL_HOOK
+
+# These ones will be provided by Firebase:
+REACT_APP_DATABASE_URL
+REACT_APP_API_KEY
+REACT_APP_AUTH_DOMAIN
+REACT_APP_PROJECT_ID
+REACT_APP_STORAGE_BUCKET
+REACT_APP_MESSAGING_SENDER_ID
 ```
 
 
@@ -80,7 +91,6 @@ This project currently uses [create-react-app], look at their incredible documen
 * `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
 * `$ yarn analyse` will show a size visualization of our production bundle.
 * `$ yarn format` will run Prettier on the whole codebase.
-
 
 ## License
 <div id='license'/>
