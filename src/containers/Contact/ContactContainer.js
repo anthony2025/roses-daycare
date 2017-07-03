@@ -1,12 +1,8 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import Contact from './Contact'
-
-import {connect} from 'react-redux'
-import {getContactInfo} from 'store/selectors'
-
 import {post as postToDatabase} from 'services/database'
 
-class ContactContainer extends Component {
+export default class ContactContainer extends PureComponent {
   state = {
     name: '',
     email: '',
@@ -57,9 +53,3 @@ class ContactContainer extends Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
-  info: getContactInfo(state)
-})
-
-export default connect(mapStateToProps)(ContactContainer)

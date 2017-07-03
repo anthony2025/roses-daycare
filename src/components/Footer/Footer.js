@@ -9,6 +9,38 @@ Footer.propTypes = {
   address: PropTypes.string
 }
 
+export default function Footer(props) {
+  return (
+    <Wrapper className={props.className}>
+      <ContactInfo>
+        <Labels>
+          <div>PHONE</div>
+          <div>EMAIL</div>
+          <div>ADDRESS</div>
+        </Labels>
+
+        <div>
+          <div>
+            {props.phone}
+          </div>
+          <div>
+            {props.email}
+          </div>
+          <div>
+            {props.address}
+          </div>
+        </div>
+      </ContactInfo>
+
+      <Copyright href={`mailto:${props.devEmail}`}>
+        Rose's Day Care LLC, 2017
+        <br />
+        made with ♥ by Anthony Ascencio
+      </Copyright>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   width: 100%;
   margin-top: auto; // sticks footer to bottom of page
@@ -61,35 +93,3 @@ const Copyright = styled.a`
     border-top: 1px solid ${props => props.theme.opposite};
   }
 `
-
-export default function Footer(props) {
-  return (
-    <Wrapper className={props.className}>
-      <ContactInfo>
-        <Labels>
-          <div>PHONE</div>
-          <div>EMAIL</div>
-          <div>ADDRESS</div>
-        </Labels>
-
-        <div>
-          <div>
-            {props.phone}
-          </div>
-          <div>
-            {props.email}
-          </div>
-          <div>
-            {props.address}
-          </div>
-        </div>
-      </ContactInfo>
-
-      <Copyright href={`mailto:${props.devEmail}`}>
-        Rose's Day Care LLC, 2017
-        <br />
-        made with ♥ by Anthony Ascencio
-      </Copyright>
-    </Wrapper>
-  )
-}

@@ -10,6 +10,19 @@ Logo.propTypes = {
   bigTitle: PropTypes.string
 }
 
+export default function Logo(props) {
+  return (
+    <Wrapper to="/" className={props.className}>
+      <SmallTitle>
+        {props.smallTitle}
+      </SmallTitle>
+      <BigTitle>
+        {props.bigTitle}
+      </BigTitle>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled(Link)`
   color: ${props => props.theme.primary};
   line-height: .75;
@@ -44,16 +57,3 @@ const SmallTitle = styled.div`
     font-size: 50px;
   }
 `
-
-export default function Logo(props) {
-  return (
-    <Wrapper to="/" className={props.className}>
-      <SmallTitle>
-        {props.smallTitle}
-      </SmallTitle>
-      <BigTitle>
-        {props.bigTitle}
-      </BigTitle>
-    </Wrapper>
-  )
-}

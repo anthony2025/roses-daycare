@@ -1,13 +1,10 @@
-import React, {Component} from 'react'
-
-import {connect} from 'react-redux'
-import {getIntro, getPeople} from 'store/selectors'
+import React, {PureComponent} from 'react'
 
 import ModalBio from 'components/ModalBio'
 import Modal from 'components/Modal'
 import Home from './Home'
 
-class HomeContainer extends Component {
+export default class HomeContainer extends PureComponent {
   state = {
     modalPerson: null,
     isModalOpen: false
@@ -36,12 +33,3 @@ class HomeContainer extends Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
-  paragraphs: getIntro(state),
-  people: getPeople(state)
-})
-
-export default connect(mapStateToProps, null, null, {pure: false})(
-  HomeContainer
-)

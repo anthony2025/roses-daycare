@@ -6,6 +6,14 @@ Navbar.propTypes = {
   children: PropTypes.node
 }
 
+export default function Navbar(props) {
+  return (
+    <Wrapper className={props.className}>
+      {props.children}
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -32,11 +40,3 @@ const Wrapper = styled.div`
     font-size: 6vw;
   }
 `
-
-export default function Navbar(props) {
-  return (
-    <Wrapper className={props.className}>
-      {props.children}
-    </Wrapper>
-  )
-}

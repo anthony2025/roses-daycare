@@ -2,11 +2,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Image from 'components/Image'
-
 ModalBio.propTypes = {
   person: PropTypes.object,
   modalCloseHandler: PropTypes.func
+}
+
+export default function ModalBio(props) {
+  return (
+    <Wrapper
+      className={props.className}
+      onClick={props.modalCloseHandler}
+      {...props}
+    >
+      <Image src={props.person.image} />
+
+      <Content>
+        <Name>
+          {props.person.name}
+        </Name>
+        <Subtitle>
+          {props.person.subtitle && props.person.subtitle.toUpperCase()}
+        </Subtitle>
+        <Description>
+          {props.person.description}
+        </Description>
+      </Content>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -63,33 +85,11 @@ const Description = styled.div`
 
 const Content = styled.div`margin: 30px;`
 
-const StyledImage = styled(Image)`
+const Image = styled.img`
   border: 1px solid ${props => props.theme.opposite};
   border-radius: 5px;
   width: 35%;
   height: auto;
+  cursor: inherit;
+  object-fit: cover;
 `
-
-export default function ModalBio(props) {
-  return (
-    <Wrapper
-      className={props.className}
-      onClick={props.modalCloseHandler}
-      {...props}
-    >
-      <StyledImage src={props.person.image} />
-
-      <Content>
-        <Name>
-          {props.person.name}
-        </Name>
-        <Subtitle>
-          {props.person.subtitle && props.person.subtitle.toUpperCase()}
-        </Subtitle>
-        <Description>
-          {props.person.description}
-        </Description>
-      </Content>
-    </Wrapper>
-  )
-}

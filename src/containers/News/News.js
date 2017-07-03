@@ -15,28 +15,6 @@ News.propTypes = {
   })
 }
 
-const Articles = styled.div`
-  @media (min-width: 700px) {
-    padding: 40px 10%;
-  }
-  @media (max-width: 700px) {
-    padding: 10px 7%;
-  }
-  animation: ${appear} .9s ease;
-`
-
-const StyledArticle = styled(Article)`
-  margin-bottom: 45px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid ${props => props.theme.primary}
-`
-
-const Link = styled.div`
-  color: ${props => props.theme.primary};
-  font-size: 16px;
-  margin: 0 0 20px 20px;
-`
-
 export default function News({articles, ...props}) {
   return (
     <div className={props.className}>
@@ -59,3 +37,25 @@ export default function News({articles, ...props}) {
     </div>
   )
 }
+
+const Articles = styled.div`
+  @media (min-width: 700px) {
+    padding: 40px 10%;
+  }
+  @media (max-width: 700px) {
+    padding: 10px 7%;
+  }
+  animation: ${appear} .9s ease;
+`
+
+const StyledArticle = styled(Article)`
+  margin-bottom: 45px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid ${props => props.theme.primary}
+`
+
+const Link = styled.div`
+  color: ${props => props.theme.primary};
+  font-size: 16px;
+  margin: 0 0 20px 20px;
+`

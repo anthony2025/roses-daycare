@@ -1,9 +1,6 @@
 import React from 'react'
 import registerServiceWorker from 'services/serviceWorker'
 
-import * as firebase from 'firebase'
-import firebaseConfig from 'services/firebase'
-
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
 import App from 'containers/App'
@@ -28,4 +25,3 @@ render(
 
 injectResetCSS()
 registerServiceWorker()
-firebase.initializeApp(firebaseConfig)

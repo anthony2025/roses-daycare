@@ -8,7 +8,7 @@
   "repository": "https://github.com/anthony2025/roses-daycare",
   "private": true,
   "dependencies": {
-    "firebase": "^4.1.3",
+    "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-css-loaders": "^0.0.3",
@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "deploy": "yarn build && firebase deploy",
-    "analyze": "source-map-explorer build/static/js/main.*",
+    "analyze": "yarn build && source-map-explorer build/static/js/main.*",
     "format": "prettier --single-quote --no-bracket-spacing --no-semi --write 'src/**/*.js'"
   }
 }

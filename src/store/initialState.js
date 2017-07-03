@@ -1,4 +1,4 @@
-export default {
+export default {} /*
   articles: {
     '5e65': {
       author: 'shirley',
@@ -79,4 +79,4 @@ export default {
       subtitle: 'Principal'
     }
   }
-}
+}*/

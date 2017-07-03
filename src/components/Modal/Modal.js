@@ -11,6 +11,19 @@ Modal.propTypes = {
   children: PropTypes.node
 }
 
+export default function Modal(props) {
+  return (
+    <ReactModalStyled
+      isOpen={props.isModalOpen}
+      contentLabel="Modal"
+      onRequestClose={props.modalCloseHandler}
+      className={props.className + ' modal'}
+    >
+      {props.children}
+    </ReactModalStyled>
+  )
+}
+
 const ReactModalStyled = styled(ReactModal)`
   // react-modal dimensions respond to its children and
   // only works if the children don't exceed viewport dimensions
@@ -34,16 +47,3 @@ const ReactModalStyled = styled(ReactModal)`
     max-width: 90vw;
   }
 `
-
-export default function Modal(props) {
-  return (
-    <ReactModalStyled
-      isOpen={props.isModalOpen}
-      contentLabel="Modal"
-      onRequestClose={props.modalCloseHandler}
-      className={props.className + ' modal'}
-    >
-      {props.children}
-    </ReactModalStyled>
-  )
-}

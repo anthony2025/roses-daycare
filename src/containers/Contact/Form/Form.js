@@ -13,6 +13,40 @@ Form.propTypes = {
   changeHandler: PropTypes.func
 }
 
+export default function Form(props) {
+  let {question, ...fields} = props.fields
+  return (
+    <Wrapper className={props.className}>
+      {Object.keys(fields).map(key =>
+        <Item key={key}>
+          <Label htmlFor={key}>
+            {key.toUpperCase()}
+          </Label>
+          <Field
+            name={key}
+            id={key}
+            type="text"
+            value={fields[key].name}
+            onChange={props.changeHandler}
+          />
+        </Item>
+      )}
+
+      <Item key="question">
+        <Label htmlFor="question">QUESTION</Label>
+        <Textarea
+          name="question"
+          id="question"
+          value={props.question}
+          onChange={props.changeHandler}
+        />
+      </Item>
+
+      <SendButton onClick={props.sendHandler}>SEND</SendButton>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`text-align: center;`
 
 const Item = styled.div`text-align: left;`
@@ -56,37 +90,3 @@ const SendButton = styled.button`
     border: 2px solid ${props => props.theme.accent};
   }
 `
-
-export default function Form(props) {
-  let {question, ...fields} = props.fields
-  return (
-    <Wrapper className={props.className}>
-      {Object.keys(fields).map(key =>
-        <Item key={key}>
-          <Label htmlFor={key}>
-            {key.toUpperCase()}
-          </Label>
-          <Field
-            name={key}
-            id={key}
-            type="text"
-            value={fields[key].name}
-            onChange={props.changeHandler}
-          />
-        </Item>
-      )}
-
-      <Item key="question">
-        <Label htmlFor="question">QUESTION</Label>
-        <Textarea
-          name="question"
-          id="question"
-          value={props.question}
-          onChange={props.changeHandler}
-        />
-      </Item>
-
-      <SendButton onClick={props.sendHandler}>SEND</SendButton>
-    </Wrapper>
-  )
-}

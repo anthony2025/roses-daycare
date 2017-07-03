@@ -9,6 +9,21 @@ Title.propTypes = {
   subtitle: PropTypes.string
 }
 
+export default function Title(props) {
+  return (
+    <Wrapper>
+      <BigTitle>
+        {props.title}
+      </BigTitle>
+      <WithHorizontalLines>
+        <SmallTitle>
+          {props.subtitle}
+        </SmallTitle>
+      </WithHorizontalLines>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   color: ${props => props.theme.primary};
   text-align: center;
@@ -36,18 +51,3 @@ const SmallTitle = styled.div`
     font-size: 20px;
   }
 `
-
-export default function Title(props) {
-  return (
-    <Wrapper>
-      <BigTitle>
-        {props.title}
-      </BigTitle>
-      <WithHorizontalLines>
-        <SmallTitle>
-          {props.subtitle}
-        </SmallTitle>
-      </WithHorizontalLines>
-    </Wrapper>
-  )
-}

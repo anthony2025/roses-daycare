@@ -20,6 +20,24 @@ Contact.propTypes = {
   })
 }
 
+export default function Contact(props) {
+  return (
+    <Wrapper className={props.className}>
+      <StyledInfo
+        email={props.info.email}
+        phone={props.info.phone}
+        address1={props.info.address1}
+        address2={props.info.address2}
+      />
+      <StyledForm
+        fields={props.form.fields}
+        sendHandler={props.form.sendHandler}
+        changeHandler={props.form.changeHandler}
+      />
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,21 +67,3 @@ const StyledForm = styled(Form)`
   width: 100%;
   margin-top: 20px;
 `
-
-export default function Contact(props) {
-  return (
-    <Wrapper className={props.className}>
-      <StyledInfo
-        email={props.info.email}
-        phone={props.info.phone}
-        address1={props.info.address1}
-        address2={props.info.address2}
-      />
-      <StyledForm
-        fields={props.form.fields}
-        sendHandler={props.form.sendHandler}
-        changeHandler={props.form.changeHandler}
-      />
-    </Wrapper>
-  )
-}

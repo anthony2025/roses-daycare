@@ -17,6 +17,37 @@ Home.propTypes = {
   modalOpenHandler: PropTypes.func
 }
 
+export default function Home({paragraphs, people, ...props}) {
+  return (
+    <Wrapper className={props.className}>
+      <Paragraphs>
+        {paragraphs &&
+          paragraphs.map((p, index) =>
+            <p key={index}>
+              {p}
+            </p>
+          )}
+      </Paragraphs>
+
+      <Avatars>
+        {people &&
+          Object.keys(people)
+            .reverse()
+            .map(key =>
+              <StyledAvatar
+                image={people[key].image}
+                name={people[key].name}
+                subtitle={people[key].subtitle}
+                border={3}
+                onClick={props.modalOpenHandler(key)}
+                key={key}
+              />
+            )}
+      </Avatars>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -64,34 +95,3 @@ const StyledAvatar = styled(Avatar)`
   }
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 `
-
-export default function Home({paragraphs, people, ...props}) {
-  return (
-    <Wrapper className={props.className}>
-      <Paragraphs>
-        {paragraphs &&
-          paragraphs.map((p, index) =>
-            <p key={index}>
-              {p}
-            </p>
-          )}
-      </Paragraphs>
-
-      <Avatars>
-        {people &&
-          Object.keys(people)
-            .reverse()
-            .map(key =>
-              <StyledAvatar
-                image={people[key].image}
-                name={people[key].name}
-                subtitle={people[key].subtitle}
-                border={3}
-                onClick={props.modalOpenHandler(key)}
-                key={key}
-              />
-            )}
-      </Avatars>
-    </Wrapper>
-  )
-}

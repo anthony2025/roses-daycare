@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Image from 'components/Image'
 import Avatar from 'components/Avatar'
 
 Article.propTypes = {
@@ -10,7 +9,35 @@ Article.propTypes = {
   date: PropTypes.string,
   image: PropTypes.string,
   text: PropTypes.string,
-  author: PropTypes.string
+  author: PropTypes.shape({
+    description: PropTypes.string,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    subtitle: PropTypes.string
+  })
+}
+
+export default function Article(props) {
+  return (
+    <Wrapper className={props.className}>
+      <Image src={props.image} />
+
+      <div>
+        <Title>
+          {props.title && props.title.toUpperCase()}
+        </Title>
+        <Paragraph>
+          {props.text}
+        </Paragraph>
+        <Metadata>
+          <When>
+            {props.date}
+          </When>
+          <Author image={props.author.image} onClick={props.onClick} />
+        </Metadata>
+      </div>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -37,8 +64,10 @@ const Title = styled.div`
   color: ${props => props.theme.accent};
 `
 
-const StyledImage = styled(Image)`
-  height: 100%;
+const Image = styled.img`
+  cursor: inherit;
+  border-radius: 1px;
+  object-fit: cover;
   border: 3px solid ${props => props.theme.primary};
   @media (max-width: 700px) {
     width: 100%;
@@ -77,26 +106,3 @@ const Paragraph = styled.div`
     font-size: 20px;
   }
 `
-
-export default function Article(props) {
-  return (
-    <Wrapper className={props.className}>
-      <StyledImage src={props.image} />
-
-      <div>
-        <Title>
-          {props.title && props.title.toUpperCase()}
-        </Title>
-        <Paragraph>
-          {props.text}
-        </Paragraph>
-        <Metadata>
-          <When>
-            {props.date}
-          </When>
-          <Author image={props.author.image} onClick={props.onClick} />
-        </Metadata>
-      </div>
-    </Wrapper>
-  )
-}

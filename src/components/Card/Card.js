@@ -17,6 +17,20 @@ Card.propTypes = {
   path: PropTypes.string
 }
 
+export default function Card(props) {
+  return (
+    <Wrapper to={props.path} className={props.className}>
+      <Title>
+        {props.name}
+      </Title>
+      <Text>
+        {props.text}
+      </Text>
+      <ReadMore>Read more</ReadMore>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled(Link)`
   // Styles for multiples of four
   --cardsGap: 2%;
@@ -72,17 +86,3 @@ const ReadMore = styled.div`
   font-size: 13px;
   text-align: right;
 `
-
-export default function Card(props) {
-  return (
-    <Wrapper to={props.path} className={props.className}>
-      <Title>
-        {props.name}
-      </Title>
-      <Text>
-        {props.text}
-      </Text>
-      <ReadMore>Read more</ReadMore>
-    </Wrapper>
-  )
-}

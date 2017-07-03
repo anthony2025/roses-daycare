@@ -65,18 +65,11 @@ For the project to run the following environment variables must be available. Yo
 REACT_APP_REPOSITORY (optional)
 # Email in mailto links, used in footer
 REACT_APP_DEV_EMAIL (optional)
-
 # Zapier email notifications hook
 # or similar service (optional)
 REACT_APP_EMAIL_HOOK
-
-# These ones will be provided by Firebase:
+# Firebase database root url:
 REACT_APP_DATABASE_URL
-REACT_APP_API_KEY
-REACT_APP_AUTH_DOMAIN
-REACT_APP_PROJECT_ID
-REACT_APP_STORAGE_BUCKET
-REACT_APP_MESSAGING_SENDER_ID
 ```
 
 
@@ -91,6 +84,7 @@ This project currently uses [create-react-app], look at their incredible documen
 * `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
 * `$ yarn analyse` will show a size visualization of our production bundle.
 * `$ yarn format` will run Prettier on the whole codebase.
+To change the content of the project you should create a key "content" in your database following the structure in initialState.js
 
 ## License
 <div id='license'/>

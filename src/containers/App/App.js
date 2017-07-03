@@ -7,6 +7,22 @@ import Header from 'components/Header'
 import Routes from 'containers/Routes'
 import Footer from 'components/Footer'
 
+export default function App(props) {
+  return (
+    <Wrapper>
+      <GithubCorner repository={props.repository} />
+      <Header />
+      <Routes />
+      <Footer
+        devEmail={props.devEmail}
+        address={props.info.address}
+        phone={props.info.phone}
+        email={props.info.email}
+      />
+    </Wrapper>
+  )
+}
+
 App.propTypes = {
   devEmail: PropTypes.string,
   repository: PropTypes.string,
@@ -24,19 +40,3 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-
-export default function App(props) {
-  return (
-    <Wrapper>
-      <GithubCorner repository={props.repository} />
-      <Header />
-      <Routes />
-      <Footer
-        devEmail={props.devEmail}
-        address={props.info.address}
-        phone={props.info.phone}
-        email={props.info.email}
-      />
-    </Wrapper>
-  )
-}

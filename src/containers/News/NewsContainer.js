@@ -1,13 +1,10 @@
-import React, {Component} from 'react'
-
-import {connect} from 'react-redux'
-import {getArticles, getPeople} from 'store/selectors'
+import React, {PureComponent} from 'react'
 
 import ModalBio from 'components/ModalBio'
 import Modal from 'components/Modal'
 import News from './News'
 
-class NewsContainer extends Component {
+export default class NewsContainer extends PureComponent {
   state = {
     modalPerson: null,
     isModalOpen: false
@@ -39,10 +36,3 @@ class NewsContainer extends Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
-  articles: getArticles(state),
-  people: getPeople(state)
-})
-
-export default connect(mapStateToProps)(NewsContainer)

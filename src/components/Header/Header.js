@@ -5,6 +5,28 @@ import Logo from 'components/Logo'
 import Navbar from 'components/Navbar'
 import {NavLink} from 'react-router-dom'
 
+export default function Header(props) {
+  return (
+    <Wrapper className={props.className}>
+      <StyledLogo smallTitle="Rose's" bigTitle="Daycare" />
+      <StyledNavbar>
+        <NavLink exact={true} to="/" activeClassName="active">
+          Home
+        </NavLink>
+        <NavLink to="/news" activeClassName="active">
+          News
+        </NavLink>
+        <NavLink to="/gallery" activeClassName="active">
+          Gallery
+        </NavLink>
+        <NavLink to="/contact" activeClassName="active">
+          Contact
+        </NavLink>
+      </StyledNavbar>
+    </Wrapper>
+  )
+}
+
 const Wrapper = styled.div`
   padding: 25px;
   display: flex;
@@ -29,25 +51,3 @@ const StyledNavbar = styled(Navbar)`
   margin-top: auto;
   width: 100%;
 `
-
-export default function Header(props) {
-  return (
-    <Wrapper className={props.className}>
-      <StyledLogo smallTitle="Rose's" bigTitle="Daycare" />
-      <StyledNavbar>
-        <NavLink exact={true} to="/" activeClassName="active">
-          Home
-        </NavLink>
-        <NavLink to="/news" activeClassName="active">
-          News
-        </NavLink>
-        <NavLink to="/gallery" activeClassName="active">
-          Gallery
-        </NavLink>
-        <NavLink to="/contact" activeClassName="active">
-          Contact
-        </NavLink>
-      </StyledNavbar>
-    </Wrapper>
-  )
-}
