@@ -6,7 +6,8 @@ import appear from 'styling/appearAnimation'
 import Carousel from 'components/Carousel'
 
 Gallery.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string),
+  carouselImages: PropTypes.arrayOf(PropTypes.string),
+  thumbnailImages: PropTypes.arrayOf(PropTypes.string),
   modalOpenHandler: PropTypes.func
 }
 
@@ -14,11 +15,13 @@ export default function Gallery(props) {
   return (
     <Wrapper className={props.className}>
       <Carousel>
-        {props.images.map(image => <CarouselImage key={image} src={image} />)}
+        {props.carouselImages.map(image =>
+          <CarouselImage key={image} src={image} />
+        )}
       </Carousel>
 
       <Thumbnails>
-        {props.images.map(image =>
+        {props.thumbnailImages.map(image =>
           <Thumbnail key={image} src={image} onClick={props.modalOpenHandler} />
         )}
       </Thumbnails>
@@ -38,8 +41,8 @@ const CarouselImage = styled.img`
   margin-bottom: 20px;
   margin-top: 30px;
   box-shadow: 0 8px 14x ${props => props.theme.primary}33;
-  cursor: inherit;
   object-fit: cover;
+  cursor: inherit;
   @media (max-width: 700px) {
     display: none;
     margin-top: 0;

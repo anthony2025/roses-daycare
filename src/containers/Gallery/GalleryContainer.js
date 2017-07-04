@@ -6,7 +6,7 @@ import ModalImage from 'components/ModalImage'
 
 export default class GalleryContainer extends PureComponent {
   state = {
-    previewImage: this.props.images[0],
+    previewImage: this.props.thumbnailImages[0],
     isModalOpen: false
   }
 
@@ -18,11 +18,7 @@ export default class GalleryContainer extends PureComponent {
   render() {
     return (
       <div>
-        <Gallery
-          images={this.props.images}
-          modalOpenHandler={this.handleModalOpen}
-          {...this.props}
-        />
+        <Gallery modalOpenHandler={this.handleModalOpen} {...this.props} />
 
         <Modal
           isModalOpen={this.state.isModalOpen}
