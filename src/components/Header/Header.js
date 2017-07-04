@@ -13,11 +13,11 @@ export default function Header(props) {
         <NavLink exact={true} to="/" activeClassName="active">
           Home
         </NavLink>
-        <NavLink to="/news" activeClassName="active">
-          News
-        </NavLink>
         <NavLink to="/gallery" activeClassName="active">
           Gallery
+        </NavLink>
+        <NavLink to="/news" activeClassName="active">
+          News
         </NavLink>
         <NavLink to="/contact" activeClassName="active">
           Contact
