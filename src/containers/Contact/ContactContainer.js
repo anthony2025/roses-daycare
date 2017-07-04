@@ -26,10 +26,8 @@ export default class ContactContainer extends PureComponent {
     let areAllFieldsFilled =
       payload.name && payload.email && payload.phone && payload.question
     if (areAllFieldsFilled) {
-      const dbUrl = process.env.REACT_APP_DATABASE_URL + 'questions.json'
-      if (dbUrl) postToDatabase(payload, dbUrl).then(res => alert(res))
-      const hookUrl = process.env.REACT_APP_EMAIL_HOOK
-      if (hookUrl) postToDatabase(payload, hookUrl)
+      const dbUrl = process.env.REACT_APP_DATABASE_URL + '/questions.json'
+      postToDatabase(payload, dbUrl).then(res => alert(res))
     } else {
       alert('please fill out all fields :)')
     }

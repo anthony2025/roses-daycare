@@ -3,7 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux and Styled-Components. The site is live at: [https://rosesdaycare.center](https://rosesdaycare.center)
+A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux, Firebase, and Styled-Components. The site is live at: [https://rosesdaycare.center](https://rosesdaycare.center)
 
 ## Table of Contents
 - [Technologies](#technologies)
@@ -11,7 +11,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 - [Motivation](#motivation)
 - [Future](#future)
 - [Prerequisites](#prerequisites)
-- [Development](#development)
+- [Scripts](#scripts)
 - [License](#license)
 
 ## Technologies
@@ -19,7 +19,7 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 
 * [React] and [React-Router] allow us to code in components, which forces us towards code reusability and design consistency.
 * [Redux] plus some help from Local Storage let us hydrate and cache the page with updated content.
-* [Firebase] and [Zapier] gives us serverless backend solutions. Firebase is used as a CMS and all content editing is done there, as well as for SPA hosting. We use Zapier with a webhook to notify us via email when a new question arrives.
+* [Firebase] serves all our serverless backend needs. Database is used as a CMS for all content, Hosting gives us SPA hosting, Storage is a CDN for all our assets, and we use Functions to notify us via email when a new question arrives.
 * [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution. Also their ThemeProvider makes changing the theme programatically a delight.
 * The new **Flexbox** and **Grid** standards provide a fully responsive and solid layout system.
 * CSS3 **Transitions** and **Animations** help us add a touch of interactivity and playfulness. It's a kids business after all.
@@ -56,35 +56,36 @@ The blog extension is expected for next year, to host more of their day to day a
 
 * [Node] >= 6.x.x must be installed.
 * [Yarn] >= 0.20.x must be installed.
-* [Firebase] a database on the free tier.
-* [Zapier] a free zap with a catch webhook (optional, for email notifications).
+* [Firebase] empty database on the free tier.
 
-For the project to run the following environment variables must be available. You can find them in your Firebase console. You can either add them into .env, or create a .env.local file in the root folder of the project (recommended).
+To change environment variables either add them to .env, or create a .env.local file in the root folder of the project (recommended).
 ```
 # Github Repo, used in fork corner
 REACT_APP_REPOSITORY (optional)
 # Email in mailto links, used in footer
 REACT_APP_DEV_EMAIL (optional)
-# Zapier email notifications hook
-# or similar service (optional)
-REACT_APP_EMAIL_HOOK
-# Firebase database root url:
+# Firebase database root url, for all content
 REACT_APP_DATABASE_URL
 ```
 
+To change the content of the project you must create a key "content" in your Firebase database with values following the structure in store/initialState.js
 
-## Development
-<div id='development'/>
+To setup email notifications via Firebase Functions you must have a gmail account with 2-step verification activated, then add an application password. The readme at [gmail-send] goes into more detail if you get stuck. Finally run this command in the root folder of the project to setup  required environment variables.
+```bash
+$ firebase functions:config:set gmail.user="user@gmail.com" gmail.pass="password"
+```
+
+## Scripts
+<div id='scripts'/>
 
 This project currently uses [create-react-app], look at their incredible documentation if more advanced configuration is needed.
 * `$ yarn install` in the app's root directory will install all the necessary dependencies.
 * `$ yarn start` will run the app's development server.
 * `$ yarn build` creates an optimized production build.
 * `$ yarn test` will run Jest in watch mode.
-* `$ yarn deploy` will build and deploy to firebase (previous firebase configuration will be required).
+* `$ yarn deploy` will build and deploy to firebase, including functions.
 * `$ yarn analyse` will show a size visualization of our production bundle.
 * `$ yarn format` will run Prettier on the whole codebase.
-To change the content of the project you should create a key "content" in your database following the structure in initialState.js
 
 ## License
 <div id='license'/>
@@ -96,6 +97,7 @@ The libraries used are property of their respective authors.
 ![cc0 badge](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)
 
 [react-modal-dialog]: https://github.com/qimingweng/react-modal-dialog
+[gmail-send]: https://github.com/alykoshin/gmail-send
 [react]: https://github.com/facebook/react
 [redux]: https://github.com/reactjs/redux
 [zapier]: https://zapier.com/

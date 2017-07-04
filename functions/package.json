@@ -1,0 +1,11 @@
+{
+  "name": "functions",
+  "version": "0.0.1",
+  "description": "Email notification Function for Firebase",
+  "dependencies": {
+    "firebase-admin": "^5.0.0",
+    "firebase-functions": "^0.5.8",
+    "gmail-send": "^1.2.10"
+  },
+  "private": true
+}
