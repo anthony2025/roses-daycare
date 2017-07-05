@@ -49,9 +49,10 @@ export default class Carousel extends PureComponent {
           onClick: this.handleClick
         })}
         {/* We are preloading the next image here to avoid flickering */}
-        {React.cloneElement(this.props.children[this.state.counter + 1], {
-          style: {display: 'none'}
-        })}
+        {this.state.counter + 1 < this.count &&
+          React.cloneElement(this.props.children[this.state.counter + 1], {
+            style: {display: 'none'}
+          })}
       </div>
     )
   }
