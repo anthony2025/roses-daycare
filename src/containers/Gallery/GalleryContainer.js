@@ -18,7 +18,11 @@ export default class GalleryContainer extends PureComponent {
   render() {
     return (
       <div>
-        <Gallery modalOpenHandler={this.handleModalOpen} {...this.props} />
+        <Gallery
+          modalOpenHandler={this.handleModalOpen}
+          thumbnailImages={this.props.thumbnailImages}
+          carouselImages={this.props.carouselImages}
+        />
 
         <Modal
           isModalOpen={this.state.isModalOpen}

@@ -21,7 +21,7 @@ export default class NewsContainer extends PureComponent {
         <News
           modalOpenHandler={this.handleModalOpen}
           people={this.props.people}
-          {...this.props}
+          articles={this.props.articles}
         />
         <Modal
           isModalOpen={this.state.isModalOpen}

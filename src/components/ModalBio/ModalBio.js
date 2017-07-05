@@ -9,11 +9,7 @@ ModalBio.propTypes = {
 
 export default function ModalBio(props) {
   return (
-    <Wrapper
-      className={props.className}
-      onClick={props.modalCloseHandler}
-      {...props}
-    >
+    <Wrapper className={props.className} onClick={props.modalCloseHandler}>
       <Image src={props.person.image} />
 
       <Content>

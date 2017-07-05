@@ -43,8 +43,12 @@ export default class Carousel extends PureComponent {
   }
 
   render() {
-    return React.cloneElement(this.props.children[this.state.counter], {
-      onClick: this.handleClick
-    })
+    return (
+      <div>
+        {React.cloneElement(this.props.children[this.state.counter], {
+          onClick: this.handleClick
+        })}
+      </div>
+    )
   }
 }

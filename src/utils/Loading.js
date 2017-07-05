@@ -14,8 +14,8 @@ export default function Loading(props) {
       return null
     }
   } else if (props.error) {
-    // If we aren't loading, maybe
-    return <div>Sorry, the page failed to load</div>
+    // If we aren't loading, refresh the page
+    return window.location.reload()
   } else {
     // This case shouldn't happen... but we'll return null anyways.
     return null

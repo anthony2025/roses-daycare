@@ -14,7 +14,7 @@ Form.propTypes = {
 }
 
 export default function Form(props) {
-  let {question, ...fields} = props.fields
+  const {question, ...fields} = props.fields
   return (
     <Wrapper className={props.className}>
       {Object.keys(fields).map(key =>
@@ -37,7 +37,7 @@ export default function Form(props) {
         <Textarea
           name="question"
           id="question"
-          value={props.question}
+          value={props.fields.question}
           onChange={props.changeHandler}
         />
       </Item>

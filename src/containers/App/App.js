@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import GithubCorner from 'components/GithubCorner'
@@ -10,27 +9,12 @@ import Footer from 'components/Footer'
 export default function App(props) {
   return (
     <Wrapper>
-      <GithubCorner repository={props.repository} />
+      <GithubCorner />
       <Header />
       <Routes />
-      <Footer
-        devEmail={props.devEmail}
-        address={props.info.address}
-        phone={props.info.phone}
-        email={props.info.email}
-      />
+      <Footer />
     </Wrapper>
   )
-}
-
-App.propTypes = {
-  devEmail: PropTypes.string,
-  repository: PropTypes.string,
-  info: PropTypes.shape({
-    address: PropTypes.string,
-    phone: PropTypes.string,
-    email: PropTypes.string
-  })
 }
 
 const Wrapper = styled.div`

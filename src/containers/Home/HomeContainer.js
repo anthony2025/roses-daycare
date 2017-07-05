@@ -19,7 +19,11 @@ export default class HomeContainer extends PureComponent {
   render() {
     return (
       <div>
-        <Home modalOpenHandler={this.handleModalOpen} {...this.props} />
+        <Home
+          modalOpenHandler={this.handleModalOpen}
+          paragraphs={this.props.paragraphs}
+          people={this.props.people}
+        />
         <Modal
           isModalOpen={this.state.isModalOpen}
           modalCloseHandler={this.handleModalClose}

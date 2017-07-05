@@ -9,7 +9,14 @@ ModalImage.propTypes = {
 }
 
 export default function ModalImage(props) {
-  return <Image {...props} />
+  return (
+    <Image
+      onClick={props.onClick}
+      className={props.className}
+      src={props.src}
+      alt={props.alt}
+    />
+  )
 }
 
 const Image = styled.img`

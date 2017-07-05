@@ -7,12 +7,13 @@ Avatar.propTypes = {
   name: PropTypes.string,
   subtitle: PropTypes.string,
   description: PropTypes.string,
-  border: PropTypes.number
+  border: PropTypes.number,
+  onClick: PropTypes.func
 }
 
 export default function Avatar(props) {
   return (
-    <Wrapper className={props.className} {...props}>
+    <Wrapper className={props.className} onClick={props.onClick}>
       <Image src={props.image} border={props.border} />
       <Name>
         {props.name}
