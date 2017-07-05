@@ -36,6 +36,7 @@ const Wrapper = styled.div`
 `
 
 const CarouselImage = styled.img`
+  animation: ${appear} .9s ease;
   height: 400px;
   width: 100%;
   margin-bottom: 20px;
