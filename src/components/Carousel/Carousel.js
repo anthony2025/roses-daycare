@@ -8,7 +8,7 @@ export default class Carousel extends PureComponent {
   }
 
   static defaultProps = {
-    speed: 2000
+    speed: 3000
   }
 
   state = {
