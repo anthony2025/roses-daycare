@@ -22,7 +22,7 @@ export default function NoMatch(props) {
 }
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.primary};
+  background: ${props => props.theme.primary};
   padding: 50px;
 `
 

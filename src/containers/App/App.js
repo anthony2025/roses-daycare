@@ -18,7 +18,7 @@ export default function App(props) {
 }
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.background};
+  background: ${props => props.theme.background};
   height: 100%;
   min-height: 100vh;
   display: flex;

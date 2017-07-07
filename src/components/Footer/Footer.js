@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   padding: 15px 20px;
   display: flex;
 
-  background-color: ${props => props.theme.primary};
+  background: ${props => props.theme.primary};
   background-blend-mode: multiply;
   color: ${props => props.theme.opposite};
   border-top: 3px solid ${props => props.theme.opposite};

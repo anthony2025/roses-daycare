@@ -59,14 +59,13 @@ const Label = styled.div`
 
 const Field = styled.input`
   color: ${props => props.theme.primary};
-  background-color: inherit;
+  background: inherit;
   display: block;
   min-height: 32px;
   width: 100%;
   font-size: inherit;
   outline: 0;
   border: 2px solid ${props => props.theme.primary};
-
   &:focus {
     border: 2px solid ${props => props.theme.accent};
   }

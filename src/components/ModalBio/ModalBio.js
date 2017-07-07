@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 20px;
 
-  background-color: ${props => props.theme.primary};
+  background: ${props => props.theme.primary};
   color: ${props => props.theme.opposite};
   border-radius: 5px;
   border: 1px solid ${props => props.theme.opposite};

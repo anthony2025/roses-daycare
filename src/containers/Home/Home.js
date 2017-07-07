@@ -88,7 +88,7 @@ const StyledAvatar = styled(Avatar)`
     margin: 0 15px 50px 5px;
   }
   @media (max-width: 700px) {
-    flex: 1;
+    flex: 1 0 auto;
     width: 35vw;
     height: 35vw;
     margin-bottom: 50px;

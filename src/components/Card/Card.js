@@ -49,19 +49,19 @@ const Wrapper = styled(Link)`
   border-width: 12px 0 0 0;
 
   &:nth-child(4n) {
-    background-color: ${() => theme.blue};
+    background: ${() => theme.blue};
     border-color: ${() => theme.green};
   }
   &:nth-child(4n+1) {
-    background-color: ${() => theme.pink};
+    background: ${() => theme.pink};
     border-color: ${() => theme.blue};
   }
   &:nth-child(4n+2) {
-    background-color: ${() => theme.green};
+    background: ${() => theme.green};
     border-color: ${() => theme.red};
   }
   &:nth-child(4n+3) {
-    background-color: ${() => theme.red};
+    background: ${() => theme.red};
     border-color: ${() => theme.pink};
   }
 `
@@ -80,7 +80,7 @@ const Text = styled.div`
 
 const ReadMore = styled.div`
   font-family: SignikaRegular;
-  background-color: white;
+  background: white;
   color: ${() => theme.red};
   padding: 5px;
   font-size: 13px;
