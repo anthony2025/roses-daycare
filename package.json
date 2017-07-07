@@ -10,6 +10,7 @@
   "dependencies": {
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
+    "raven-js": "^3.16.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.3",

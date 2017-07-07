@@ -58,12 +58,14 @@ The blog extension is expected for next year, to host more of their day to day a
 * [Yarn] >= 0.20.x must be installed.
 * [Firebase] empty database on the free tier.
 
-To change environment variables either add them to .env, or create a .env.local file in the root folder of the project (recommended).
+To setup optional features you need to change these environment variables. Either add them to .env, or create a .env.local file in the root folder of the project (recommended).
 ```
 # Github Repo, used in fork corner
-REACT_APP_REPOSITORY (optional)
+REACT_APP_REPOSITORY
 # Email in mailto links, used in footer
-REACT_APP_DEV_EMAIL (optional)
+REACT_APP_DEV_EMAIL
+# Sentry url for errors logging in production
+REACT_APP_RAVEN_URL
 # Firebase database root url, for all content
 REACT_APP_DATABASE_URL
 ```

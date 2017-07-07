@@ -1,5 +1,6 @@
 import React from 'react'
 import registerServiceWorker from 'services/serviceWorker'
+import Raven from 'raven-js'
 
 import {render} from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
@@ -25,3 +26,4 @@ render(
 
 injectResetCSS()
 registerServiceWorker()
+Raven.config(process.env.REACT_APP_RAVEN_URL).install()
