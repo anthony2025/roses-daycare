@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import GoogleMap from 'google-map-react'
 
 Map.propTypes = {
-  // apiKey: PropTypes.string.isRequired,
+  apiKey: PropTypes.string.isRequired,
   center: PropTypes.shape({
     lat: PropTypes.number.isRequired,
     lng: PropTypes.number.isRequired
@@ -12,7 +12,7 @@ Map.propTypes = {
 }
 
 Map.defaultProps = {
-  // apiKey: process.env.REACT_APP_GAPI_KEY,
+  apiKey: process.env.REACT_APP_GAPI_KEY,
   center: {
     lat: 38.7781517,
     lng: -77.160154
@@ -26,7 +26,7 @@ export default function Map(props) {
       <GoogleMap
         defaultCenter={props.center}
         defaultZoom={props.zoom}
-        // bootstrapURLKeys={{key: this.props.apiKey}}
+        bootstrapURLKeys={{key: props.apiKey}}
       />
     </div>
   )

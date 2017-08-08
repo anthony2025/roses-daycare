@@ -68,6 +68,8 @@ REACT_APP_DEV_EMAIL
 REACT_APP_RAVEN_URL
 # Firebase database root url, for all content
 REACT_APP_DATABASE_URL
+# Google Maps API Key, for contact map
+REACT_APP_GAPI_KEY
 ```
 
 To change the content of the project you must create a key "content" in your Firebase database with values following the structure in store/initialState.js
