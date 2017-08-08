@@ -8,6 +8,7 @@
   "repository": "https://github.com/anthony2025/roses-daycare",
   "private": true,
   "dependencies": {
+    "google-map-react": "^0.24.0",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
     "raven-js": "^3.17.0",
