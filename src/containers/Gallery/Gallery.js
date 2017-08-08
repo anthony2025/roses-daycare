@@ -41,7 +41,7 @@ const CarouselImage = styled.img`
   width: 100%;
   margin-bottom: 20px;
   margin-top: 30px;
-  box-shadow: 0 8px 14x ${props => props.theme.primary}33;
+  box-shadow: 0 8px 14x rgba(0, 0, 0, .4);
   object-fit: cover;
   cursor: inherit;
   @media (max-width: 700px) {
@@ -73,5 +73,6 @@ const Thumbnail = styled.img`
   object-fit: cover;
   width: 100%;
   margin: 5px;
-  box-shadow: 0px 8px 14px ${props => props.theme.primary}33;
+  border: 3px solid ${props => props.theme.primary};
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, .5);
 `

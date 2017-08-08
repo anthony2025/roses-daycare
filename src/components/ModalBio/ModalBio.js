@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   border-radius: 5px;
   border: 1px solid ${props => props.theme.opposite};
 
-  font-family: SignikaLight;
+  font-family: Open Sans, Garamond;
   line-height: 1.5;
   cursor: pointer;
   overflow: hidden;

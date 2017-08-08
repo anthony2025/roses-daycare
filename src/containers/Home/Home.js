@@ -63,7 +63,7 @@ const Wrapper = styled.div`
 
 const Paragraphs = styled.div`
   text-align: left;
-  line-height: 1.3;
+  line-height: 1.4;
   font-family: Avenir Next;
   color: ${props => props.theme.primary};
   font-size: 19px;
@@ -71,7 +71,7 @@ const Paragraphs = styled.div`
     margin: 0 5% 30px 5%;
   }
   @media (min-width: 1000px) {
-    margin: 0 20% 25px 20%;
+    margin: 0 25% 25px 25%;
   }
 `
 

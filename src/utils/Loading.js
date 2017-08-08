@@ -1,4 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
+Loading.propTypes = {
+  isLoading: PropTypes.bool,
+  timedOut: PropTypes.bool,
+  pastDelay: PropTypes.bool
+  // TODO find the right ones
+}
 
 export default function Loading(props) {
   if (props.isLoading) {

@@ -10,22 +10,22 @@
   "dependencies": {
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.5.10",
-    "raven-js": "^3.16.1",
+    "raven-js": "^3.17.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-loadable": "^4.0.3",
-    "react-modal": "^2.2.1",
+    "react-loadable": "^4.0.4",
+    "react-modal": "^2.2.2",
     "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.1",
-    "redux": "^3.7.1",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "styled-components": "^2.1.1"
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
-    "firebase-tools": "^3.9.1",
-    "prettier": "^1.5.2",
+    "firebase-tools": "^3.9.2",
+    "prettier": "^1.5.3",
     "react-scripts": "1.0.10",
     "source-map-explorer": "^1.4.0"
   },

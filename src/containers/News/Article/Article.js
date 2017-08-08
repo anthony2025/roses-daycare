@@ -43,16 +43,16 @@ export default function Article(props) {
 const Wrapper = styled.div`
   text-align: center;
   color: ${props => props.theme.primary};
-  font-family: SignikaLight;
-  line-height: 1.5;
+  font-family: Open Sans, Garamond;
+  line-height: 1.4;
   font-size: 30px;
   display: flex;
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     flex-direction: row;
     align-items: center;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
   }
@@ -69,12 +69,12 @@ const Image = styled.img`
   border-radius: 1px;
   object-fit: cover;
   border: 3px solid ${props => props.theme.primary};
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     max-width: 40%;
     margin-right: 30px;
   }
@@ -97,12 +97,13 @@ const Author = styled(Avatar)`
 
 const Paragraph = styled.div`
   text-align: left;
-  line-height: 1.25;
 
-  @media (max-width: 700px) {
-    font-size: 15px;
+  @media (max-width: 800px) {
+    font-size: 18px;
+    margin: 0 10px;
   }
-  @media (min-width: 700px) {
-    font-size: 20px;
+  @media (min-width: 800px) {
+    font-size: 18px;
+    margin: 0 30px;
   }
 `

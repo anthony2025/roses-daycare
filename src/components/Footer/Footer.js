@@ -52,9 +52,10 @@ const Wrapper = styled.div`
   color: ${props => props.theme.opposite};
   border-top: 3px solid ${props => props.theme.opposite};
 
-  font-family: SignikaLight;
-  line-height: 1.5;
+  font-family: Open Sans, Garamond;
+  line-height: 1.6;
   letter-spacing: 0.4px;
+  font-size: 14px;
 
   @media (min-width: 700px) {
     flex-direction: row;
@@ -65,10 +66,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ContactInfo = styled.div`
-  display: flex;
-  font-size: 16px;
-`
+const ContactInfo = styled.div`display: flex;`
 
 const Labels = styled.div`
   color: ${props => props.theme.accent};
@@ -76,7 +74,6 @@ const Labels = styled.div`
 `
 
 const Copyright = styled.a`
-  font-size: 14px;
   &:hover {
     transition: 1s;
     color: ${props => props.theme.accent};

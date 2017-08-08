@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   text-align: center;
   line-height: 1.3;
   color: ${props => props.theme.primary};
-  font-family: SignikaLight;
+  font-family: Open Sans, Garamond;
   border-radius: 50%;
 `
 
@@ -40,7 +40,7 @@ const Subtitle = styled.div`font-size: 12px;`
 
 const Image = styled.img`
   border: ${props => props.border}px solid ${props => props.theme.primary};
-  box-shadow: 0 4px 9px 2px ${props => props.theme.primary}33;
+  box-shadow: 0 4px 9px 2px rgba(0, 0, 0, .4);
   border-radius: 50%;
   width: inherit;
   height: inherit;

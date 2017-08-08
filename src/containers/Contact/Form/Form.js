@@ -83,7 +83,7 @@ const SendButton = styled.button`
   border: 2px solid ${props => props.theme.primary};
   color: ${props => props.theme.primary};
   text-align: center;
-  font-family: SignikaLight;
+  font-family: Open Sans, Garamond;
 
   &:focus {
     border: 2px solid ${props => props.theme.accent};

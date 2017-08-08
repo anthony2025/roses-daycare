@@ -41,7 +41,7 @@ const BigTitle = styled.div`
 `
 
 const SmallTitle = styled.div`
-  font-family: SignikaLight;
+  font-family: Open Sans, Garamond;
   margin-top: 10px;
 
   @media (min-width: 700px) {

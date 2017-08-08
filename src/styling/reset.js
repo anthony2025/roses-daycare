@@ -18,6 +18,7 @@ export default () => injectGlobal`
     line-height: 1;
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
   }
 
   a,
@@ -33,14 +34,10 @@ export default () => injectGlobal`
 
   @font-face {
     font-family: SignikaRegular;
-    src: url(${process.env.PUBLIC_URL}/font/signika-regular.otf);
-  }
-  @font-face {
-    font-family: SignikaLight;
-    src: url(${process.env.PUBLIC_URL}/font/signika-light.otf);
+    src: url(${process.env.PUBLIC_URL}/fonts/signika-regular.otf);
   }
   @font-face {
     font-family: SignikaSemi;
-    src: url(${process.env.PUBLIC_URL}/font/signika-semi.otf);
+    src: url(${process.env.PUBLIC_URL}/fonts/signika-semi.otf);
   }
 `

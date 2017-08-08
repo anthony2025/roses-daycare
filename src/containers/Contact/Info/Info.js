@@ -51,6 +51,6 @@ const Subtitle = styled.div`
 
 const Field = styled.div`
   text-align: right;
-  font-family: SignikaLight;
+  font-family: Open Sans, Garamond;
   margin-top: 7px;
 `
