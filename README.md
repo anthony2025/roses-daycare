@@ -91,15 +91,6 @@ This project currently uses [create-react-app], look at their incredible documen
 * `$ yarn analyse` will show a size visualization of our production bundle.
 * `$ yarn format` will run Prettier on the whole codebase.
 
-## License
-<div id='license'/>
-
-Thanks to the the great folks at Rose's, this project is dedicated to the public domain, with a CC0 license. No attribution is required and no warranties are provided: use as you wish.
-
-The libraries used are property of their respective authors.
-
-![cc0 badge](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)
-
 [react-modal-dialog]: https://github.com/qimingweng/react-modal-dialog
 [gmail-send]: https://github.com/alykoshin/gmail-send
 [react]: https://github.com/facebook/react
