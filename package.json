@@ -4,7 +4,6 @@
   "description": "Responsive webpage made for Rose's Daycare LLC",
   "homepage": "https://rosesdaycare.center/",
   "author": "Anthony Ascencio",
-  "license": "CC0",
   "repository": "https://github.com/anthony2025/roses-daycare",
   "private": true,
   "dependencies": {
