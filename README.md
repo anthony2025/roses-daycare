@@ -3,7 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux, Firebase, and Styled-Components. The site is live at: [https://rosesdaycare.center](https://rosesdaycare.center)
+A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux, Firebase, and Styled-Components. The site is live at: [https://roses-daycare.firebaseapp.com/](https://roses-daycare.firebaseapp.com/)
 
 ## Table of Contents
 - [Technologies](#technologies)
