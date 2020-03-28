@@ -9,7 +9,6 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 - [Technologies](#technologies)
 - [Screenshot](#screenshot)
 - [Motivation](#motivation)
-- [Future](#future)
 - [Prerequisites](#prerequisites)
 - [Scripts](#scripts)
 - [License](#license)
