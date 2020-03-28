@@ -3,7 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/made-with-crayons.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux, Firebase, and Styled-Components. The site is live at: [https://roses-daycare.firebaseapp.com/](https://roses-daycare.firebaseapp.com/)
+A responsive and data-driven marketing website made for Rose's Daycare LLC powered by React, Redux, Firebase, and Styled-Components.
 
 ## Table of Contents
 - [Technologies](#technologies)
@@ -19,10 +19,10 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 
 * [React] and [React-Router] allow us to code in components, which forces us towards code reusability and design consistency.
 * [Redux] plus some help from Local Storage let us hydrate and cache the page with updated content.
-* [Firebase] serves all our serverless backend needs. Database is used as a CMS for all content, Hosting gives us SPA hosting, Storage is a CDN for all our assets, and we use Functions to notify us via email when a new question arrives.
-* [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and all the power of a **CSS-in-JS** solution. Also their ThemeProvider makes changing the theme programatically a delight.
+* [Firebase] serves us our serverless backend. Database is used as a CMS for all content, Hosting gives us SPA hosting, Storage is a CDN for all our assets, and we use Functions to notify us via email when a new question arrives.
+* [Styled-Components] and [Native CSS Variables] gives us local scoped css, easy theming, conditional styling, and the power of a **CSS-in-JS** solution. Also their ThemeProvider allow us to change the theme programatically.
 * The new **Flexbox** and **Grid** standards provide a fully responsive and solid layout system.
-* CSS3 **Transitions** and **Animations** help us add a touch of interactivity and playfulness. It's a kids business after all.
+* CSS3 **Transitions** and **Animations** help us add a touch of interactivity and playfulness.
 * ~~NWB babel and webpack configuration~~ moved the project to create-react-app.
 * ~~CSS Modules~~ moved the project to styled-components.
 
@@ -35,32 +35,22 @@ A responsive and data-driven marketing website made for Rose's Daycare LLC power
 ## Motivation
 <div id='motivation'/>
 
-Rose's daycare is an small family business but from time to time one of their little rascals goes away. They needed a site to help them find a new client quickly when this happens.
+Rose's Daycare is a small family business. They needed a site to help them find a new client quickly when this happens.
 
 They wanted to share contact information, a bit of story of themselves and staff, plus a way to receive email notifications when people ask questions.
 
-The page should also serve to keep parents in the loop of what their children are up to. At the moment the News page serves as a short outlet for snippets and photos of what is going on during the week. An addition of a more involved blog is planned.
-
-## Future
-<div id='future'/>
-
-The blog extension is expected for next year, to host more of their day to day activities :steam_locomotive::train::train::train::train::train: This will require a more robust CMS solution and refactoring the codebase a bit. We will be working on the later until confirmed. Others smaller issues include:
-* The store logic needs to be further unit tested. (Why only the store logic? because we are terrible, terrible people.)
-* Currently modals are being handled with React component state. We might move this to Redux for the sake of organization.
-* react-modal might probably be replaced with a custom made modal following [react-modal-dialog] ideas
-* We will be improving the design, starting with that lazy looking contact page.
-
+The page should also serve to keep parents in the loop of what their children are up to. At the moment the News page serves as a short outlet for snippets and photos of what is going on during the week. They might need a blog extension to host more of their day to day activities :steam_locomotive::train::train::train::train::train:
 
 ## Prerequisites
 <div id='prerequisites'/>
 
-* [Node] >= 6.x.x must be installed.
-* [Yarn] >= 0.20.x must be installed.
-* [Firebase] empty database on the free tier.
+* [Node] >= 6.x.x
+* [Yarn] >= 0.20.x
+* [Firebase] empty NoSQL database
 
 To setup optional features you need to change these environment variables. Either add them to .env, or create a .env.local file in the root folder of the project (recommended).
 ```
-# Github Repo, used in fork corner
+# Github Repo, used in fork octicat corner
 REACT_APP_REPOSITORY
 # Email in mailto links, used in footer
 REACT_APP_DEV_EMAIL
@@ -74,7 +64,7 @@ REACT_APP_GAPI_KEY
 
 To change the content of the project you must create a key "content" in your Firebase database with values following the structure in store/initialState.js
 
-To setup email notifications via Firebase Functions you must have a gmail account with 2-step verification activated, then add an application password. The readme at [gmail-send] goes into more detail if you get stuck. Finally run this command in the root folder of the project to setup  required environment variables.
+To setup email notifications via Firebase Functions you must have a gmail account with 2-step verification activated, then add an application password. The readme at [gmail-send] goes into more detail if you get stuck. Finally run this command in the root folder of the project to setup required environment variables.
 ```bash
 $ firebase functions:config:set gmail.user="user@gmail.com" gmail.pass="password"
 ```
@@ -82,7 +72,7 @@ $ firebase functions:config:set gmail.user="user@gmail.com" gmail.pass="password
 ## Scripts
 <div id='scripts'/>
 
-This project currently uses [create-react-app], look at their incredible documentation if more advanced configuration is needed.
+This project uses [create-react-app], look at their incredible documentation if more advanced configuration is needed.
 * `$ yarn install` in the app's root directory will install all the necessary dependencies.
 * `$ yarn start` will run the app's development server.
 * `$ yarn build` creates an optimized production build.
